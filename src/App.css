@@ -5,7 +5,57 @@
     top: 0%;
     z-index: 1;
 }
-.info{
-    position: relative;
-    
+/* App.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  .board {
+    background-color: #e9ecef;
+  }
+  
+  .info {
+    background-color: #f1f3f5;
+  }
+  
+  .slider-bar {
+    background-color: #dee2e6;
+  }
+  
+.class-container{
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+  
+.graphy{
+  position: relative;
+  width: 40%;
+  height: auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  border: 3px solid #dddddd;
+  border-radius: 10px;
+
+}
+
+.graphy:hover{
+  box-shadow: 0px 1px 50px 1px #31313170;
+}
+
+.sesiondatatable{
+  position: relative;
+  width: 80%;
+  margin-left: 10%;
+
+  margin-top: 50px;
 }

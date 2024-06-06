@@ -1,0 +1,139 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .class-cell{
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    padding: 30px;
+    border: 1px solid rgb(236, 236, 236);
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 5px #8a8a8a70;
+  }
+  .class-header{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 80%;
+    align-items: center;
+  }
+  .class-header .class-title{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .class-header .class-status{
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 10px;
+  
+  }
+  .finished{
+    background-color: rgb(255, 17, 17);
+  }
+  .in-progress{
+    background-color: rgb(57, 153, 1);
+  }
+  
+  .class-date{
+    font-size: 15px;
+    color: rgba(110, 110, 110, 0.692);
+  }
+  .class-attendance .text-dontattendance{
+    color: rgb(255, 77, 77);
+    font-weight: 100;
+  }
+  
+  
+  .class-schedule,
+  .class-attendance, 
+  .class-description{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .class-schedule .text-schedule,.class-description .text-description{
+    color: rgb(112, 112, 112);
+    font-weight: 100;
+  }
+  
+  .class-attendance .text-attendance{
+    color: rgb(57, 153, 1);
+    font-weight: 100;
+  }
+  
+  .class-actions{
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    
+  }
+  
+  .class-actions .btn{
+    position: relative;
+    height: 30px;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  
+  .class-actions .join-button{
+    background-color: rgb(81, 6, 255);
+    color: #fff;
+  }
+  
+  .class-actions .join-button:hover{
+    background-color:  rgb(56, 1, 182);
+  }
+  
+  .class-actions .recording-button{
+    background-color: rgba(180, 180, 180, 0.37);
+  }
+  
+  
+  
+  /*---- CERRADO ----*/
+  
+  .class-small{
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    padding: 30px;
+    border: 1px solid rgb(236, 236, 236);
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 5px #8a8a8a70;
+  }
+  
+  .class-false{
+    display: none;
+  }
+  
+  .title-datatable{
+    position: relative;
+    margin-left: 40%;
+  }
+
+  .search-bar{
+    width: 200px;
+    height: 25px;
+    border: 1px solid #8a8a8a70;
+    border-radius: 5px;
+  }
+
+ 
+  .meet{
+    position: relative;
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
