@@ -94,9 +94,7 @@ function SesionDataTable() {
           
         }
       />
-        <div className="meet">
-            <iframe id="sesion-meet" title="GoogleMeet" src="https://meet.google.com/ffg-uten-sjo"></iframe>
-        </div>
+        
     </>
   );
 }

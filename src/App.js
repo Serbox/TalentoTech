@@ -6,7 +6,7 @@ import Board from './components/board/board';
 import SlideBar from './components/SlideBar/SlideBar';
 import Class from './components/Class/Class';
 import SesionDataTable from './components/DataTable/DataTable';
-
+import Tools from './components/Tools/Tools';
 
 function App() {
   return (
@@ -39,6 +39,9 @@ function App() {
       </div>
         <div className='sesiondatatable'>
           <SesionDataTable/>
+        </div>
+        <div className='tools'>
+          <Tools/>
         </div>
 
 
