@@ -4,7 +4,25 @@ import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 
 
+
+
 const Tools = () => {
+
+
+    const Recursos = [
+        { text: "Kit del programador" },
+        { text: "Actividades estudiantes" },
+        { text: "Material clase" },
+        { text: "Contenido tematico" },
+        { text: "Tutorias componente tecnico" },
+
+    ];
+
+    const ingles = [
+        {logo:"material-symbols-outlined",text:"Consulta Horarios"},
+    
+    ]
+
 
     return (
         <>
@@ -13,11 +31,29 @@ const Tools = () => {
                 <div className='toolsSub-Container'>
                     <div className='conte-tools'>
                         <h3>Recursos:</h3>
-                        <div className='cont-info'></div>
+                        <div className='cont-info'>
+                            {Recursos.map((item, index) => (
+                                <div key={index} className='cont-option'>
+                                        <span className='material-symbols-outlined'>add_to_drive</span>
+                                        <p>{item.text}</p>
+                                            <span className='material-symbols-outlined'>link</span>
+                                    </div>
+                            ))}
+                        </div>
                     </div>
+
+
                     <div className='conte-tools'>
                         <h3>Tutorias en ingles:</h3>
-                        <div className='cont-info'></div>
+                        <div className='cont-info'>
+                        {ingles.map((item, index) => (
+                                <div key={index} className='cont-option'>
+                                        <span className=''>add_to_drive</span>
+                                        <p>{item.text}</p>
+                                            <span className='material-symbols-outlined'>link</span>
+                                    </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div className='toolsSub-Container'>
