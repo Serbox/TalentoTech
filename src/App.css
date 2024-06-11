@@ -22,6 +22,7 @@ body {
   
   .slider-bar {
     background-color: #dee2e6;
+    margin-top: 5%;
   }
   
 .class-container{
@@ -35,16 +36,16 @@ body {
   
 .graphy{
   position: relative;
-  width: 40%;
+  width: 30%;
   height: auto;
   background-color: #ffffff;
+  border-radius: 10px;
+  border: 3px solid #dddddd;
+  margin-top: 3%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 4%;
-  border: 3px solid #dddddd;
-  border-radius: 10px;
+  gap: 5vh;
 
 }
 

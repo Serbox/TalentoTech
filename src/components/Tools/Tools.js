@@ -19,7 +19,10 @@ const Tools = () => {
     ];
 
     const ingles = [
-        {logo:"material-symbols-outlined",text:"Consulta Horarios"},
+        {logo:"add_to_drive",text:"Consulta Horarios"},
+        {logo:"brightness_low",text:"Ingreso tutoria diurna"},
+        {logo:"bedtime",text:"Ingreso tutoria nocturna"},
+        {logo:"add_to_drive",text:"Consulta grabaciones de tutorias"},
     
     ]
 
@@ -48,7 +51,7 @@ const Tools = () => {
                         <div className='cont-info'>
                         {ingles.map((item, index) => (
                                 <div key={index} className='cont-option'>
-                                        <span className=''>add_to_drive</span>
+                                        <span className='material-symbols-outlined'>{item.logo}</span>
                                         <p>{item.text}</p>
                                             <span className='material-symbols-outlined'>link</span>
                                     </div>

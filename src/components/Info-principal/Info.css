@@ -122,3 +122,313 @@
   box-shadow: 0px 0px 90px 1px #0000006c;
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+
+.wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) -12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type:x mandatory ;
+    scroll-behavior:smooth ;
+    scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.wrapper{
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+.wrapper i{
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgb(0, 0,0,0.23);
+    z-index: 1;
+}
+
+.wrapper i:first-child{
+    left: -22px;
+}
+.wrapper i:last-child{
+    right: -22px;
+}
+.carousel :where( .card, .img){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+/*se ya no se devulve a el inicio*/
+.carousel.no-transition{ 
+    scroll-behavior: auto;
+
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel.dragging .card{
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel .card:hover{
+    box-shadow: 0px 4px 20px 2px #7619e060;
+}
+.carousel .card:hover .img  {
+    background: rgb(101, 73, 202);
+    width: 163px;
+    height: 163px;
+}
+
+.carousel .card:hover .img img  {
+    transform: scale(1.1);
+}
+    
+
+.carousel .card{
+    scroll-snap-align: start;
+    height: 342px;
+    width: 250px;
+    list-style: none;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    border: solid #4141410e;
+    padding-bottom:15px ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card .img{
+    background: #5144ffd3;
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+}
+.card .img img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px  #2633e7e0;
+}
+
+.card h2{
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+
+@media screen and (max-width: 900){
+    .wrapper .carousel{
+        grid-auto-columns: calc((100% / 2) -9px);
+    }
+}
+@media screen and (max-width: 600){
+    .wrapper .carousel{
+        grid-auto-columns: 100%;
+    }
+}
+
+.carrousel-student{
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*- - - --- - - - - - - - - - - -*/
+/*- - - --- - - - - - - - - - - -*/
+/*- - - --- - - - - - - - - - - -*/
+.ui-btn {
+  --btn-default-bg: rgb(72, 75, 255);
+  --btn-padding: 15px 20px;
+  --btn-hover-bg: rgb(72, 105, 255);
+  --btn-transition: .3s;
+  --btn-letter-spacing: .1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(150, 150, 150, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: #ffffff;
+  --default-btn-color: #fff;
+  --font-size: 16px;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  --font-family: Menlo,Roboto Mono,monospace;
+  /* 👆 this field should not be empty */
+}
+
+/* button settings 👆 */
+
+.ui-btn {
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover, .ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span, .ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before, .ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";
+  }
+
+  35% {
+    content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}

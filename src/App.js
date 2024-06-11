@@ -26,7 +26,7 @@ function App() {
       </div>
       <div className='board'>
         <Board />
-      </div>
+      </div> 
       <div className='class-container'>
         <div className='graphy'>
           <h1>Duración del curso</h1>
