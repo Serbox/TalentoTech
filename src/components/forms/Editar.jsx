@@ -8,12 +8,12 @@ const Editar = () => {
 
                     <form action="/update" method="POST">
                       <div className="container text-left p-0">
-                        <div className="d-flex flex-row justify-content-center">
+                        <div className="d-flex flex-row justify-content-center w-100 h-100">
                           <div className="col">
                             <img src={RegisterImg} alt="" id="image" className=" rounded-l-3xl"></img>
                           </div>
                           <div className="col p-3 ">
-                            <h2 className="font-extrabold text-3xl text-blue-800 text-left rounded-md">EDITAR USUARIO</h2>
+                            <h2 className="font-extrabold text-2xl text-blue-800 text-left rounded-md">EDITAR USUARIO</h2>
                             <div className="border w-28 border-spacing-24 border-blue-950 mb-2"></div>
                             <div className="row m-0 d-flex flex-row justify-content-between py-2">
                               <div className="col d-flex flex-column justify-content-center gap-1">
@@ -96,7 +96,7 @@ const Editar = () => {
                               </div>
                             </div>
                             <div className="mb-1 d-flex flex-column justify-content-between gap-2">
-                              <h6 class=" block mx-2 text-base text-gray-700 font-medium">Identification</h6>
+                              <h6 class=" block mx-2 text-base text-gray-700 font-medium">Rol</h6>
                                 <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                                     <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                                         <div class="flex items-center ps-3">
