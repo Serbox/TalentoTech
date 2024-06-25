@@ -31,42 +31,42 @@ const RegisterUser = () => {
   });
 
   return (
-    <div className="tw-h-auto tw-p-6 tw-w-auto  tw-bg-[#072563]">
+    <div className="h-auto p-6 w-auto  bg-[#072563]">
       <div
-        className="tw-flex  tw-justify-center tw-items-center tw-min-h-screen "
+        className="flex  justify-center items-center min-h-screen "
       >
-        <div className="tw-w-98 tw-p-10 tw-bg-[#5c88e1] tw-bg-opacity-20 tw-border tw-border-black tw-rounded-lg  tw-shadow-lg">
+        <div className="w-98 p-10 bg-[#5c88e1] bg-opacity-20 border border-black rounded-lg  shadow-lg">
           <form onSubmit={onSubmit}>
-            <h1 className="tw-text-3xl  tw-text-white tw-font-bold tw-text-center tw-mb-8">
+            <h1 className="text-3xl  text-white font-bold text-center mb-8">
               Registro de usuario
             </h1>
-            <div className="tw-relative tw-mb-6">
+            <div className="relative mb-6">
               <input
                 type="text"
                 placeholder="Usuario"
                 {...register("username", {
                   required: "El usuario es requerido",
                 })}
-                className="tw-w-full tw-h-12  tw-border tw-border-white tw-rounded-full px-5 text-white tw-placeholder-black tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-white"
+                className="w-full h-12  border border-white rounded-full tw-px-5 text-white tw-placeholder-black focus:outline-none focus:ring-2 focus:ring-white"
               />
               {errors.username && (
-                <span className="tw-text-red-600">{errors.username.message}</span>
+                <span className="text-red-600">{errors.username.message}</span>
               )}
             </div>
-            <div className="tw-relative tw-mb-7">
+            <div className="relative mb-7">
               <input
                 type="password"
                 placeholder="Contraseña"
                 {...register("password", {
                   required: "La contraseña es requerido",
                 })}
-                className="tw-w-full tw-h-12 bg-transparent tw-border tw-border-white tw-rounded-full  text-white tw-placeholder-black tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-white"
+                className="w-full h-12  border border-white rounded-full  text-white tw-placeholder-black focus:outline-none focus:ring-2 focus:ring-white"
               />
               {errors.password && (
-                <span className="tw-text-red-600">{errors.password.message}</span>
+                <span className="text-red-600">{errors.password.message}</span>
               )}
             </div>
-            <div className="tw-relative tw-mb-6">
+            <div className="relative mb-6">
               <input
                 type="number"
                 placeholder="Número de documento"
@@ -74,10 +74,10 @@ const RegisterUser = () => {
                   required: "Documento es requerido",
                   minLength: 4,
                 })}
-                className="tw-w-full tw-h-12 bg-transparent tw-border tw-border-white tw-rounded-full px-5 tw-text-black tw-placeholder-black tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-white"
+                className="w-full h-12 tw-bg-transparent border border-white rounded-full tw-px-5 text-black tw-placeholder-black focus:outline-none focus:ring-2 focus:ring-white"
               />
               {errors.documento?.type === "required" && (
-                <span className="tw-text-red-600">
+                <span className="text-red-600">
                   Número de documento es requerido
                 </span>
               )}
@@ -87,7 +87,7 @@ const RegisterUser = () => {
                 </span>
               )}
             </div>
-            <div className="tw-relative tw-mb-6">
+            <div className="relative tw-mb-6">
               <input
                 type="email"
                 placeholder="Correo "
@@ -101,15 +101,15 @@ const RegisterUser = () => {
                     message: "Correro no válido",
                   },
                 })}
-                className="tw-w-full tw-h-12 bg-transparent tw-border tw-border-white tw-rounded-full px-5 tw-text-black tw-placeholder-black tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-white"
+                className="w-full h-12 tw-bg-transparent border border-white rounded-full tw-px-5 text-black tw-placeholder-black focus:outline-none focus:ring-2 focus:ring-white"
               />
               {errors.email && (
-                <span className="tw-text-red-600">{errors.email.message}</span>
+                <span className="text-red-600">{errors.email.message}</span>
               )}
             </div>
             <button
               type="submit"
-              className="tw-w-full tw-h-12 bg-white tw-text-gray-800 tw-rounded-full tw-shadow-md tw-hover:bg-gray-200 tw-transition tw-duration-300"
+              className="w-full h-12 tw-bg-white mt-3 text-gray-800 rounded-full shadow-md hover:bg-gray-200 transition duration-300"
             >
               Registrar Usuario
             </button>
