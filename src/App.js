@@ -9,6 +9,7 @@ import Class from './components/Class/Class';
 import SesionDataTable from './components/DataTable/DataTable';
 import Tools from './components/Tools/Tools';
 import Editar from './components/forms/Editar';
+import TableUsers from './components/tableUsers/TableUsers';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         </div>
 
         <Editar/>
+        <TableUsers/>
 
 
 
