@@ -9,6 +9,7 @@ import Class from './components/Class/Class';
 import SesionDataTable from './components/DataTable/DataTable';
 import Tools from './components/Tools/Tools';
 import Editar from './components/forms/Editar';
+import Modal from './components/Modal/modal';
 
 function App() {
   return (
@@ -43,9 +44,12 @@ function App() {
         </div>
         <div className='tools'>
           <Tools/>
+        </div> 
+        <div className=''>
+          <Modal Title={"Editar estudiante"} Form={<Editar/>}/>
         </div>
 
-        <Editar/>
+        
 
 
 
