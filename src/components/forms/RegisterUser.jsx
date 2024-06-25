@@ -10,23 +10,7 @@ const RegisterUser = () => {
   } = useForm();
 
   const onSubmit = handleSubmit(async (data) => {
-    // Transformar los datos del formulario en el formato requerido por la API
-    // const transformedData = {
-    //   persona: {
-    //     tipo_documento: data.tipo_documento,
-    //     documento: data.documento,
-    //     primer_nombre: data.primer_nombre,
-    //     segundo_nombre: data.segundo_nombre || null,
-    //     primer_apellido: data.primer_apellido,
-    //     segundo_apellido: data.segundo_apellido || null
-    //   },
-    //   user_conjunto: {
-    //     username: data.username,
-    //     password: data.password,
-    //     email: data.email
-    //   }
-
-    // };
+   
     console.log(data);
   });
 
@@ -40,7 +24,7 @@ const RegisterUser = () => {
             <h1 className="text-3xl  text-white font-bold text-center mb-8">
               Registro de usuario
             </h1>
-            <div className="relative mb-6">
+            <div className="mb-6">
               <input
                 type="text"
                 placeholder="Usuario"
@@ -53,7 +37,7 @@ const RegisterUser = () => {
                 <span className="text-red-600">{errors.username.message}</span>
               )}
             </div>
-            <div className="relative mb-7">
+            <div className=" mb-7">
               <input
                 type="password"
                 placeholder="Contraseña"
@@ -66,7 +50,7 @@ const RegisterUser = () => {
                 <span className="text-red-600">{errors.password.message}</span>
               )}
             </div>
-            <div className="relative mb-6">
+            <div className=" mb-6">
               <input
                 type="number"
                 placeholder="Número de documento"
@@ -87,9 +71,9 @@ const RegisterUser = () => {
                 </span>
               )}
             </div>
-            <div className="relative tw-mb-6">
+            <div className="tw-mb-6">
               <input
-                type="email"
+                type="text"
                 placeholder="Correo "
                 {...register("email", {
                   required: {
@@ -109,7 +93,7 @@ const RegisterUser = () => {
             </div>
             <button
               type="submit"
-              className="w-full h-12 tw-bg-white mt-3 text-gray-800 rounded-full shadow-md hover:bg-gray-200 transition duration-300"
+              className="w-full h-12 bg-white mt-3 text-gray-800 rounded-full shadow-md hover:bg-gray-400 transition duration-300"
             >
               Registrar Usuario
             </button>

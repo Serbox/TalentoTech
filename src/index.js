@@ -4,12 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import RegisterUser from './components/forms/RegisterUser';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+
+  {path: '/',
+    element: <App/>
+  },
+  {path: '/example',
+    element: <RegisterUser/>
+  }
+
+
+])
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    {/* <RegisterUser/> */}
+  <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
