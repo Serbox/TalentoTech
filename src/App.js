@@ -1,5 +1,6 @@
 
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import Info from './components/Info-principal/Info-principal';
 import Board from './components/board/board';
@@ -7,11 +8,11 @@ import SlideBar from './components/SlideBar/SlideBar';
 import Class from './components/Class/Class';
 import SesionDataTable from './components/DataTable/DataTable';
 import Tools from './components/Tools/Tools';
+import Editar from './components/forms/Editar';
 
 function App() {
   return (
     <>
-    
       <div className='header'>
         <Header />
       </div>
@@ -43,6 +44,8 @@ function App() {
         <div className='tools'>
           <Tools/>
         </div>
+
+        <Editar/>
 
 
 
