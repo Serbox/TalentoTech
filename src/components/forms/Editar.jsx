@@ -13,7 +13,7 @@ const Editar = () => {
                             <img src={RegisterImg} alt="" id="image" className=" rounded-l-3xl"></img>
                           </div>
                           <div className="col p-3 ">
-                            <h2 className="font-extrabold text-2xl text-blue-800 text-left rounded-md">EDITAR USUARIO</h2>
+                            <h2 className="font-extrabold text-3xl text-blue-900 text-left rounded-md">EDITAR USUARIO</h2>
                             <div className="border w-28 border-spacing-24 border-blue-950 mb-2"></div>
                             <div className="row m-0 d-flex flex-row justify-content-between py-2">
                               <div className="col d-flex flex-column justify-content-center gap-1">

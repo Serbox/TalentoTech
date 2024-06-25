@@ -1,7 +1,7 @@
 #image {
     object-fit: initial !important;
     width: 95%;
-    height: calc(100% - 2%);
+    height: 98%;
     margin: auto;
 }
 
@@ -28,7 +28,7 @@
 }
 .contenedor_editar {
     width: 70%;
-    height: 95%;
+    height: 96.8%;
     margin: auto;
     background-color: white;
     box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.594);
