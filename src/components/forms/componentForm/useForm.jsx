@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RegisterImg from "../../IMG/register.jpg";
+import RegisterImg from "../../../IMG/register.jpg";
 
 const UserForm = ({ formData, handleChange, handleSubmit, handleCancel }) => {
   return (

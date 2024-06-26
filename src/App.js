@@ -9,8 +9,6 @@ import Class from './components/Class/Class';
 import SesionDataTable from './components/DataTable/DataTable';
 import Tools from './components/Tools/Tools';
 
-import TableUsers from './components/tableUsers/TableUsers';
-
 function App() {
   return (
     <>
