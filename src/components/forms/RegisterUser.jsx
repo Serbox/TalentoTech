@@ -1,111 +1,112 @@
-import { useForm } from "react-hook-form";
-
-//
+import React, { useState } from "react";
+import UserForm from "./componentForm/UserForm";
 
 const RegisterUser = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = handleSubmit(async (data) => {
-   
-    console.log(data);
+  const [formData, setFormData] = useState({
+    cedula: "",
+    nombre: "",
+    ciudad: "",
+    fecha_nacimiento: "",
+    correo: "",
+    telefono: "",
+    password: "",
+    confirmPassword: "",
+    rol: "",
   });
 
-  return (
-    <div className="h-auto p-6 w-auto  bg-[#072563]">
-      <div
-        className="flex  justify-center items-center min-h-screen "
-      >
-        <div className="w-98 p-10 bg-[#5c88e1] bg-opacity-20 border border-black rounded-lg  shadow-lg">
-          <form onSubmit={onSubmit}>
-            <h1 className="text-3xl  text-white font-bold text-center mb-8">
-              Registro de usuario
-            </h1>
-            <div className="mb-6">
-              <input
-                type="text"
-                placeholder="Usuario"
-                {...register("username", {
-                  required: "El usuario es requerido",
-                })}
-                className="w-full h-12  border border-white rounded-full tw-px-5 text-white tw-placeholder-black focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              {errors.username && (
-                <span className="text-red-600">{errors.username.message}</span>
-              )}
-            </div>
-            <div className=" mb-7">
-              <input
-                type="password"
-                placeholder="Contraseña"
-                {...register("password", {
-                  required: "La contraseña es requerido",
-                })}
-                className="w-full h-12  border border-white rounded-full  text-white tw-placeholder-black focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              {errors.password && (
-                <span className="text-red-600">{errors.password.message}</span>
-              )}
-            </div>
-            <div className=" mb-6">
-              <input
-                type="number"
-                placeholder="Número de documento"
-                {...register("documento", {
-                  required: "Documento es requerido",
-                  minLength: 4,
-                })}
-                className="w-full h-12 tw-bg-transparent border border-white rounded-full tw-px-5 text-black tw-placeholder-black focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              {errors.documento?.type === "required" && (
-                <span className="text-red-600">
-                  Número de documento es requerido
-                </span>
-              )}
-              {errors.documento?.type === "minLength" && (
-                <span className="text-red-600">
-                  Número de documento no valido
-                </span>
-              )}
-            </div>
-            <div className="tw-mb-6">
-              <input
-                type="text"
-                placeholder="Correo "
-                {...register("email", {
-                  required: {
-                    value: true,
-                    message: "El correo es requerido",
-                  },
-                  pattern: {
-                    value: /^[a-z0-9._%+-]+@[a-z0-9*-]+\.[a-z]/,
-                    message: "Correro no válido",
-                  },
-                })}
-                className="w-full h-12 tw-bg-transparent border border-white rounded-full tw-px-5 text-black tw-placeholder-black focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              {errors.email && (
-                <span className="text-red-600">{errors.email.message}</span>
-              )}
-            </div>
-            <button
-              type="submit"
-              className="w-full h-12 bg-white mt-3 text-gray-800 rounded-full shadow-md hover:bg-gray-400 transition duration-300"
-            >
-              Registrar Usuario
-            </button>
+  const [errors, setErrors] = useState({});
 
-            {/* <pre>
-                {JSON.stringify(watch(), null, 2)}
-            </pre> */}
-          </form>
-        </div>
-      </div>
-    </div>
-  );
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+
+
+    if (!formData.cedula) {
+      newErrors.cedula = "La cédula es obligatoria.";
+    }
+
+    if (!formData.nombre) {
+      newErrors.nombre = "El nombre es obligatorio.";
+    }
+
+    if (!formData.ciudad) {
+      newErrors.ciudad = "La ciudad es obligatoria.";
+    }
+
+    if (!formData.fecha_nacimiento) {
+      newErrors.fecha_nacimiento = "La fecha de nacimiento es obligatoria.";
+    }else {
+      const birthDate = new Date(formData.fechaNacimiento);
+      const age = currentYear - birthDate.getFullYear();
+      if (age < 18 || (age === 18 && currentDate < new Date(birthDate.setFullYear(currentYear)))) {
+        errors.fechaNacimiento = "Debes ser mayor de 18 años";
+      }
+    }
+
+    if (!formData.correo) {
+      newErrors.correo = "El correo es obligatorio.";
+    }else if (!/^[a-z0-9._%+-]+@[a-z0-9*-]+\.[a-z]+$/.test(formData.correo)) {
+      errors.correo = "Correo no es válido";
+    }
+
+    if (!formData.telefono) {
+      newErrors.telefono = "El número de teléfono es obligatorio.";
+    }
+
+    if (!formData.password) {
+      newErrors.password = "La contraseña es obligatoria.";
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      newErrors.confirmPassword = "Las contraseñas no coinciden.";
+    }
+
+    if (!formData.rol) {
+      newErrors.rol = "El rol es obligatorio.";
+    }
+
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      // Aquí puedes manejar el submit del formulario
+      console.log("Formulario enviado", formData);
+      setErrors({});
+    }
+  };
+
+  const handleCancel = () => {
+    // Aquí puedes manejar la acción de cancelar
+    console.log("Formulario cancelado");
+    // Podrías limpiar el formulario si lo deseas
+    setFormData({
+      cedula: "",
+      nombre: "",
+      ciudad: "",
+      fecha_nacimiento: "",
+      correo: "",
+      telefono: "",
+      password: "",
+      confirmPassword: "",
+      rol: "",
+    });
+  };
+
+  return <UserForm formData={formData}
+  handleChange={handleChange}
+  handleSubmit={handleSubmit}
+  handleCancel={handleCancel} titleData="Crear Usuario" btnTitle="Crear Usuario" errors={errors} />;
 };
 
 export default RegisterUser;

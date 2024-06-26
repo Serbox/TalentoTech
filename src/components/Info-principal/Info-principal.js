@@ -7,6 +7,7 @@ import ImgHackatones from '../../IMG/hackatones.svg';
 import ImgPQR from '../../IMG/PQR.svg';
 import ImgBootcamps from '../../IMG/Bootcamps.svg';
 import ImgUsuario from '../../IMG/Usuario.svg';
+import { Link } from 'react-router-dom';
 
 const Info = () => {
 
@@ -119,7 +120,7 @@ const Info = () => {
                 </div>
                 <ul className='grid grid-cols-3 grid-rows-2 pb-16'>
                         <li className='flex flex-row justify-between'>
-                            <a href='#' className='block w-96 h-52 p-6 bg-yellow-300 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-yellow-500 hover:bg-yellow-400'>
+                            <Link to={"/users"} className='block w-96 h-52 p-6 bg-yellow-300 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-yellow-500 hover:bg-yellow-400'>
                                 <h1 className='font-semibold'>
                                     usuario
                                 </h1>
@@ -131,7 +132,7 @@ const Info = () => {
                                     <i className="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
                                 <img src={ImgUsuario} alt="imagen Market" className='absolute bottom-2 right-2'/>
-                            </a>
+                            </Link>
                         </li>
                         <li className='flex flex-row justify-between'>
                             <a href='#' className='block w-96 h-52 p-6 bg-sky-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-sky-600 hover:bg-sky-500'>
