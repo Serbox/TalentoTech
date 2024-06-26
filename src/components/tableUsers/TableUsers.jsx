@@ -13,16 +13,27 @@ const users = [
 ];
 
 const columns = [
+    {
+        name: '',    
+        cell: row => (
+          <>
+            <div className='img-users-table'>
+                <img src="" alt="" />
+            </div>
+          </>
+        ),
+      },
   { name: 'Nombre', selector: row => row.name, sortable: true },
   { name: 'Email', selector: row => row.email, sortable: true },
   { name: 'Rol', selector: row => row.role, sortable: true },
-  { name: 'Sitios', selector: row => row.sites, sortable: true },
+  { name: 'Promedio', selector: row => row.sites, sortable: true },
   {
-    name: 'Acciones',
+    name: 'Acciones',    
     cell: row => (
       <>
-        <button onClick={() => alert('Reenviar')}>Reenviar</button>
-        <Modal Title={"✏️"} Form={<Editar/>}/>
+        <button> 
+         <Modal Title={"✏️"} Form={<Editar/>}/>
+        </button>
         <button onClick={() => alert('Eliminar')}>🗑️</button>
       </>
     ),
@@ -31,11 +42,16 @@ const columns = [
 
 const TableUsers = () => {
   return (
-    <div className="container">
-      <h1 className='mt-[80px]'>Administración de Usuarios</h1>
-      <Modal Title={"Agregar usuario"} Form={<RegisterUser/>}/>
+
+      
+      <div className="container-table-users">
+      <h1 className='title-admi-users'>Administración de Usuarios</h1>
+      <div className="btn-add-users">
+
+        <Modal Title={"Agregar usuario"} Form={<RegisterUser/>}/>
+      </div>
       <DataTable
-        title="Todas las aplicaciones"
+        title="Usuarios del bootcamp"
         columns={columns}
         data={users}
         pagination

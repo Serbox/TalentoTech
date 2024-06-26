@@ -4,7 +4,7 @@ function modal({Form, Title}) {
   return (
     <div className="content_editar_usuario">
       <input type="checkbox" id="btn-modal" />
-      <label for="btn-modal" className="lbl-modal">
+      <label for="btn-modal" className="">
         {Title}
       </label>
       <div className="modale">
