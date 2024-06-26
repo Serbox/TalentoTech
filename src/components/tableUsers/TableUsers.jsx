@@ -3,6 +3,7 @@ import DataTable from 'react-data-table-component';
 import './TableUsers.css';
 import Editar from '../forms/Editar';
 import Modal from '../Modal/modal';
+import RegisterUser from '../forms/RegisterUser';
 
 const users = [
   { name: 'Invitación pendiente', email: '', role: '', sites: 'Todos los sitios' },
@@ -32,7 +33,7 @@ const TableUsers = () => {
   return (
     <div className="container">
       <h1 className='mt-[80px]'>Administración de Usuarios</h1>
-      <Modal Title={"Agregar usuario"} Form={<Editar/>}/>
+      <Modal Title={"Agregar usuario"} Form={<RegisterUser/>}/>
       <DataTable
         title="Todas las aplicaciones"
         columns={columns}
