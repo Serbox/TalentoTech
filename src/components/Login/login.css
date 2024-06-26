@@ -1,0 +1,40 @@
+.Title_login{
+  font-family: "Potta One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--text-xl);
+  color: var(--primary);
+}
+.login-text{
+  font-size: var(--text-xs) !important;
+}
+.Text_login{
+  font-size: var(--text-sm);
+  color: var(--primary);
+}
+.buttoner{
+  background-color: var(--tertiary);
+}
+.login_ini{
+  max-width: 30% !important;
+}
+.transparent{
+  background-color: rgba(240, 248, 255, 0) !important;
+}
+.font{
+  font-size: var(--text-sm);
+  color: var(--primary);
+}
+.button{
+  color: white;
+  background-color: var(--primary);
+}
+.buttoner{
+  max-width: 55%;
+}
+.continer {
+  background-color: #082563;
+}
+.Image_login {
+  height: 100vh;
+}

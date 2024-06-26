@@ -4,16 +4,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import From from 'react-bootstrap/Form';
-import Background from '../IMG/BackgroundLogin.png';
+import Background from '../../IMG/BackgroundLogin.png';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
-import '../CSS/login.css'
+import './login.css';
 function Login() {
   return (
     <Container fluid className='continer w-100 p-0'>
         <Row className='w-100 m-0'>
-            <Col className='tw-bg-white px-3 py-5 login_ini'>
+            <Col className='bg-white px-3 py-5 login_ini'>
                 <From className='w-100 d-flex flex-column justify-content-center gap-5'>
                     <From.Group as={Row} className='w-100 m-0 d-flex flex-row justify-content-center'>
                         <div className='buttoner d-flex flex-row justify-content-center p-2 mb-2 rounded-pill'>

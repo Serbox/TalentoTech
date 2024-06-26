@@ -13,6 +13,7 @@ import PQR from './pages/pqr';
 import Hackatones from './pages/hackathon';
 import JobConnection from './pages/jobConnection';
 import Marketplace from './pages/marketplace';
+import Login from './components/Login/Login';
 
 const router = createBrowserRouter([
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   ,
   {path: '/marketplace',
     element: <Marketplace/>
+  }
+  ,
+  {path: '/login',
+    element: <Login/>
   }
 
 
