@@ -43,8 +43,6 @@ function App() {
         <div className='tools'>
           <Tools/>
         </div> 
-        <div className=''>
-        </div>
 
         
 
