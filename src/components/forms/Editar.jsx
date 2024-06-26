@@ -1,6 +1,5 @@
-import React from "react";
 import RegisterImg from "../../IMG/register.jpg";
-import Swal from "sweetalert2";
+//import Swal from "sweetalert2";
 
 const Editar = () => {
 

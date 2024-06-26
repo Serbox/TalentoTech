@@ -5,14 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import RegisterUser from './components/forms/RegisterUser';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import UsersPage from './pages/Userpage/UsersPage';
 
 const router = createBrowserRouter([
 
   {path: '/',
     element: <App/>
   },
-  {path: '/example',
-    element: <RegisterUser/>
+  {path: '/users',
+    element: <UsersPage/>
   }
 
 

@@ -2,19 +2,20 @@ import React from 'react'
 import './Header.css'
 import img1 from '../../IMG/logo_talento.svg'
 import img2 from '../../IMG/tec-presidencia.svg'
+import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <>
     <header>
          <div className='imgs'>
-            <a href='#'><img className='img' src={img1}/></a>
+            <Link to={"/"}><img className='img' src={img1}/></Link>
             <a href='#'><img className='img' src={img2}></img></a>
          </div>
          <div className='nav-bar'>
             <nav className='options'>
                 <ul>
                     <li className='dropdown'>
-                        <a href='#'>Inicio</a>
+                        <Link to={"/"} href='#'>Inicio</Link>
                         <div className='dropdown-content'>
                             <a href='#'>Bootcamps</a>
                         </div>

@@ -5,6 +5,8 @@
   }
   
   .add-user-btn {
+    margin-top: 15px;
+    margin-bottom: 20px;
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
