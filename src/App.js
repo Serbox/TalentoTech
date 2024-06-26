@@ -8,8 +8,7 @@ import SlideBar from './components/SlideBar/SlideBar';
 import Class from './components/Class/Class';
 import SesionDataTable from './components/DataTable/DataTable';
 import Tools from './components/Tools/Tools';
-import Editar from './components/forms/Editar';
-import Modal from './components/Modal/modal';
+
 import TableUsers from './components/tableUsers/TableUsers';
 
 function App() {
@@ -47,7 +46,6 @@ function App() {
           <Tools/>
         </div> 
         <div className=''>
-          <Modal Title={"Editar estudiante"} Form={<Editar/>}/>
         </div>
 
         

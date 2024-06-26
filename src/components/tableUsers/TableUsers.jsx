@@ -1,6 +1,8 @@
 import React from 'react';
 import DataTable from 'react-data-table-component';
-import './TableUsers.css'
+import './TableUsers.css';
+import Editar from '../forms/Editar';
+import Modal from '../Modal/modal';
 
 const users = [
   { name: 'Invitación pendiente', email: '', role: '', sites: 'Todos los sitios' },
@@ -19,7 +21,7 @@ const columns = [
     cell: row => (
       <>
         <button onClick={() => alert('Reenviar')}>Reenviar</button>
-        <button onClick={() => alert('Editar')}>✏️</button>
+        <Modal Title={"✏️"} Form={<Editar/>}/>
         <button onClick={() => alert('Eliminar')}>🗑️</button>
       </>
     ),
