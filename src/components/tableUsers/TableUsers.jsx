@@ -29,7 +29,7 @@ const columns = [
 const TableUsers = () => {
   return (
     <div className="container">
-      <h1>Administración de Usuarios</h1>
+      <h1 className='mt-[80px]'>Administración de Usuarios</h1>
       <button className="add-user-btn">Agregar usuarios</button>
       <DataTable
         title="Todas las aplicaciones"

@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import RegisterUser from './components/forms/RegisterUser';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import UsersPage from './pages/Userpage/UsersPage';
+import AsistenciaPage from './pages/AsistenciaPage/AsistenciaPage';
 
 const router = createBrowserRouter([
 
@@ -14,6 +15,9 @@ const router = createBrowserRouter([
   },
   {path: '/users',
     element: <UsersPage/>
+  },{
+    path: '/asistencia',
+    element: <AsistenciaPage/>
   }
 
 

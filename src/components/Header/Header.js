@@ -26,6 +26,7 @@ const Header = () => {
                             <a href='#'>Hackathons</a>
                             <a href='#'>Job Connections</a>
                             <a href='#'>Marketplace</a>
+                            <Link to={"/asistencia"}>Crud Asistencia</Link>
                         </div>
                     </li>
                     <li className='dropdown'>
