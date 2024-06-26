@@ -1,6 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Info.css';
 import Student from '../../IMG/estudent.jpg';
+import ImgMarketPlace from '../../IMG/Marketplace.svg';
+import ImgJobConnection from '../../IMG/JobConnection.svg';
+import ImgHackatones from '../../IMG/hackatones.svg';
+import ImgPQR from '../../IMG/PQR.svg';
+import ImgBootcamps from '../../IMG/Bootcamps.svg';
+import ImgUsuario from '../../IMG/Usuario.svg';
 
 const Info = () => {
 
@@ -111,6 +117,98 @@ const Info = () => {
                         <img src={Student} alt='Student' title='Student' />
                     </div>
                 </div>
+                <ul className='grid grid-cols-3 grid-rows-2 pb-16'>
+                        <li className='flex flex-row justify-between'>
+                            <a href='#' className='block w-96 h-52 p-6 bg-yellow-300 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-yellow-500 hover:bg-yellow-400'>
+                                <h1 className='font-semibold'>
+                                    usuario
+                                </h1>
+                                <p className='font-semibold'>Crud usuario</p>
+                                <div className='flex flex-row pt-5'>
+                                    <p className='font-semibold text-base'>
+                                        Link Ingeso
+                                    </p>
+                                    <i className="bi bi-chevron-right px-3 text-base"></i>
+                                </div>
+                                <img src={ImgUsuario} alt="imagen Market" className='absolute bottom-2 right-2'/>
+                            </a>
+                        </li>
+                        <li className='flex flex-row justify-between'>
+                            <a href='#' className='block w-96 h-52 p-6 bg-sky-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-sky-600 hover:bg-sky-500'>
+                                <h1 className='font-semibold'>
+                                    bootcamps
+                                </h1>
+                                <p className='font-semibold'>Crud bootcamp</p>
+                                <div className='flex flex-row pt-5'>
+                                    <p className='font-semibold text-base'>
+                                        Link Ingeso
+                                    </p>
+                                    <i class="bi bi-chevron-right px-3 text-base"></i>
+                                </div>
+                                <img src={ImgBootcamps} alt="imagen Market" className='absolute bottom-0 right-4'/>
+                            </a>
+                        </li>
+                        <li className='flex flex-row justify-between'>
+                            <a href='#' className='block w-96 h-52 p-6 bg-blue-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-blue-600 hover:bg-blue-500'>
+                                <h1 className='font-semibold'>
+                                    pqr
+                                </h1>
+                                <p className='font-semibold'>Crud pqr</p>
+                                <div className='flex flex-row pt-5'>
+                                    <p className='font-semibold text-base'>
+                                        Link Ingeso
+                                    </p>
+                                    <i class="bi bi-chevron-right px-3 text-base"></i>
+                                </div>
+                                <img src={ImgPQR} alt="imagen Market" className='absolute bottom-0 right-4'/>
+                            </a>
+                        </li>
+                        <li className='flex flex-row justify-betwee'>
+                            <a href='#' className='block w-96 h-52 p-6 bg-purple-500 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-purple-700 hover:bg-purple-600'>
+                                <h1 className='font-semibold'>
+                                    hackathons
+                                </h1>
+                                <p className='font-semibold'>Crud hackatones</p>
+                                <div className='flex flex-row pt-5'>
+                                    <p className='font-semibold text-base'>
+                                        Link Ingeso
+                                    </p>
+                                    <i class="bi bi-chevron-right px-3 text-base"></i>
+                                </div>
+                                <img src={ImgHackatones} alt="imagen Market" className='absolute bottom-0 right-4 '/>
+                            </a>
+                        </li>
+                        <li className='flex flex-row justify-between'>
+                        <a href='#' className='block w-96 h-52 p-6  bg-red-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-red-600 hover:bg-red-500'>
+                                <h1 className='font-semibold'> 
+                                    job connections
+                                </h1>
+                                <p className='font-semibold'>Crud job connections</p>
+                                <div className='flex flex-row pt-5'>
+                                    <p className='font-semibold text-base'>
+                                        Link Ingeso
+                                    </p>
+                                    <i class="bi bi-chevron-right px-3 text-base"></i>
+                                </div>
+                                <img src={ImgJobConnection} alt="imagen Market" className='absolute bottom-0 right-4'/>
+                            </a>
+                        </li>
+                        <li className='flex flex-row justify-between'>
+                            <a href='#' className='relatove w-96 h-52 p-6  bg-lime-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-lime-600 hover:bg-lime-500'>
+                                <h1 className='font-semibold'>
+                                    marketplace
+                                </h1>
+                                <p className='font-semibold'>Crud marketplace</p>
+                                <div className='flex flex- pt-5'>
+                                    <p className='font-semibold text-base'>
+                                        Link Ingeso
+                                    </p>
+                                    <i class="bi bi-chevron-right px-3 text-base"></i>
+                                </div>
+                                <img src={ImgMarketPlace} alt="imagen Market" className='absolute bottom-0 right-4'/>
+                            </a>
+                        </li>
+                    </ul>
                 <h1>Estudiantes reconocidos por su talento!</h1>
                 <div className="wrapper" ref={wrapperRef}>
                     <i id="left" className="fa-solid fa-chevron-left"></i>
