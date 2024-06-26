@@ -130,12 +130,12 @@ const Info = () => {
                             </Carousel.Item>
                         </Carousel>
                     </div>
-                    <div className='max-w-xl p-6 flex flex-col align-middle justify-center'>
-                        <h1 className='font-bold text-gray-700 text-3xl'>Novedades en Talento Tech</h1>
-                        <p className='font-bold text-blue-500 text-xl'> Crea tus propios novedades </p>
+                    <div className='max-w-xl p-6 flex flex-col justify-center align-middle'>
+                        <h1 className='block font-bold text-gray-700 text-3xl text-center'>Novedades en Talento Tech</h1>
+                        <p className='block font-bold text-blue-500 text-2xl text-center'> Crea tus propios novedades </p>
 
-                        <a className=''> Crea tus propias noticias</a>
-                        <a className=''> Crea tus propias Novedades</a>
+                        <a className='btn bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-700 rounded'> Crea tus propias noticias</a>
+                        <a className='btn bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-700 rounded'> Crea tus propias Novedades</a>
                     </div>
                 </div>
                 <ul className='grid grid-cols-3 grid-rows-2 pb-16'>
