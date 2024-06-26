@@ -6,13 +6,13 @@ const users = [
   { name: 'Invitación pendiente', email: '', fecha: '', sites: 'Todos los sitios' },
   { name: 'Juan Sebastian Hernandez Reyes', email: 'auxiliarsistemas@gep.com.co', fecha: '26/06/2024', sites: 'Sesion 45' },
   { name: 'Juan Sebastian Hernandez Reyes', email: 'auxiliarsistemas@gep.com.co', fecha: '26/06/2024', sites: 'Sesion 30' },
-  { name: 'Juan Sebastian Hernandez Reyes', email: 'auxiliarsistemas@gep.com.co', fecha: '26/06/2024 SAC', sites: 'Sesion 35' }
+  { name: 'Juan Sebastian Hernandez Reyes', email: 'auxiliarsistemas@gep.com.co', fecha: '26/06/2024', sites: 'Sesion 35' }
 ];
 
 const columns = [
     { name: 'Nombre', selector: row => row.name, sortable: true },
     { name: 'Email', selector: row => row.email, sortable: true },
-    { name: 'Fecha', selector: row => row.role, sortable: true },
+    { name: 'Fecha', selector: row => row.fecha, sortable: true },
     { name: 'Sesion', selector: row => row.sites, sortable: true },
     {
       name: 'Acciones',
