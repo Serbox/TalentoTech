@@ -59,6 +59,11 @@
     background-color: rgba(0, 0, 0, 0.089) ;
     padding: 5px;
     margin: 10px;
+    font-size: larger;
     border-radius: 4px;
     cursor: pointer;
+}
+.lbl-modal:hover {
+    background-color: rgb(55, 98, 214);
+    color: white;
 }

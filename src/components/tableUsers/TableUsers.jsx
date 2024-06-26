@@ -32,7 +32,7 @@ const TableUsers = () => {
   return (
     <div className="container">
       <h1 className='mt-[80px]'>Administración de Usuarios</h1>
-      <button className="add-user-btn">Agregar usuarios</button>
+      <Modal Title={"Agregar usuario"} Form={<Editar/>}/>
       <DataTable
         title="Todas las aplicaciones"
         columns={columns}
