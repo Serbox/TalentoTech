@@ -7,6 +7,12 @@ import RegisterUser from './components/forms/RegisterUser';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import UsersPage from './pages/Userpage/UsersPage';
 import AsistenciaPage from './pages/AsistenciaPage/AsistenciaPage';
+import Usuario from './pages/usuario';
+import Bootcamp from './pages/bootcamp';
+import PQR from './pages/pqr';
+import Hackatones from './pages/hackathon';
+import JobConnection from './pages/jobConnection';
+import Marketplace from './pages/marketplace';
 
 const router = createBrowserRouter([
 
@@ -18,6 +24,30 @@ const router = createBrowserRouter([
   },{
     path: '/asistencia',
     element: <AsistenciaPage/>
+  }
+  ,
+  {path: '/usuario',
+    element: <Usuario/>
+  }
+  ,
+  {path: '/bootcamp',
+    element: <Bootcamp/>
+  }
+  ,
+  {path: '/pqr',
+    element: <PQR/>
+  }
+  ,
+  {path: '/hackatones',
+    element: <Hackatones/>
+  }
+  ,
+  {path: '/jobconnections',
+    element: <JobConnection/>
+  }
+  ,
+  {path: '/marketplace',
+    element: <Marketplace/>
   }
 
 
