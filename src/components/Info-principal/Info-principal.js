@@ -10,9 +10,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-
-import ImgCarrousel from '../../IMG/carrusel.jpg'
-
 import { Link } from 'react-router-dom';
 
 const Info = () => {
@@ -144,7 +141,7 @@ const Info = () => {
                                 <p className='font-semibold'>Editar usuario</p>
                                 <div className='flex flex-row pt-5'>
                                     <p className='font-semibold text-base'>
-                                        Link Ingeso
+                                        Link Ingreso
                                     </p>
                                     <i className="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
@@ -159,7 +156,7 @@ const Info = () => {
                                 <p className='font-semibold'>Editar bootcamps</p>
                                 <div className='flex flex-row pt-5'>
                                     <p className='font-semibold text-base'>
-                                        Link Ingeso
+                                        Link Ingreso
                                     </p>
                                     <i class="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
@@ -174,7 +171,7 @@ const Info = () => {
                                 <p className='font-semibold'>Editar pqrs</p>
                                 <div className='flex flex-row pt-5'>
                                     <p className='font-semibold text-base'>
-                                        Link Ingeso
+                                        Link Ingreso
                                     </p>
                                     <i class="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
@@ -189,7 +186,7 @@ const Info = () => {
                                 <p className='font-semibold'>Editar hackatones</p>
                                 <div className='flex flex-row pt-5'>
                                     <p className='font-semibold text-base'>
-                                        Link Ingeso
+                                        Link Ingreso
                                     </p>
                                     <i class="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
@@ -204,7 +201,7 @@ const Info = () => {
                                 <p className='font-semibold'>Editar job connections</p>
                                 <div className='flex flex-row pt-5'>
                                     <p className='font-semibold text-base'>
-                                        Link Ingeso
+                                        Link Ingreso
                                     </p>
                                     <i class="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
@@ -219,7 +216,7 @@ const Info = () => {
                                 <p className='font-semibold'>Editar marketplace</p>
                                 <div className='flex flex- pt-5'>
                                     <p className='font-semibold text-base'>
-                                        Link Ingeso
+                                        Link Ingreso
                                     </p>
                                     <i class="bi bi-chevron-right px-3 text-base"></i>
                                 </div>

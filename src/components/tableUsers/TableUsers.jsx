@@ -1,7 +1,7 @@
 import React from 'react';
 import DataTable from 'react-data-table-component';
 import './TableUsers.css';
-import Editar from '../forms/Editar';
+import Editar from '../forms/Editar.jsx';
 import Modal from '../Modal/modal';
 import RegisterUser from '../forms/RegisterUser';
 
@@ -48,7 +48,7 @@ const TableUsers = () => {
       <h1 className='title-admi-users'>Administración de Usuarios</h1>
       <div className="btn-add-users">
 
-        <Modal Title={"Agregar usuario"} Form={<RegisterUser/>}/>
+       
       </div>
       <DataTable
         title="Usuarios del bootcamp"
