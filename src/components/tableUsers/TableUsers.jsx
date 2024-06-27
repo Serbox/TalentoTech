@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DataTable from 'react-data-table-component';
 import './TableUsers.css';
 import Editar from '../forms/Editar.jsx';
@@ -32,7 +32,7 @@ const columns = [
     name: 'Acciones',    
     cell: row => (
       <>
-        <Modal/>
+        <Modal Form={<Editar/>}/>
         <button onClick={() => alert('Eliminar')}>🗑️</button>
       </>
     ),
@@ -40,10 +40,7 @@ const columns = [
 ];
 
 const TableUsers = () => {
-  const [open, setopen] = useState();
-  return (
-
-      
+  return (      
       <div className="container-table-users">
       <h1 className='title-admi-users'>Administración de Usuarios</h1>
       <div className="btn-add-users">
