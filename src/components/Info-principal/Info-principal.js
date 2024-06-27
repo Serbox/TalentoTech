@@ -129,8 +129,8 @@ const Info = () => {
                                 <h1 className='block font-bold text-gray-600 text-2xl text-center mb-0'> News Talento Tech</h1>
                                 <p className='block font-bold text-blue-400 text-xl text-center mb-20'> Crea tus novedades </p>
 
-                                <a className='shadow-sm mb-2 mx-4 text-sm btn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 border-b-4 border-blue-600 hover:border-blue-700 hover:shadow-black hover:font-semibold hover:text-sm rounded'> APRENDE A CREAR NOVEDADES </a>
-                                <a className='shadow-sm mx-4 text-sm btn bg-white text-blue-700 hover:text-white font-semibold py-2 px-4 border-b-4 border-gray-300 hover:border-gray-400 hover:shadow-black hover:font-semibold hover:text-sm rounded'> CREA NOVEDADES </a>
+                                <a className='btn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 border-b-4 border-blue-600 hover:border-blue-700 hover:shadow-black hover:font-semibold hover:text-sm shadow mb-2 mx-4 text-sm rounded'> APRENDE A CREAR NOVEDADES </a>
+                                <a className='btn bg-white text-blue-600 hover:text-blue-600 font-semibold py-2 px-4 border-b-4 border-gray-300 hover:border-gray-400 hover:shadow-black hover:font-semibold hover:text-sm shadow mx-4 text-sm rounded'> CREA NOVEDADES </a>
                             </div>
                         </Col>
                     </Row>
