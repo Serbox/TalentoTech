@@ -123,7 +123,7 @@ const Info = () => {
                         </Col>
                         <Col className="px-0 mx-2">
                             <div className='max-w-xl px-2 flex flex-col justify-center align-middle pt-10'>
-                                <h1 className='block font-bold text-gray-600 text-2xl text-center mb-0'> News Talento Tech</h1>
+                                <h1 className='block font-bold text-gray-600 text-3xl text-center mb-0'> News Talento Tech</h1>
                                 <p className='block font-bold text-blue-400 text-xl text-center mb-20'> Crea tus novedades </p>
 
                                 <a className='btn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 border-b-4 border-blue-600 hover:border-blue-700 hover:shadow-black hover:font-semibold hover:text-sm shadow mb-2 mx-4 text-sm rounded'> APRENDE A CREAR NOVEDADES </a>

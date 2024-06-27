@@ -1,79 +1,7 @@
-#image {
-    object-fit: initial !important;
-    width: 95%;
-    height: 98%;
-    margin: auto;
-}
 
-.content_editar_usuario{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.modale{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.227);
-    transition: all 500ms ease;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 3;
-}
-#btn-modal:checked ~ .modale {
-    opacity: 1;
-    visibility: visible;
-}
-.contenedor_editar {
-    width: 67%;
-    height: 96.8%;
-    margin: auto;
-    background-color: white;
-    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.594);
-    transition: all 500ms ease;
-    position: relative;
-    transform: translateY(-30%);
-    border-radius: 2rem;
-}
-
-#btn-modal:checked ~ .modale .contenedor_editar {
-    transform: translateY(0%);
-
-}
-
-.contenedor_editar > label{
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    font-weight: bolder;
-    color: rgb(3, 3, 82);
-    font-size: xx-large;
-    cursor: pointer;
-}
-#btn-modal{
-    display: none;
-}
-.lbl-modal{
-    background-color: rgba(0, 0, 0, 0.089) ;
-    padding: 5px;
-    margin: 10px;
-    font-size: larger;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.lbl-modal:hover {
-    background-color: rgb(55, 98, 214);
-    color: white;
-}
 
 .background_modal{
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.046);
     backdrop-filter: blur(2px);
-}
-.modal{
-    max-height: 60%;
-    max-width: 60%;
 }

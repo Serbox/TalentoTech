@@ -8,19 +8,15 @@ const Editar = () => {
                     <form action="/update" method="POST">
                       <div className="container text-left p-0">
                         <div className="d-flex flex-row justify-content-center w-100 h-100">
-                          <div className="col">
-                            <img src={RegisterImg} alt="" id="image" className=" rounded-l-3xl"></img>
+                          <div className="col relative">
+                            <h2 className="absolute top-3 left-3 font-extrabold text-3xl text-white text-left rounded-md">EDITAR USUARIO</h2>
+                            <img src={RegisterImg} alt="" id="image" className=" rounded-l-lg h-100 w-100"></img>
                           </div>
                           <div className="col p-3 ">
-                            <h2 className="font-extrabold text-3xl text-blue-900 text-left rounded-md">EDITAR USUARIO</h2>
                             <div className="border w-28 border-spacing-24 border-blue-950 mb-2"></div>
                             <div className="row m-0 d-flex flex-row justify-content-between py-2">
                               <div className="col d-flex flex-column justify-content-center gap-1">
-                              <label for="number-input" class="block mb-2 text-base text-gray-700 font-medium">Cedula :</label>
-                              <input type="number" id="number-input" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="90210" required />
-                              </div>
-                              <div className="col d-flex flex-column justify-content-center gap-1">
-                              <label for="website-admin" class="block mb-2 text-base text-gray-700 font-medium">Nombre:</label>
+                              <label for="website-admin" class="block mb-2 text-base text-gray-700 font-medium">Nombres y Apellidos:</label>
                                 <div class="flex">
                                   <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
                                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -33,14 +29,15 @@ const Editar = () => {
                             </div>
                             <div class="row m-0 d-flex flex-row justify-content-between py-2">
                               <div className="col d-flex flex-column justify-content-center gap-1">
-                                <label for="zip-input" class="block mb-2 text-base text-gray-700 font-medium">Ciudad :</label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
-                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                                            <path d="M8 0a7.992 7.992 0 0 0-6.583 12.535 1 1 0 0 0 .12.183l.12.146c.112.145.227.285.326.4l5.245 6.374a1 1 0 0 0 1.545-.003l5.092-6.205c.206-.222.4-.455.578-.7l.127-.155a.934.934 0 0 0 .122-.192A8.001 8.001 0 0 0 8 0Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
-                                        </svg>
-                                    </div>
-                                    <input type="text" id="zip-input" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 " placeholder="Bogota D.C" required />
+                                <label for="number-input" class="block mb-2 text-base text-gray-700 font-medium">Cedula :</label>
+                                <div class="flex">
+                                  <span class="inline-flex items-center px-1 w-32 text-base text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+                                      <select class="bg-transparent border-transparent text-gray-900 text-sm rounded-e-lg focus:ring-blue-500 block w-full p-2.5">
+                                          <option value="Cedula" selected>CC</option>
+                                          <option value="Tarjeta de identidad">TI</option>
+                                      </select>
+                                  </span>
+                                  <input type="number" id="number-input" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="90210" required />
                                 </div>
                               </div>
                               <div className="col d-flex flex-column justify-content-center gap-1">
