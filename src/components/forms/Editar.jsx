@@ -1,4 +1,3 @@
-import RegisterImg from "../../IMG/register.jpg";
 //import Swal from "sweetalert2";
 
 const Editar = () => {
@@ -8,10 +7,7 @@ const Editar = () => {
                     <form action="/update" method="POST">
                       <div className="container text-left p-0">
                         <div className="d-flex flex-row justify-content-center w-100 h-100">
-                          <div className="col relative">
-                            <h2 className="absolute top-3 left-3 font-extrabold text-3xl text-white text-left rounded-md">EDITAR USUARIO</h2>
-                            <img src={RegisterImg} alt="" id="image" className=" rounded-l-lg h-100 w-100"></img>
-                          </div>
+                          
                           <div className="col p-3 ">
                             <div className="border w-28 border-spacing-24 border-blue-950 mb-2"></div>
                             <div className="row m-0 d-flex flex-row justify-content-between py-2">

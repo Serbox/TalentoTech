@@ -1,34 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './modal.css';
-import { Button } from 'bootstrap';
 
-function modal({Form, Title}) {
+function modal({open, onclose, children}) {
   return (
-    /*<div className="content_editar_usuario">
-      <input type="checkbox" id="btn-modal" />
-      <label for="btn-modal" className="lbl-modal">
-        {Title}
-      </label>
-      <div className="modale">
-        <div className="contenedor_editar">
-              <div className="contenido_editar p-2">
-                {Form}
-              </div>
-        </div>
+    //backdrop
+    <div className={`fixed inset-0 justify-center items-center transition-colors z-10 ${open ? "visible bg-black/20" : "invisible"}`} onClick={onclose}>
+      {/*modal*/}
+      <div onClick={e => e.stopPropagation()} className={`mx-auto mt-10 max-w-[50%] max-h-[90%] bg-white rounded-xl shadow p-2 transition-all ${open ? "scale-100": "scale-125 opacity-0"}`}>
+        <button onClick={onclose} className='absolute top-2 right-2 p-1 rounded-lg text-gray-400 bg-white hover:bg-gray-50 hover:text-gray-600'>
+          <p>X</p>
+        </button>
+        {children}
       </div>
-    </div>*/
-    <>
-      <label for="btn-modal" className="lbl-modal">
-        {Title}
-      </label>
-      <div className='background_modal fixed inset-0 flex justify-center items-center'>
-        <input type="checkbox" id="btn-modal"/>
-        <div className='modale bg-white rounded flex flex-col justify-center items-center max-w-4xl mt-15 mb-15 rounded-l-xl'>
-          {Form}
-        </div>
-
-      </div>
-    </>
+    </div>
   );
 }
 
