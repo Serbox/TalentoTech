@@ -32,7 +32,7 @@ const columns = [
     cell: row => (
       <>
         <button> 
-         {/* <Modal Title={"✏️"} Form={<Editar/>}/> */}
+         <Modal Title={"✏️"} Form={<Editar/>}/>
         </button>
         <button onClick={() => alert('Eliminar')}>🗑️</button>
       </>

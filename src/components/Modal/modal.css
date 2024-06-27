@@ -1,3 +1,22 @@
+.modale{
+    transition: all 500ms ease;
+}
+#btn-modal:checked ~ .modale {
+    opacity: 1;
+    visibility: visible;
+    transition: all 500ms ease;
+    transform: translateY(-30%);
+}
+
+
+#btn-modal:checked ~ .modale .contenedor_editar {
+    transform: translateY(0%);
+
+}
+
+#btn-modal{
+    display: none;
+}
 
 
 .background_modal{
