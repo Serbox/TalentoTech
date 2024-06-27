@@ -7,6 +7,9 @@ import ImgPQR from '../../IMG/PQR.svg';
 import ImgBootcamps from '../../IMG/Bootcamps.svg';
 import ImgUsuario from '../../IMG/Usuario.svg';
 import Carousel from 'react-bootstrap/Carousel';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 import ImgCarrousel from '../../IMG/carrusel.jpg'
 
@@ -108,36 +111,30 @@ const Info = () => {
 
     return (
         <>
-            <div className='carrousel-student  p-12'>
-                <div className='flex flex-row p-6'>
-                    <div className='max-w-sm max-h-96'>
-                        <Carousel>
-                            <Carousel.Item>
-                                <img src="https://www.mintic.gov.co/portal/715/articles-333597_foto_marquesina.jpg" className='h-auto' alt="..." />
-                                <Carousel.Caption>
-                                <h3>First slide label</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img src="https://www.mintic.gov.co/portal/715/articles-333040_foto_marquesina.jpg" alt="..." />
-                                <Carousel.Caption>
-                                <h3>Third slide label</h3>
-                                <p>
-                                    Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                                </p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        </Carousel>
-                    </div>
-                    <div className='max-w-xl p-6 flex flex-col justify-center align-middle'>
-                        <h1 className='block font-bold text-gray-700 text-3xl text-center'>Novedades en Talento Tech</h1>
-                        <p className='block font-bold text-blue-500 text-2xl text-center'> Crea tus propios novedades </p>
+            <div className='carrousel-student  p-1'>
+                <Container className="px-0" fluid>
+                    <Row className=" w-100 h-100 m-0 px-40">
+                        <Col className=" mt-1 mx-2 p-0 py-3 rounded" xs={7}>
+                                <Carousel className='w-100 h-100'>
+                                    <Carousel.Item className='w-100 h-100'>
+                                        <img src="https://www.mintic.gov.co/portal/715/articles-333597_foto_marquesina.jpg" className='w-100 h-75 rounded-l-xl rounded-r-sm' alt="..." />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img src="https://www.mintic.gov.co/portal/715/articles-333040_foto_marquesina.jpg" className='w-100 h-75 rounded-l-xl rounded-r-sm' alt="..." />
+                                    </Carousel.Item>
+                                </Carousel>
+                        </Col>
+                        <Col className="px-0 mx-2">
+                            <div className='max-w-xl px-2 flex flex-col justify-center align-middle pt-10'>
+                                <h1 className='block font-bold text-gray-600 text-2xl text-center mb-0'> News Talento Tech</h1>
+                                <p className='block font-bold text-blue-400 text-xl text-center mb-20'> Crea tus novedades </p>
 
-                        <a className='btn bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-700 rounded'> Crea tus propias noticias</a>
-                        <a className='btn bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-700 rounded'> Crea tus propias Novedades</a>
-                    </div>
-                </div>
+                                <a className='shadow-sm mb-2 mx-4 text-sm btn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 border-b-4 border-blue-600 hover:border-blue-700 hover:shadow-black hover:font-semibold hover:text-sm rounded'> APRENDE A CREAR NOVEDADES </a>
+                                <a className='shadow-sm mx-4 text-sm btn bg-white text-blue-700 hover:text-white font-semibold py-2 px-4 border-b-4 border-gray-300 hover:border-gray-400 hover:shadow-black hover:font-semibold hover:text-sm rounded'> CREA NOVEDADES </a>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
                 <ul className='grid grid-cols-3 grid-rows-2 pb-16'>
                         <li className='flex flex-row justify-between'>
                             <Link to={"/users"} className='block w-96 h-52 p-6 bg-yellow-300 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-yellow-500 hover:bg-yellow-400'>
