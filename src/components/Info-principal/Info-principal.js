@@ -121,13 +121,13 @@ const Info = () => {
                                     </Carousel.Item>
                                 </Carousel>
                         </Col>
-                        <Col className="px-0 mx-2">
+                        <Col className="px-0 mx-0">
                             <div className='max-w-xl px-2 flex flex-col justify-center align-middle pt-10'>
                                 <h1 className='block font-bold text-gray-600 text-3xl text-center mb-0'> News Talento Tech</h1>
-                                <p className='block font-bold text-blue-400 text-xl text-center mb-6'> Crea tus novedades </p>
+                                <p className='block font-bold text-blue-400 text-xl text-center mb-9'> Crea tus novedades </p>
 
-                                <a className='btn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-4 border-b-4 border-blue-600 hover:border-blue-700 hover:shadow-black hover:font-semibold hover:text-sm shadow mb-2 mx-4 text-sm rounded'> APRENDE A CREAR NOVEDADES </a>
-                                <a className='btn bg-white text-blue-600 hover:text-blue-600 font-semibold py-4 px-4 border-b-4 border-gray-300 hover:border-gray-400 hover:shadow-black hover:font-semibold hover:text-sm shadow mx-4 text-sm rounded'> CREA NOVEDAD </a>
+                                <a className='btn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-3 border-b-4 border-blue-600 hover:border-blue-700 hover:shadow-black hover:font-semibold hover:text-sm shadow mb-2 mx-5 text-sm rounded'> APRENDE A CREAR NOVEDADES </a>
+                                <a className='btn bg-white text-blue-600 hover:text-blue-600 font-semibold py-3 px-3 border-b-4 border-gray-300 hover:border-gray-400 hover:shadow-black hover:font-semibold hover:text-sm shadow mx-5 text-sm rounded'> CREA NOVEDAD </a>
                             </div>
                         </Col>
                     </Row>
@@ -136,7 +136,7 @@ const Info = () => {
                         <li className='flex flex-row justify-between'>
                             <Link to={"/users"} className='block w-96 h-52 p-6 bg-yellow-300 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-yellow-500 hover:bg-yellow-400'>
                                 <h1 className='font-semibold'>
-                                    usuario
+                                    Usuario
                                 </h1>
                                 <p className='font-semibold'>Editar usuario</p>
                                 <div className='flex flex-row pt-5'>
@@ -151,7 +151,7 @@ const Info = () => {
                         <li className='flex flex-row justify-between'>
                             <a href='#' className='block w-96 h-52 p-6 bg-sky-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-sky-600 hover:bg-sky-500'>
                                 <h1 className='font-semibold'>
-                                    bootcamps
+                                    Bootcamps
                                 </h1>
                                 <p className='font-semibold'>Editar bootcamps</p>
                                 <div className='flex flex-row pt-5'>
@@ -166,7 +166,7 @@ const Info = () => {
                         <li className='flex flex-row justify-between'>
                             <a href='#' className='block w-96 h-52 p-6 bg-blue-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-blue-600 hover:bg-blue-500'>
                                 <h1 className='font-semibold'>
-                                    pqr
+                                    Pqr
                                 </h1>
                                 <p className='font-semibold'>Editar pqrs</p>
                                 <div className='flex flex-row pt-5'>
@@ -181,7 +181,7 @@ const Info = () => {
                         <li className='flex flex-row justify-betwee'>
                             <a href='#' className='block w-96 h-52 p-6 bg-purple-500 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-purple-700 hover:bg-purple-600'>
                                 <h1 className='font-semibold'>
-                                    hackathons
+                                    Hackathons
                                 </h1>
                                 <p className='font-semibold'>Editar hackatones</p>
                                 <div className='flex flex-row pt-5'>
@@ -196,7 +196,7 @@ const Info = () => {
                         <li className='flex flex-row justify-between'>
                         <a href='#' className='block w-96 h-52 p-6  bg-red-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-red-600 hover:bg-red-500'>
                                 <h1 className='font-semibold'> 
-                                    job connections
+                                    Job connections
                                 </h1>
                                 <p className='font-semibold'>Editar job connections</p>
                                 <div className='flex flex-row pt-5'>
@@ -211,7 +211,7 @@ const Info = () => {
                         <li className='flex flex-row justify-between'>
                             <a href='#' className='relatove w-96 h-52 p-6  bg-lime-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-lime-600 hover:bg-lime-500'>
                                 <h1 className='font-semibold'>
-                                    marketplace
+                                    Marketplace
                                 </h1>
                                 <p className='font-semibold'>Editar marketplace</p>
                                 <div className='flex flex- pt-5'>

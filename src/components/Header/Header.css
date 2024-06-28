@@ -2,7 +2,7 @@ header{
     position: absolute;
     width: 100%;
     height: 11vh;
-    background-color:#072563 ;
+    background-color:#04318a ;
     display: flex;
     align-items: center;
     gap: 22%;
@@ -35,7 +35,6 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
     gap: 20px;
 }
 
