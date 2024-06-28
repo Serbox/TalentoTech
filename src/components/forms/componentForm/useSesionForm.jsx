@@ -3,11 +3,14 @@ import PropTypes from "prop-types";
 import RegisterImg from "../../../IMG/register.jpg";
 
 
-const UserForm = ({ formData, handleChange, handleSubmit, handleCancel, errors, titleData, btnTitle }) => {
+const useSesionForm = ({ formData, handleChange, handleSubmit, handleCancel, errors, titleData, btnTitle }) => {
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="w-full">
       <div className="container text-left p-0">
         <div className="d-flex flex-row justify-content-center w-100 h-100">
+          <div className="col">
+            <img src={RegisterImg} alt="register" id="image" className="rounded-l-3xl" />
+          </div>
           <div className="col p-3">
             <h2 className="font-extrabold text-3xl text-blue-900 text-left rounded-md">{titleData}</h2>
             <div className="border w-28 border-spacing-24 border-blue-950 mb-2"></div>
@@ -132,7 +135,7 @@ const UserForm = ({ formData, handleChange, handleSubmit, handleCancel, errors, 
   );
 };
 
-UserForm.propTypes = {
+useSesionForm.propTypes = {
   formData: PropTypes.shape({
     cedula: PropTypes.string,
     nombre: PropTypes.string,
@@ -150,4 +153,4 @@ UserForm.propTypes = {
   errors: PropTypes.object.isRequired,
 };
 
-export default UserForm;
+export default useSesionForm;

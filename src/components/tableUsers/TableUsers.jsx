@@ -1,9 +1,12 @@
 import React from 'react';
 import DataTable from 'react-data-table-component';
 import './TableUsers.css';
-import Editar from '../forms/Editar.jsx';
+// import Editar from '../forms/Editar.jsx';
 import Modal from '../forms/formModal.jsx';
-
+import EditarUser from '../forms/ManageUsers/EditarUser.jsx';
+import RegisterUser from '../forms/ManageUsers/RegisterUser.jsx';
+import { Link } from 'react-router-dom';
+import Swal from "sweetalert2";
 
 const users = [
   { name: 'Invitación pendiente', email: '', role: '', sites: 'Todos los sitios' },
@@ -32,8 +35,20 @@ const columns = [
     name: 'Acciones',    
     cell: row => (
       <>
-        <Modal Form={<Editar/>}/>
-        <button onClick={() => alert('Eliminar')}>🗑️</button>
+        <Modal Form={<EditarUser/>} ButonTitle={'editar'} btnClass={'btn btn-danger'}/>
+        <button onClick={() => {
+          Swal.fire({
+            title: '¿Estás seguro de eliminar este usuario?',
+            showDenyButton: true,
+            confirmButtonText: `Eliminar`,
+            denyButtonText: `Cancelar`,
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire('Usuario eliminado', '', 'success')
+            } 
+          })
+        
+        }}>🗑️</button>
       </>
     ),
   },
@@ -43,8 +58,15 @@ const TableUsers = () => {
   return (      
       <div className="container-table-users">
       <h1 className='title-admi-users'>Administración de Usuarios</h1>
-      <div className="btn-add-users">
-       
+      <div className="flex justify-evenly align-middle mt-4 mb-4">
+      <div className='flex'>
+      <Modal Form={<RegisterUser/>} ButonTitle={'Registrar'} btnClass={'btn-add-users self-center'}/>
+      </div>
+      <div className='flex'>
+      <button className='bg-red-500 w-[150px] h-[40px] rounded-[10px] text-white font-bold self-center'>
+        <Link to='/'>Regresar</Link>
+        </button>
+      </div>
       </div>
       <DataTable
         title="Usuarios del bootcamp"

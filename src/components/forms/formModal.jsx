@@ -2,19 +2,19 @@ import Modal from '../Modal/modal';
 import React, { useState } from 'react'
 import RegisterImg from "../../IMG/register.jpg";
 
-const FormModal = ({Form}) => {
+const FormModal = ({Form, ButonTitle, btnClass}) => {
     const [open, setopen] = useState();
     return (
         <div>
-            <button className='btn btn-danger' onClick={()=> setopen(true)}> 
-                Editar
+            <button className={btnClass} onClick={()=> setopen(true)}> 
+                {ButonTitle}
             </button>
-            <Modal open={open} onclose={() => setopen(false)}>
-                <div className="grid grid-cols-2 w-100 h-100">
-                    <div className='w-100 h-100'>
-                        <img src={RegisterImg} alt="" id="image" className=" shadow rounded-l-lg"></img>
+            <Modal  open={open} onclose={() => setopen(false)}>
+                <div className="flex justify-center align-middle border border-solid border-black w-full h-full">
+                    <div className='w-full h-[500px]'>
+                        <img src={RegisterImg} alt="" id="image" className=" shadow rounded-l-lg h-[602px] w-[602px]"></img>
                     </div>
-                    <div>
+                    <div className='overflow-auto w-full'>
                         {Form}
                     </div>
                 </div>

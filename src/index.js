@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import RegisterUser from './components/forms/RegisterUser';
+import RegisterUser from './components/forms/ManageUsers/RegisterUser';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import UsersPage from './pages/Userpage/UsersPage';
 import AsistenciaPage from './pages/AsistenciaPage/AsistenciaPage';
@@ -53,6 +53,9 @@ const router = createBrowserRouter([
   ,
   {path: '/login',
     element: <Login/>
+  },
+  {path: '/register',
+    element: <RegisterUser/>
   }
 
 

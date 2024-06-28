@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import UserForm from "./componentForm/UserForm";
+import UserForm from "../componentForm/UserForm";
+import Swal from "sweetalert2";
 
-const RegisterUser = () => {
-  const [formData, setFormData] = useState({
+const EditarUser = () => {
+    const [errors, setErrors] = useState({});
+
+    const [formData, setFormData] = useState({
     cedula: "",
     nombre: "",
     ciudad: "",
@@ -14,7 +17,25 @@ const RegisterUser = () => {
     rol: "",
   });
 
-  const [errors, setErrors] = useState({});
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      // Convertir los errores en una lista HTML
+      const errorsHtml = Object.values(validationErrors).map(error => `<li>${error}</li>`).join('');
+      Swal.fire({
+        icon: 'error',
+        title: 'Errores en el formulario',
+        html: `<ol style="text-align: center; list-style-position: inside;">${errorsHtml}</ol>`,
+        confirmButtonText: 'Aceptar'
+      });
+    } else {
+      // Aquí puedes manejar el submit del formulario
+      console.log("Formulario enviado", formData);
+      setErrors({});
+    }
+  };
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -74,17 +95,6 @@ const RegisterUser = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-    } else {
-      // Aquí puedes manejar el submit del formulario
-      console.log("Formulario enviado", formData);
-      setErrors({});
-    }
-  };
 
   const handleCancel = () => {
     // Aquí puedes manejar la acción de cancelar
@@ -106,7 +116,8 @@ const RegisterUser = () => {
   return <UserForm formData={formData}
   handleChange={handleChange}
   handleSubmit={handleSubmit}
-  handleCancel={handleCancel} titleData="Crear Usuario" btnTitle="Crear Usuario" errors={errors} />;
+  handleCancel={handleCancel} titleData="Editar Usuario" btnTitle="Crear Usuario" errors={errors} />;
 };
 
-export default RegisterUser;
+
+export default EditarUser;
