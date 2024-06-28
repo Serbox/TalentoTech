@@ -10,9 +10,9 @@ const FormModal = ({Form, ButonTitle, btnClass}) => {
                 {ButonTitle}
             </button>
             <Modal  open={open} onclose={() => setopen(false)}>
-                <div className="flex justify-center align-middle border border-solid border-black w-full h-full">
-                    <div className='w-full h-[500px]'>
-                        <img src={RegisterImg} alt="" id="image" className=" shadow rounded-l-lg h-[602px] w-[602px]"></img>
+                <div className="flex justify-center align-middle border border-solid w-full h-full">
+                    <div className='w-full'>
+                        <img src={RegisterImg} alt="" id="image" className=" shadow rounded-l-lg"></img>
                     </div>
                     <div className='overflow-auto w-full'>
                         {Form}
