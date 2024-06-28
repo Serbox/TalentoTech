@@ -3,60 +3,68 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import RegisterUser from './components/forms/ManageUsers/RegisterUser';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import UsersPage from './pages/Userpage/UsersPage';
-import AsistenciaPage from './pages/AsistenciaPage/AsistenciaPage';
-import Usuario from './pages/usuario';
-import Bootcamp from './pages/bootcamp';
-import PQR from './pages/pqr';
-import Hackatones from './pages/hackathon';
-import JobConnection from './pages/jobConnection';
-import Marketplace from './pages/marketplace';
+import {
+  AsistenciaPage,
+  Bootcamp,
+  Hackathon,
+  JobConnection,
+  Marketplace,
+  PQR,
+  Usuario,
+  UsersPage
+} from './pages';
+
 import Login from './components/Login/Login';
 
 const router = createBrowserRouter([
 
-  {path: '/',
-    element: <App/>
+  {
+    path: '/',
+    element: <App />
   },
-  {path: '/users',
-    element: <UsersPage/>
-  },{
+  {
+    path: '/users',
+    element: <UsersPage />
+  }, {
     path: '/asistencia',
-    element: <AsistenciaPage/>
+    element: <AsistenciaPage />
   }
   ,
-  {path: '/usuario',
-    element: <Usuario/>
+  {
+    path: '/usuario',
+    element: <Usuario />
   }
   ,
-  {path: '/bootcamp',
-    element: <Bootcamp/>
+  {
+    path: '/bootcamp',
+    element: <Bootcamp />
   }
   ,
-  {path: '/pqr',
-    element: <PQR/>
+  {
+    path: '/pqr',
+    element: <PQR />
   }
   ,
-  {path: '/hackatones',
-    element: <Hackatones/>
+  {
+    path: '/hackatones',
+    element: <Hackathon/>
   }
   ,
-  {path: '/jobconnections',
-    element: <JobConnection/>
+  {
+    path: '/jobconnections',
+    element: <JobConnection />
   }
   ,
-  {path: '/marketplace',
-    element: <Marketplace/>
+  {
+    path: '/marketplace',
+    element: <Marketplace />
   }
   ,
-  {path: '/login',
-    element: <Login/>
+  {
+    path: '/login',
+    element: <Login />
   },
-  {path: '/register',
-    element: <RegisterUser/>
-  }
 
 
 ])
@@ -66,7 +74,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

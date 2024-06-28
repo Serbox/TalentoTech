@@ -14,9 +14,9 @@ const Header = () => {
         <nav className='shadow-md w-full sticky top-0 left-0  z-10'>
             <div className='md:px-10 py-1 px-7 md:flex justify-between items-center bg-blue-900'>
             {/*Logo Aqui*/}
-                <div className='flex text-2xl cursor-pointer items-center gap-2'>
+                <Link to={'/'} className='flex text-2xl cursor-pointer items-center gap-2'>
                     <img src={LogoTalento} alt="..." className='w-36 sm:w-full' />    
-                </div>  
+                </Link>  
             {/*Icono Muni Desplegable*/}
                 <div onClick={()=> setisOpen(!isOpen)} className='w-7 h-7 absolute right-8 top-1 cursor-pointer md:hidden'>
                     {
@@ -64,7 +64,7 @@ const Header = () => {
                                             <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-nut-fill mx-1"></i >Config. cuenta</a>
                                         </div>
                                         <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-red-600 '>
-                                            <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-door-open text-xl"></i> Cerrar Sesiòn</a>
+                                            <Link to={'/login'} className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-door-open text-xl"></i> Cerrar Sesiòn</Link>
                                         </div>
                                     </div>
                                 )}
