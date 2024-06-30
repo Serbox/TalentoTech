@@ -52,7 +52,6 @@ const UserForm = ({ formData, handleChange, handleSubmit, handleCancel, errors, 
                     placeholder="name@gmail.com"
                     required/>
                 </div>
-                {errors.correo && <p className="text-red-500 text-sm">{errors.correo}</p>}
               </div>
               <div className="row m-0 d-flex flex-row justify-content-between pb-2">
                 {/* Cedula */}
@@ -135,7 +134,6 @@ const UserForm = ({ formData, handleChange, handleSubmit, handleCancel, errors, 
                       type="text"
                       id="bootcamp"
                       name="bootcamp"
-                      value={formData.ciudad} 
                       onChange={handleChange} 
                       class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
                       placeholder="Bootcamp"
@@ -175,9 +173,8 @@ const UserForm = ({ formData, handleChange, handleSubmit, handleCancel, errors, 
               </div>
             </div>
 
-            <div className="d-flex flex-row justify-content-evenly pt-5">
+            <div className="d-flex flex-row justify-start pt-5 px-2">
               <button type="submit" className="btn bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-700 rounded">{btnTitle}</button>
-              <button type="button" onClick={handleCancel} className="btn bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 border-b-4 border-red-900 hover:border-red-700 rounded">Cancelar</button>
             </div>
           </div>
         </div>
