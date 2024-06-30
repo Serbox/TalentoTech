@@ -14,7 +14,7 @@ const FormModal = ({Form, ButonTitle, btnClass}) => {
                     <div className='w-full'>
                         <img src={RegisterImg} alt="" id="image" className=" shadow rounded-l-lg"></img>
                     </div>
-                    <div className='overflow-auto w-full'>
+                    <div className='overflow-auto w-100 h-100'>
                         {Form}
                     </div>
                 </div>

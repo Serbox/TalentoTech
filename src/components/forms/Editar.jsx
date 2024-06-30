@@ -23,8 +23,8 @@ const Editar = () => {
                                 </div>
                               </div>
                             </div>
-                            <div class="row m-0 d-flex flex-row justify-content-between py-2">
-                              <div className="col d-flex flex-column justify-content-center gap-1">
+                            <div class="row m-0 d-flex flex-row justify-content-between">
+                              <div className="col d-flex flex-column justify-content-center p-0">
                                 <label for="number-input" class="block mb-2 text-base text-gray-700 font-medium">Cedula :</label>
                                 <div class="flex">
                                   <span class="inline-flex items-center px-1 w-32 text-base text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
