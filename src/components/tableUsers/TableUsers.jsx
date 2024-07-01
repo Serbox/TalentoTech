@@ -64,7 +64,7 @@ const TableUsers = () => {
       </div>
       <div className='flex'>
       <button className='bg-red-500 w-[150px] h-[40px] rounded-[10px] text-white font-bold self-center'>
-        <Link to='/'>Regresar</Link>
+        <a href='/'>Regresar</a>
         </button>
       </div>
       </div>
