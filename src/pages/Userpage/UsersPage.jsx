@@ -13,7 +13,28 @@ import AddUsuario from "../../IMG/AddUsuario.svg";
 import Modal from '../../components/forms/formModal';
 import RegisterUser from '../../components/forms/ManageUsers/RegisterUser.jsx';
 
-
+const Menu = [{
+  id: 1,
+  titleTab: "Estudiantes",
+  title: "Administrar estudiante",
+  titleButton: "Agregar estudiante",
+  Form: <RegisterUser/>,
+  Table: <TableUsers/>
+},{
+  id: 2,
+  titleTab: "Administradores",
+  title: "Administrar administrador",
+  titleButton: "Agregar administrador",
+  Form: <RegisterUser/>,
+  Table: <TableUsers/>
+},{
+  id: 3,
+  titleTab: "Maestros",
+  title: "Administrar Maestro",
+  titleButton: "Agregar Maestro",
+  Form: <RegisterUser/>,
+  Table: <TableUsers/>
+}]
 
 const UsersPage = () => {
   return (
@@ -137,12 +158,13 @@ const UsersPage = () => {
           </ul>
           <div className="w-100 bg-blue-950 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-sky-950">
             <div className="relative w-100 h-100 bg-blue-100 rounded-xl p-2 border-b-8 border-x-2 border-blue-200">
-              <h1 className="text-gray-600 font-bold text-2xl text-center p-3">Administrador usuario</h1>
-              <Modal Form={<RegisterUser/>} ButonTitle={"Agregar Usuario"} img={AddUsuario} btnClass={'flex flex-row absolute top-4 right-2 font-bold text-white gap-1 rounded-2xl pt-1'} style={{background:"#9BD0D9"}}/>
+              <h1 className="text-gray-600 font-bold text-2xl text-center p-3">Administrar usuarios</h1>
+              <Modal Form={<RegisterUser/>} ButonTitle={"Agregar Usuario"} img={AddUsuario} btnClass={'flex flex-row absolute top-4 right-2 font-bold text-white gap-1 rounded-2xl pt-1 justify-center align-middle'} style={{background:"#9BD0D9"}}/>
               <div className="h-100 w-100 bg-white rounded-xl">
                 <TableUsers className="h-100 w-100"/>
               </div>
             </div>
+            {/*Menu.map(item => )*/}
           </div>
 
         </Container>
