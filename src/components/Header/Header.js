@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
     <header>
-        <nav className='shadow-md w-full sticky top-0 left-0  z-10'>
+        <nav className='shadow-md w-full fixed top-0 left-0  z-10'>
             <div className='md:px-10 py-1 px-7 md:flex justify-between items-center bg-blue-900'>
             {/*Logo Aqui*/}
                 <Link to={'/'} className='flex text-2xl cursor-pointer items-center gap-2'>

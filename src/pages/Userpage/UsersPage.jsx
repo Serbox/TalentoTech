@@ -1,23 +1,140 @@
-import Header from "../../components/Header/Header"
-import "../../App.css"
-import TableUsers from "../../components/tableUsers/TableUsers"
-import Container from "react-bootstrap/Container"
+import Header from "../../components/Header/Header";
+import "../../App.css";
+import TableUsers from "../../components/tableUsers/TableUsers";
+import Container from "react-bootstrap/Container";
+import Actividades from "../../IMG/NumActividades.svg";
+import EstAsistencia from "../../IMG/EstAsistencia.svg";
+import DocAsistencia from "../../IMG/DocAsistencia.svg";
+import EntActividades from "../../IMG/ActividadesEnt.svg";
+import Profesor from "../../IMG/Profesor.svg";
 
 const UsersPage = () => {
   return (
     <>
       <div className="container-users">
-        <div className="header-users">
-          <Header/>
-        </div>
-        <Container className=" pt-5">
+        <Header/>
+        <Container className=" mt-5 w-[86%] h-100">
           {/*Titulo*/}
           <div className="flex flex-row gap-2">
             <h1 className=" font-bold text-gray-500">Administrar</h1>
             <h1 className=" font-bold text-blue-400">Usuario</h1>
           </div> 
           {/*Add User Table*/}
-          
+          <ul className="grid grid-cols-4 grid-rows-1 gap-2 px-3">
+            <li className="flex flex-row justify-between">
+              <a href="/users" className="block w-64 h-40 p-3 bg-red-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-red-600 hover:bg-red-500">
+                <div className="flex flex-row justify-center align-middle ">
+                    <img src={Actividades} alt="..." className="w-100 h-100" />                 
+                    <div className="flex flex-col">
+                    <h4 className="text-center font-bold text-xl">Numero de actividades</h4>
+                    <p className="text-center font-bold text-2xl">999</p>
+                  </div>  
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+                  <div className="bg-red-700 h-4 rounded-full dark:bg-red-600 shadow-md shadow-red-800" style={{width:'45%'}} >
+                  </div>
+                </div>
+
+              </a>
+            </li>
+            <li className="flex flex-row justify-between">
+              <a href="/users" className="block w-64 h-40 p-3 bg-blue-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-blue-600 hover:bg-blue-500">
+                <div className="flex flex-row justify-center align-middle ">
+                    <img src={EstAsistencia} alt="..." className="w-[80%]" />                 
+                    <div className="flex flex-col">
+                    <h4 className="text-center font-bold text-xl">Asistencia estudiantes</h4>
+                    <p className="text-center font-bold text-2xl">233/242</p>
+                  </div>  
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+                  <div className="bg-blue-700 h-4 rounded-full dark:bg-blue-600 shadow-md shadow-blue-800" style={{width:'96%'}} >
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li className="flex flex-row justify-between">
+              <a href="/users" className="block w-64 h-40 p-3 bg-purple-500 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-purple-700 hover:bg-purple-600">
+                <div className="flex flex-row justify-center align-middle ">
+                    <img src={DocAsistencia} alt="..." className="w-100" />                 
+                    <div className="flex flex-col">
+                    <h4 className="text-center font-bold text-xl">Asistencia docentes</h4>
+                    <p className="text-center font-bold text-2xl">242/242</p>
+                  </div>  
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+                  <div className="bg-purple-800 h-4 rounded-full dark:bg-purple-600 shadow-md shadow-purple-900" style={{width:'100%'}} >
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li className="flex flex-row justify-between">
+              <a href="/users" className="block w-64 h-40 p-3 bg-yellow-300 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-yellow-500 hover:bg-yellow-400 ">
+                <div className="flex flex-row justify-center align-middle pb-1">
+                    <img src={EntActividades} alt="..." className="w-[60%]" />                 
+                    <div className="flex flex-col">
+                    <h4 className="text-center font-bold text-xl">Entrega de Actividades</h4>
+                    <p className="text-center font-bold text-2xl">25/50</p>
+                    </div>  
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+                  <div className="bg-yellow-600 h-4 rounded-full dark:bg-yellow-500 shadow-md shadow-yellow-900" style={{width:'30%'}} >
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          {/*Data User Table*/}
+          <ul className="grid grid-cols-4 grid-rows-1 bg-blue-300 w-full mt-6 rounded-xl p-6">
+              <li className="flex flex-row justify-between w-100 h-100">
+                <a href="/users" className="p-0 block w-[100%] h-100 bg-white rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-slate-400 hover:bg-slate-400 border-2 border-gray-300 ">
+                  <div className="flex flex-column justify-center">
+                      <img src={Profesor} alt="..." className="w-[60%] mx-5" />        
+                      <div className="w-100 h-100 bg-blue-100 rounded-b-xl p-2">
+                        <p className="text-center font-bold text-3xl text-gray-400 mb-0">5</p>
+                        <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Docentes</h4>
+                        <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Registrados</h4>
+                      </div>         
+                  </div>
+                </a>
+              </li>
+              <li className="flex flex-row justify-between w-100 h-100">
+                <a href="/users" className="p-0 block w-[100%] h-100 bg-white rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-slate-400 hover:bg-slate-400 border-2 border-gray-300 ">
+                  <div className="flex flex-column justify-center">
+                      <img src={Profesor} alt="..." className="w-[60%] mx-5" />        
+                      <div className="w-100 h-100 bg-blue-100 rounded-b-xl p-2">
+                        <p className="text-center font-bold text-3xl text-gray-400 mb-0">5</p>
+                        <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Administradores</h4>
+                        <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Registrados</h4>
+                      </div>         
+                  </div>
+                </a>
+              </li>
+              <li className="flex flex-row justify-between w-100 h-100">
+                <a href="/users" className="p-0 block w-[100%] h-100 bg-white rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-slate-400 hover:bg-slate-400 border-2 border-gray-300 ">
+                  <div className="flex flex-column justify-center">
+                      <img src={Profesor} alt="..." className="w-[60%] mx-5" />        
+                      <div className="w-100 h-100 bg-blue-100 rounded-b-xl p-2">
+                        <p className="text-center font-bold text-3xl text-gray-400 mb-0">5</p>
+                        <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Estudiantes</h4>
+                        <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Registrados</h4>
+                      </div>         
+                  </div>
+                </a>
+              </li>
+              <li className="flex flex-row justify-between w-100 h-100">
+                <a href="/users" className="p-0 block w-[100%] h-100 bg-white rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-slate-400 hover:bg-slate-400 border-2 border-gray-300 ">
+                  <div className="flex flex-column justify-center">
+                      <img src={Profesor} alt="..." className="w-[60%] mx-5" />        
+                      <div className="w-100 h-100 bg-blue-100 rounded-b-xl p-2">
+                        <p className="text-center font-bold text-3xl text-gray-400 mb-0">5</p>
+                        <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Docentes</h4>
+                        <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Auxiliares</h4>
+                      </div>         
+                  </div>
+                </a>
+              </li>
+          </ul>
+
         </Container>
         <div className="table-users-component">
          <TableUsers/>
