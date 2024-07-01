@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RegisterImg from "../../../IMG/register.jpg";
 
 const UserForm = ({
   formData,
@@ -294,7 +293,7 @@ const UserForm = ({
             <div className="d-flex flex-row justify-start pt-4 px-2">
               <button
                 type="submit"
-                className="absolute bottom-12 right-52 btn bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-700 rounded"
+                className="absolute bottom-6 right-50 btn bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-700 rounded"
               >
                 {btnTitle}
               </button>

@@ -4,8 +4,6 @@ import './TableUsers.css';
 // import Editar from '../forms/Editar.jsx';
 import Modal from '../forms/formModal.jsx';
 import EditarUser from '../forms/ManageUsers/EditarUser.jsx';
-import RegisterUser from '../forms/ManageUsers/RegisterUser.jsx';
-import { Link } from 'react-router-dom';
 import Swal from "sweetalert2";
 
 const users = [
@@ -36,7 +34,7 @@ const columns = [
     name: 'Acciones',    
     cell: row => (
       <>
-        <Modal Form={<EditarUser/>} ButonTitle={'editar'} btnClass={'btn btn-danger'}/>
+        <Modal Form={<EditarUser/>} ButonTitle={'📝'} btnClass={'btn btn-transparent'}/>
         <button onClick={() => {
           Swal.fire({
             title: '¿Estás seguro de eliminar esta sesión?',
