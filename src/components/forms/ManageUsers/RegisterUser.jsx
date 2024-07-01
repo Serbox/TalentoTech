@@ -50,26 +50,20 @@ const RegisterUser = () => {
 
     if (!formData.cedula) {
       newErrors.cedula = "La cédula es obligatoria.";
+    }else if(NaN(formData.cedula)) {
+      newErrors.cedula = "La cédula debe ser un número.";
     }
-
     if (!formData.nombre) {
       newErrors.nombre = "El nombre es obligatorio.";
     }
 
-    if (!formData.ciudad) {
-      newErrors.ciudad = "La ciudad es obligatoria.";
+    if (!formData.bootcamp) {
+      newErrors.bootcamp = "Debe elegir un bootcamp.";
     }
 
     if (!formData.fecha_nacimiento) {
       newErrors.fecha_nacimiento = "La fecha de nacimiento es obligatoria.";
-    }else {
-      const birthDate = new Date(formData.fechaNacimiento);
-      const age = currentYear - birthDate.getFullYear();
-      if (age < 18 || (age === 18 && currentDate < new Date(birthDate.setFullYear(currentYear)))) {
-        errors.fechaNacimiento = "Debes ser mayor de 18 años";
-      }
     }
-
     if (!formData.correo) {
       newErrors.correo = "El correo es obligatorio.";
     }else if (!/^[a-z0-9._%+-]+@[a-z0-9*-]+\.[a-z]+$/.test(formData.correo)) {
@@ -88,9 +82,9 @@ const RegisterUser = () => {
       newErrors.confirmPassword = "Las contraseñas no coinciden.";
     }
 
-    if (!formData.rol) {
-      newErrors.rol = "El rol es obligatorio.";
-    }
+    // if (!formData.rol) {
+    //   newErrors.rol = "El rol es obligatorio.";
+    // }
 
     return newErrors;
   };
