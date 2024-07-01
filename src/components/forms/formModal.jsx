@@ -2,11 +2,12 @@ import Modal from '../Modal/modal';
 import React, { useState } from 'react'
 import RegisterImg from "../../IMG/register.jpg";
 
-const FormModal = ({Form, ButonTitle, btnClass}) => {
+const FormModal = ({Form, ButonTitle, btnClass, style, img}) => {
     const [open, setopen] = useState();
     return (
         <div>
-            <button className={btnClass} onClick={()=> setopen(true)}> 
+            <button className={btnClass} style={style} onClick={()=> setopen(true)}> 
+                <img src={img} alt="" />
                 {ButonTitle}
             </button>
             <Modal  open={open} onclose={() => setopen(false)}>

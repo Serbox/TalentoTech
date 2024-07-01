@@ -110,7 +110,7 @@ const Info = () => {
         <>
             <div className='carrousel-student  p-1'>
                 <Container className="px-0" fluid>
-                    <Row className=" w-100 h-100 m-0 px-40">
+                    <Row className=" w-100 h-100 m-0 px-40  mt-3">
                         <Col className=" mt-1 mx-2 p-0 py-3 rounded" xs={7}>
                                 <Carousel className='w-100 h-100'>
                                     <Carousel.Item className='w-100 h-100'>
