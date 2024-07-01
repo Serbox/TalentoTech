@@ -116,7 +116,7 @@ const EditarUser = () => {
   return <UserForm formData={formData}
   handleChange={handleChange}
   handleSubmit={handleSubmit}
-  handleCancel={handleCancel} titleData="Editar Usuario" btnTitle="Crear Usuario" errors={errors} />;
+  handleCancel={handleCancel} titleData="Editar Usuario" btnTitle="Editar Usuario" errors={errors} />;
 };
 
 

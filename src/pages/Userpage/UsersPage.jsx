@@ -41,7 +41,7 @@ const UsersPage = () => {
     <>
       <div className="container-users">
         <Header/>
-        <Container className=" my-5 w-[86%] h-full">
+        <Container className=" my-5 w-[86%] h-full bg-gray-100 rounded-xl">
           {/*Titulo*/}
           <div className="flex flex-row gap-2">
             <h1 className=" font-bold text-gray-500">Administrar</h1>
@@ -156,7 +156,11 @@ const UsersPage = () => {
                 </a>
               </li>
           </ul>
-          <div className="w-100 bg-blue-950 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-sky-950">
+          <div className="flex flex-row grid-rows-1 w-100 bg-blue-950 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-sky-950">
+            <div className="flex flex-col">
+              <button className="bg-white focus:bg-blue-100 text-gray-600 font-bold p-3 px-9 rounded-xl border-b-4 border-gray-900 shadow ">Estudiantes</button>
+
+            </div>
             <div className="relative w-100 h-100 bg-blue-100 rounded-xl p-2 border-b-8 border-x-2 border-blue-200">
               <h1 className="text-gray-600 font-bold text-2xl text-center p-3">Administrar usuarios</h1>
               <Modal Form={<RegisterUser/>} ButonTitle={"Agregar Usuario"} img={AddUsuario} btnClass={'flex flex-row absolute top-4 right-2 font-bold text-white gap-1 rounded-2xl pt-1 justify-center align-middle'} style={{background:"#9BD0D9"}}/>
