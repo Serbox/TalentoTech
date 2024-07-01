@@ -12,31 +12,35 @@ import Admin from "../../IMG/Admin.svg";
 import AddUsuario from "../../IMG/AddUsuario.svg";
 import Modal from '../../components/forms/formModal';
 import RegisterUser from '../../components/forms/ManageUsers/RegisterUser.jsx';
+import { useState } from "react";
 
 const Menu = [{
   id: 1,
-  titleTab: "Estudiantes",
-  title: "Administrar estudiante",
+  titleTab: "Estudiante",
+  title: "Administrar estudiantes",
   titleButton: "Agregar estudiante",
-  Form: <RegisterUser/>,
+  Form: <RegisterUser titleData={"Crear Estudiante"}/>,
   Table: <TableUsers/>
 },{
   id: 2,
-  titleTab: "Administradores",
-  title: "Administrar administrador",
+  titleTab: "Administrador",
+  title: "Administrar administradores",
   titleButton: "Agregar administrador",
-  Form: <RegisterUser/>,
+  Form: <RegisterUser titleData={"Crear Administrador"}/>,
   Table: <TableUsers/>
 },{
   id: 3,
-  titleTab: "Maestros",
-  title: "Administrar Maestro",
+  titleTab: "Maestro",
+  title: "Administrar Maestros",
   titleButton: "Agregar Maestro",
-  Form: <RegisterUser/>,
+  Form: <RegisterUser titleData={"Crear Maestro"}/>,
   Table: <TableUsers/>
 }]
 
 const UsersPage = () => {
+  const [activeindex , setActiveIndex ] = useState(1);
+  const handleClick = (index) => setActiveIndex(index);
+  const checkActive = (index,className) => activeindex === index ? className : "";
   return (
     <>
       <div className="container-users">
@@ -157,24 +161,22 @@ const UsersPage = () => {
               </li>
           </ul>
           <div className="flex flex-row grid-rows-1 w-100 bg-blue-950 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-sky-950">
-            <div className="flex flex-col">
-              <button className="bg-white focus:bg-blue-100 text-gray-600 font-bold p-3 px-9 rounded-xl border-b-4 border-gray-900 shadow ">Estudiantes</button>
-
+            <div className="flex flex-col  gap-2">
+              {Menu.map(item => (<button onClick={()=> handleClick(item.id)} key={item.id} type="button" className={`btn bg-blue-200 hover:bg-blue-300 text-white font-bold py-2 px-4 border-b-4 border-blue-400 hover:border-blue-500 rounded ${checkActive(item.id, "bg-blue-400 border-b-4 border-blue-600 text-orange-100")}`}>{item.titleTab}</button>))}
             </div>
-            <div className="relative w-100 h-100 bg-blue-100 rounded-xl p-2 border-b-8 border-x-2 border-blue-200">
-              <h1 className="text-gray-600 font-bold text-2xl text-center p-3">Administrar usuarios</h1>
-              <Modal Form={<RegisterUser/>} ButonTitle={"Agregar Usuario"} img={AddUsuario} btnClass={'flex flex-row absolute top-4 right-2 font-bold text-white gap-1 rounded-2xl pt-1 justify-center align-middle'} style={{background:"#9BD0D9"}}/>
-              <div className="h-100 w-100 bg-white rounded-xl">
-                <TableUsers className="h-100 w-100"/>
-              </div>
+            <div className="relative w-100 h-100 bg-blue-200 rounded-xl p-2 border-b-8 border-x-2 border-blue-400">
+              {Menu.map(item =>(<div key={item.id} className={`panel ${checkActive(item.id,"active")}`}>
+                <h1 className="text-gray-600 font-bold text-2xl text-center p-3">{item.title}</h1>
+                <Modal Form={item.Form} ButonTitle={item.titleButton} img={AddUsuario} btnClass={'flex flex-row absolute top-4 right-2 font-bold text-white gap-1 rounded-2xl pt-1 justify-center align-middle'} style={{background:"#9BD0D9"}}/>
+                <div className="h-100 w-100 bg-white rounded-xl">
+                  {item.Table}
+                </div>
+              </div>))}
             </div>
-            {/*Menu.map(item => )*/}
           </div>
 
         </Container>
-        {/*<div className="table-users-component">
-         <TableUsers/>
-        </div>*/}
+
       </div>
 
     </>

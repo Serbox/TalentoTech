@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import UserForm from "../componentForm/UserForm";
 import Swal from 'sweetalert2';
 
-const RegisterUser = () => {
+const RegisterUser = ({titleData}) => {
   const [formData, setFormData] = useState({
     cedula: "",
     nombre: "",
@@ -121,7 +121,7 @@ const RegisterUser = () => {
   return <UserForm formData={formData}
   handleChange={handleChange}
   handleSubmit={handleSubmit}
-  handleCancel={handleCancel} titleData="Crear Usuario" btnTitle="Crear Usuario" errors={errors} />;
+  handleCancel={handleCancel} titleData={titleData} btnTitle={titleData} errors={errors} />;
 };
 
 export default RegisterUser;
