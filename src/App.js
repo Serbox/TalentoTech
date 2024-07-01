@@ -33,7 +33,7 @@ function App() {
           <Class percentage={70} backgroundColor={['#00bfff', '#b0e0e8']}  />
         </div>
         <div className='graphy'>
-          <h1>Asistenacia</h1>
+          <h1>Asistencia</h1>
           <Class percentage={90} backgroundColor={['#1B8EF2' , '#F2A516']}  hoverBackgroundColor={['#38BDF2', '#F5A640']}/>
         </div>
       </div>

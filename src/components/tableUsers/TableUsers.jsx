@@ -27,6 +27,7 @@ const columns = [
           </>
         ),
       },
+
   { name: 'Nombre', selector: row => row.name, sortable: true },
   { name: 'Email', selector: row => row.email, sortable: true },
   { name: 'Rol', selector: row => row.role, sortable: true },
@@ -38,7 +39,7 @@ const columns = [
         <Modal Form={<EditarUser/>} ButonTitle={'editar'} btnClass={'btn btn-danger'}/>
         <button onClick={() => {
           Swal.fire({
-            title: '¿Estás seguro de eliminar este usuario?',
+            title: '¿Estás seguro de eliminar esta sesión?',
             showDenyButton: true,
             confirmButtonText: `Eliminar`,
             denyButtonText: `Cancelar`,
@@ -64,7 +65,7 @@ const TableUsers = () => {
       </div>
       <div className='flex'>
       <button className='bg-red-500 w-[150px] h-[40px] rounded-[10px] text-white font-bold self-center'>
-        <a href='/'>Regresar</a>
+        <Link to='/'>Regresar</Link>
         </button>
       </div>
       </div>

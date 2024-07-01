@@ -316,6 +316,7 @@ UserForm.propTypes = {
     telefono: PropTypes.string,
     password: PropTypes.string,
     confirmPassword: PropTypes.string,
+    bootcamp: PropTypes.string,
     // rol: PropTypes.string,
   }).isRequired,
   handleChange: PropTypes.func.isRequired,

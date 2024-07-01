@@ -41,10 +41,10 @@ const Header = () => {
                             {isOpenOptions && (
                                 <div className='bg-blue-950 absolute top-14 left-0 flex flex-col items-start rounded-lg p-2 w-full shadow-black'>
                                     <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-blue-950'>
-                                        <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-people-fill px-1"></i>Usuario</a>
+                                        <a href='/users' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-people-fill px-1"></i>Usuario</a>
                                     </div>
                                     <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-blue-950'>
-                                        <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-calendar-event-fill px-1"></i>Sesiones</a>
+                                        <a href='/asistencia' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-calendar-event-fill px-1"></i>Sesiones</a>
                                     </div>
                                     <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-blue-950'>
                                         <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-newspaper px-1"></i>Noticias</a>

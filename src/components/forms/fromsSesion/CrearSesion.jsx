@@ -1,13 +1,11 @@
-import RegisterImg from "../../../IMG/register.jpg";
+
 
 const CrearSesion = () => {
   return (
     <form action="/create" method="POST">
       <div className="container text-left p-0">
         <div className="d-flex flex-row justify-content-center w-100 h-100">
-          <div className="col">
-            <img src={RegisterImg} alt="" id="image" className=" rounded-l-3xl"></img>
-          </div>
+          
           <div className="col p-3 ">
             <h2 className="font-extrabold text-3xl text-blue-900 text-left rounded-md">CREAR SESIÓN</h2>
             <div className="border w-28 border-spacing-24 border-blue-950 mb-2"></div>

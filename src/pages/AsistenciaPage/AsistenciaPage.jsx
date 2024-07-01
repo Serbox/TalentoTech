@@ -6,6 +6,7 @@ import TableAsis from "../../components/tables/tableAsis/TableAsis"
 
 const AsistenciaPage = () => {
   return (
+    
     <>
         <div className='header'>
         <Header />
