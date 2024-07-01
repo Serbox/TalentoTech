@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import DataTable from 'react-data-table-component';
 import './TableAsis.css';
 import CrearSesion from '../../forms/fromsSesion/CrearSesion';
-import Editar from '../../forms/Editar';
 import Modal from '../../forms/formModal.jsx';
 
 import EditarSesion from '../../forms/fromsSesion/EditarSesion';

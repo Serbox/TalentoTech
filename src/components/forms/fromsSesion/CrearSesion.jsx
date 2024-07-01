@@ -41,15 +41,11 @@ const CrearSesion = () => {
   const validate = () => {
     const newErrors = {};
 
-    if (!formData.fecha) {
-      newErrors.fecha = "La fecha de la sesion es obligatoria.";
+    if (!formData.fecha_Sesion) {
+      newErrors.fecha_Sesion = "La fecha de la sesion es obligatoria.";
     }
     if (!formData.nombre) {
       newErrors.nombre = "El nombre es obligatorio.";
-    }
-
-    if (!formData.descripcion) {
-      newErrors.descripcion = "La descripcion de la sesion es obligatoria.";
     }
 
     if (!formData.enlace) {
