@@ -66,9 +66,9 @@ const useSesionForm = ({
               </div>
             </div>
 
-            <div className="row m-0 d-flex flex-row justify-content-between py-2">
+            <div className="row m-0 flex flex-row justify-center py-3 ">
               {/* Descripcion */}
-              <div className="col d-flex flex-column justify-content-center gap-1">
+              <div className="col d-flex flex-column justify-content-center gap-1 w-full">
                 <label
                   htmlFor="descripcion"
                   className="block mb-2 text-base text-gray-700 font-medium"
@@ -90,14 +90,18 @@ const useSesionForm = ({
               </div>
             </div>
 
-            <div className="col d-flex flex-column justify-content-center gap-1">
+            <div className="col d-flex flex-column justify-content-center gap-1 py-3">
               <label
                 htmlFor="estado_sesion"
                 className="block mb-2 text-base text-gray-700 font-medium"
               >
                 Estado de la sesión:
               </label>
-              <select name="estado_sesion" id="estado_sesion">
+              <select 
+                    name="estado_sesion" 
+                    id="estado_sesion"
+                    class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    >
                 <option value="proximamente">Proximamente</option>
                 <option value="activo">Activo</option>
                 <option value="finalizado">Finalizado</option>
@@ -106,10 +110,7 @@ const useSesionForm = ({
                 <p className="text-red-500 text-sm">{errors.estado_sesion}</p>
               )}
             </div>
-          </div>
-
-          <div className="row m-0 d-flex flex-row justify-content-between py-2">
-            <div className="col d-flex flex-column justify-content-center gap-1">
+            <div className="col d-flex flex-column justify-content-center gap-1 py-3">
               <label
                 htmlFor="enlace"
                 className="block mb-1 text-base text-gray-700 font-medium"
@@ -129,7 +130,16 @@ const useSesionForm = ({
                 <p className="text-red-500 text-sm">{errors.enlace}</p>
               )}
             </div>
+          <div className="d-flex flex-row justify-start pt-4 px-2">
+              <button
+                type="submit"
+                className="absolute bottom-6 right-50 btn bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-700 rounded"
+              >
+                {btnTitle}
+              </button>
+            </div>
           </div>
+          
         </div>
       </div>
     </form>

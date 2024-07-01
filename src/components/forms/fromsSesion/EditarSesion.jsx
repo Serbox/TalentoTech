@@ -73,7 +73,7 @@ const EditarSesion = () => {
   return <UserForm formData={formData}
   handleChange={handleChange}
   handleSubmit={handleSubmit}
-  handleCancel={handleCancel} titleData="Crear Usuario" btnTitle="Crear Usuario" errors={errors} />;
+  handleCancel={handleCancel} titleData="Editar Sesion" btnTitle="Editar" errors={errors} />;
 
 };
 
