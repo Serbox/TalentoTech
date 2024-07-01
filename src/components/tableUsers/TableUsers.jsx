@@ -57,26 +57,14 @@ const columns = [
 
 const TableUsers = () => {
   return (      
-      <div className="container-table-users">
-      <h1 className='title-admi-users'>Administración de Usuarios</h1>
-      <div className="flex justify-evenly align-middle mt-4 mb-4">
-      <div className='flex'>
-      <Modal Form={<RegisterUser/>} ButonTitle={'Registrar'} btnClass={'btn-add-users self-center'}/>
-      </div>
-      <div className='flex'>
-      <button className='bg-red-500 w-[150px] h-[40px] rounded-[10px] text-white font-bold self-center'>
-        <Link to='/'>Regresar</Link>
-        </button>
-      </div>
-      </div>
+
       <DataTable
-        title="Usuarios del bootcamp"
+        title=""
         columns={columns}
         data={users}
         pagination
       />
 
-    </div>
   );
 };
 

@@ -20,7 +20,7 @@ const UsersPage = () => {
     <>
       <div className="container-users">
         <Header/>
-        <Container className=" my-5 w-[86%] h-full bg-gray-300">
+        <Container className=" my-5 w-[86%] h-full">
           {/*Titulo*/}
           <div className="flex flex-row gap-2">
             <h1 className=" font-bold text-gray-500">Administrar</h1>
