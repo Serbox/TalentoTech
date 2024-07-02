@@ -6,6 +6,7 @@ import Modal from '../forms/formModal.jsx';
 import EditarUser from '../forms/ManageUsers/EditarUser.jsx';
 import Swal from "sweetalert2";
 
+
 const users = [
   { name: 'Invitación pendiente', email: '', role: '', sites: 'Todos los sitios' },
   { name: 'Juan Sebastian Hernandez Reyes', email: 'auxiliarsistemas@gep.com.co', role: 'Administrador', sites: 'Todos los sitios' },
@@ -54,6 +55,7 @@ const columns = [
 ];
 
 const TableUsers = () => {
+
   return (      
 
       <DataTable

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Bd from './components/BD/bd.jsx';
 import {
   AsistenciaPage,
   Bootcamp,
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
     element: <Marketplace />
   }
   ,
+  {
+    path: '/bd',
+    element: <Bd/>
+  },
   {
     path: '/login',
     element: <Login />
