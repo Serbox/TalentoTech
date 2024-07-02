@@ -18,10 +18,10 @@ function App() {
       <div className='board'>
         <Board />
       </div>
-      <div className='info'>
+     <div className='info'>
         <Info />
       </div>
-      <div className='slider-bar'>
+       {/*<div className='slider-bar'>
         <SlideBar/>
       </div>
       <div className='board'>
@@ -42,7 +42,7 @@ function App() {
         </div>
         <div className='tools'>
           <Tools/>
-        </div> 
+        </div> */}
 
         
 

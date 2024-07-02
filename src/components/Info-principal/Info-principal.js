@@ -224,7 +224,7 @@ const Info = () => {
                             </a>
                         </li>
                     </ul>
-                <h1>Estudiantes reconocidos por su talento!</h1>
+                {/*<h1>Estudiantes reconocidos por su talento!</h1>
                 <div className="wrapper" ref={wrapperRef}>
                     <i id="left" className="fa-solid fa-chevron-left"></i>
                     <ul className="carousel" ref={carouselRef}>
@@ -247,7 +247,7 @@ const Info = () => {
 
                     </ul>
                     <i id="rigth" className="fa-solid fa-chevron-right"></i>
-                </div>
+                </div>*/}
 
 
 

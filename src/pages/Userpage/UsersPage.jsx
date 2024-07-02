@@ -1,6 +1,7 @@
 import Header from "../../components/Header/Header";
 import "../../App.css";
-import TableUsers from "../../components/tableUsers/TableUsers";
+import TableUsers from "../../components/tables/tableUsers/TableUsers.jsx";
+import TableNotas from "../../components/tables/tablaNotas/TableNotas.jsx";
 import Container from "react-bootstrap/Container";
 import Actividades from "../../IMG/NumActividades.svg";
 import EstAsistencia from "../../IMG/EstAsistencia.svg";
@@ -10,7 +11,7 @@ import Profesor from "../../IMG/Profesor.svg";
 import Estudiante from "../../IMG/Estudiantes.svg";
 import Admin from "../../IMG/Admin.svg";
 import AddUsuario from "../../IMG/AddUsuario.svg";
-import Modal from '../../components/forms/formModal';
+import Modal from '../../components/forms/formModal.jsx';
 import RegisterUser from '../../components/forms/ManageUsers/RegisterUser.jsx';
 import { useState } from "react";
 
@@ -174,9 +175,16 @@ const UsersPage = () => {
               </div>))}
             </div>
           </div>
-
+          <div className="flex flex-row grid-rows-1 w-100 bg-blue-300 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-blue-400">
+            <div className="relative w-100 h-100 bg-blue-950 rounded-xl p-2 border-b-8 border-x-2 border-sky-950">
+                <h1 className="text-white font-bold text-2xl text-center p-3">Notas Estudiantes</h1>
+                <Modal Form= {<RegisterUser titleData={"Crear Maestro"}/>} btnClass={'hidden'} style={{background:"#9BD0D9"}}/>
+                <div className="h-100 w-100 bg-white rounded-xl">
+                  <TableNotas/>
+                </div>
+            </div>
+          </div>
         </Container>
-
       </div>
 
     </>
