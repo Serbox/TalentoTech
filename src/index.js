@@ -7,13 +7,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Bd from './components/BD/bd.jsx';
 import {
   AsistenciaPage,
-  Bootcamp,
-  Hackathon,
-  JobConnection,
-  Marketplace,
-  PQR,
-  Usuario,
-  UsersPage
+  UsersPage,
+  
 } from './pages';
 
 import Login from './components/Login/Login';
@@ -30,36 +25,6 @@ const router = createBrowserRouter([
   }, {
     path: '/asistencia',
     element: <AsistenciaPage />
-  }
-  ,
-  {
-    path: '/usuario',
-    element: <Usuario />
-  }
-  ,
-  {
-    path: '/bootcamp',
-    element: <Bootcamp />
-  }
-  ,
-  {
-    path: '/pqr',
-    element: <PQR />
-  }
-  ,
-  {
-    path: '/hackatones',
-    element: <Hackathon/>
-  }
-  ,
-  {
-    path: '/jobconnections',
-    element: <JobConnection />
-  }
-  ,
-  {
-    path: '/marketplace',
-    element: <Marketplace />
   }
   ,
   {
