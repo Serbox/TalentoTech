@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 const useSesionForm = ({
@@ -20,7 +19,7 @@ const useSesionForm = ({
             </h2>
             <div className="border w-28 border-spacing-24 border-blue-950 mb-2 gap-2"></div>
             {/* Nombre */}
-            <div className=" mt-[100px]">
+            <div className="">
               <div className="row m-0 d-flex flex-row justify-content-between py-2">
                 {/*Fecha de nacimiento*/}
                 <div className="col d-flex flex-col justify-content-center p-0">
