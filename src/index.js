@@ -8,7 +8,8 @@ import Bd from './components/BD/bd.jsx';
 import {
   AsistenciaPage,
   UsersPage,
-  
+  CalificacionPage
+
 } from './pages';
 
 import Login from './components/Login/Login';
@@ -25,6 +26,9 @@ const router = createBrowserRouter([
   }, {
     path: '/asistencia',
     element: <AsistenciaPage />
+  }, {
+    path: '/calificacion',
+    element: <CalificacionPage/>
   }
   ,
   {
