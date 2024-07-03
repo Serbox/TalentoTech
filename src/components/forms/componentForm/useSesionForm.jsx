@@ -49,7 +49,6 @@ const useSesionForm = ({
                       value={formData.fecha}
                       onChange={handleChange}
                       class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                      placeholder="Select date"
                     />
                   </div>
                   {errors.fecha_Sesion && (
@@ -130,8 +129,9 @@ const useSesionForm = ({
                       onChange={handleChange}
                       class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                       placeholder="Componente"
+                      defaultValue="Ingles"
                     >
-                      <option value="Ingles" selected>
+                      <option value="Ingles" >
                         Ingles tecnico
                       </option>
                       <option value="Tecnico">Formación técnica</option>
@@ -163,9 +163,10 @@ const useSesionForm = ({
                       name="estado_sesion"
                       onChange={handleChange}
                       class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                    >
+                      defaultValue="activo"
+                   >
                       <option value="proximamente">Proximamente</option>
-                      <option value="activo" selected>
+                      <option value="activo">
                         Activo
                       </option>
                       <option value="finalizado">Finalizado</option>
@@ -196,23 +197,24 @@ const useSesionForm = ({
                       onChange={handleChange}
                       class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                       placeholder="Bootcamp"
+                      defaultValue="ADAvanzado"
                     >
-                      <option value="BlcBasico" selected>
+                      <option value="BlcBasico" >
                         Blockchain basico
                       </option>
-                      <option value="BlcIntermedio" selected>
+                      <option value="BlcIntermedio" >
                         Blockchain intermedio
                       </option>
-                      <option value="BlcAvanzado" selected>
+                      <option value="BlcAvanzado" >
                         Blockchain avanzado
                       </option>
-                      <option value="DWEFBasico" selected>
+                      <option value="DWEFBasico" >
                         Desarrollo web Full Stack basico
                       </option>
-                      <option value="DWEFIntermedio" selected>
+                      <option value="DWEFIntermedio" >
                         Desarrollo web Full Stack intermedio
                       </option>
-                      <option value="DWEFAvanzado" selected>
+                      <option value="DWEFAvanzado" >
                         Desarrollo web Full Stack avanzado
                       </option>
                       <option value="ADBasico">Analisis de datos basico</option>

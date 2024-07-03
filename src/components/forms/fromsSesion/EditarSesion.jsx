@@ -29,12 +29,18 @@ const EditarSesion = () => {
     } else {
       // Aquí puedes manejar el submit del formulario
       console.log("Formulario enviado", formData);
+      Swal.fire({
+        icon: "success",
+        title: "Sesion editada",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       setErrors({});
     }
   };
 
   const [errors, setErrors] = useState({});
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
@@ -43,9 +49,26 @@ const EditarSesion = () => {
   const validate = () => {
     const newErrors = {};
 
+    // if (!formData.fecha_Sesion) {
+    //   newErrors.fecha_Sesion = "La fecha de la sesion es obligatoria.";
+    // }
     if (!formData.fecha_Sesion) {
       newErrors.fecha_Sesion = "La fecha de la sesion es obligatoria.";
+    } else {
+      // Obtener la fecha actual y establecer la hora a 0
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      // Convertir la fecha ingresada a objeto Date
+      const inputDate = new Date(formData.fecha_Sesion);
+
+      // Comparar la fecha ingresada con la fecha actual
+      if (inputDate < today) {
+        newErrors.fecha_Sesion =
+          "La fecha no puede ser anterior a la fecha actual.";
+      }
     }
+
     if (!formData.nombre) {
       newErrors.nombre = "El nombre es obligatorio.";
     }
@@ -53,7 +76,7 @@ const EditarSesion = () => {
     if (!formData.enlace) {
       newErrors.enlace = "El enlace de la sesion es obligatoria.";
     }
-   
+
     return newErrors;
   };
 
@@ -69,11 +92,17 @@ const EditarSesion = () => {
     });
   };
 
-  return <UserForm formData={formData}
-  handleChange={handleChange}
-  handleSubmit={handleSubmit}
-  handleCancel={handleCancel} titleData="Editar Sesion" btnTitle="Editar" errors={errors} />;
-
+  return (
+    <UserForm
+      formData={formData}
+      handleChange={handleChange}
+      handleSubmit={handleSubmit}
+      handleCancel={handleCancel}
+      titleData="Editar Sesion"
+      btnTitle="Editar"
+      errors={errors}
+    />
+  );
 };
 
 export default EditarSesion;

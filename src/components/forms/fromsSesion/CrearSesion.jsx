@@ -27,6 +27,12 @@ const CrearSesion = () => {
     } else {
       // Aquí puedes manejar el submit del formulario
       console.log("Formulario enviado", formData);
+      Swal.fire({
+        icon: 'success',
+        title: 'Sesion creada',
+        showConfirmButton: false,
+        timer: 1500
+      });
       setErrors({});
     }
   };
@@ -43,7 +49,21 @@ const CrearSesion = () => {
 
     if (!formData.fecha_Sesion) {
       newErrors.fecha_Sesion = "La fecha de la sesion es obligatoria.";
+    } else {
+      // Obtener la fecha actual y establecer la hora a 0
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      // Convertir la fecha ingresada a objeto Date
+      const inputDate = new Date(formData.fecha_Sesion);
+
+      // Comparar la fecha ingresada con la fecha actual
+      if (inputDate < today) {
+        newErrors.fecha_Sesion =
+          "La fecha no puede ser anterior a la fecha actual.";
+      }
     }
+    
     if (!formData.nombre) {
       newErrors.nombre = "El nombre es obligatorio.";
     }

@@ -95,10 +95,11 @@ const UserForm = ({
                 </label>
                 <div className="flex w-100 h-100">
                   <span className="inline-flex items-center w-24 text-base text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
-                    <select className="bg-transparent border-transparen rounded-e-lg focus:ring-blue-500 w-full px-1 py-2  block text-sm font-bold text-gray-400">
-                      <option value="Cedula" selected>
-                        CC
-                      </option>
+                    <select
+                      className="bg-transparent border-transparen rounded-e-lg focus:ring-blue-500 w-full px-1 py-2 block text-sm font-bold text-gray-400"
+                      defaultValue="Cedula"
+                    >
+                      <option value="Cedula">CC</option>
                       <option value="Tarjeta de identidad">TI</option>
                     </select>
                   </span>
@@ -209,34 +210,51 @@ const UserForm = ({
                     onChange={handleChange}
                     class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     placeholder="Bootcamp"
+                    defaultValue="BlcBasico"
                   >
-                    <option value="BlcBasico" selected>
+                    <option value="BlcBasico" >
                       Blockchain basico
                     </option>
-                    <option value="BlcIntermedio" selected>
+                    <option value="BlcIntermedio" >
                       Blockchain intermedio
                     </option>
-                    <option value="BlcAvanzado" selected>
+                    <option value="BlcAvanzado" >
                       Blockchain avanzado
                     </option>
-                    <option value="DWEFBasico" selected>
+                    <option value="DWEFBasico" >
                       Desarrollo web Full Stack basico
                     </option>
-                    <option value="DWEFIntermedio" selected>
+                    <option value="DWEFIntermedio" >
                       Desarrollo web Full Stack intermedio
                     </option>
-                    <option value="DWEFAvanzado" selected>
-                    Desarrollo web Full Stack avanzado
+                    <option value="DWEFAvanzado" >
+                      Desarrollo web Full Stack avanzado
                     </option>
                     <option value="ADBasico">Analisis de datos basico</option>
-                    <option value="ADIntermedio">Analisis de datos intermedio</option>
-                    <option value="ADAvanzado">Analisis de datos avanzado</option>
-                    <option value="IABasico">Inteligencia Artificial basico</option>
-                    <option value="IAIntermedio">Inteligencia Artificial intermedio</option>
-                    <option value="IAAvanzado">Inteligencia Artificial avanzado</option>
-                    <option value="NubeBasico">Arquitectura en la Nube basico</option>
-                    <option value="NubeIntermedio">Arquitectura en la Nube intermedio</option>
-                    <option value="NubeAvanzado">Arquitectura en la Nube avanzado</option>
+                    <option value="ADIntermedio">
+                      Analisis de datos intermedio
+                    </option>
+                    <option value="ADAvanzado">
+                      Analisis de datos avanzado
+                    </option>
+                    <option value="IABasico">
+                      Inteligencia Artificial basico
+                    </option>
+                    <option value="IAIntermedio">
+                      Inteligencia Artificial intermedio
+                    </option>
+                    <option value="IAAvanzado">
+                      Inteligencia Artificial avanzado
+                    </option>
+                    <option value="NubeBasico">
+                      Arquitectura en la Nube basico
+                    </option>
+                    <option value="NubeIntermedio">
+                      Arquitectura en la Nube intermedio
+                    </option>
+                    <option value="NubeAvanzado">
+                      Arquitectura en la Nube avanzado
+                    </option>
                   </select>
                 </div>
                 {errors.bootcamp && (

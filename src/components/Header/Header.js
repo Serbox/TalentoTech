@@ -22,7 +22,7 @@ const Header = () => {
             {/*Icono Muni Desplegable*/}
                 <div onClick={()=> setisOpen(!isOpen)} className='w-7 h-7 absolute right-8 top-1 cursor-pointer md:hidden'>
                     {
-                        isOpen ? <i class="bi bi-list text-white text-2xl"></i> : <i class="bi bi-x-lg text-white text-xl"></i>
+                        isOpen ? <i className="bi bi-list text-white text-2xl"></i> : <i className="bi bi-x-lg text-white text-xl"></i>
                     }
                 </div>
             {/*Nav Link*/}
@@ -36,21 +36,21 @@ const Header = () => {
                             {!isOpenOptions ?(
                                 <i className="bi bi-grid-fill px-2"></i>
                             ):(
-                                <i class="bi bi-ui-checks-grid px-2 "></i>
+                                <i className="bi bi-ui-checks-grid px-2 "></i>
                             )}
                             {isOpenOptions && (
                                 <div className='bg-blue-950 absolute top-14 left-0 flex flex-col items-start rounded-lg p-2 w-full shadow-black'>
                                     <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-blue-950'>
-                                        <a href='/users' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-people-fill px-1"></i>Usuario</a>
+                                        <a href='/users' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i className="bi bi-people-fill px-1"></i>Usuario</a>
                                     </div>
                                     <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-blue-950'>
-                                        <a href='/asistencia' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-calendar-event-fill px-1"></i>Sesiones</a>
+                                        <a href='/asistencia' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i className="bi bi-calendar-event-fill px-1"></i>Sesiones</a>
                                     </div>
                                     <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-blue-950'>
-                                        <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-newspaper px-1"></i>Noticias</a>
+                                        <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i className="bi bi-newspaper px-1"></i>Noticias</a>
                                     </div>
                                     <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-blue-950'>
-                                        <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-inboxes-fill px-1"></i>Bootcamp </a>
+                                        <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i className="bi bi-inboxes-fill px-1"></i>Bootcamp </a>
                                     </div>
                                 </div>
                             )}
@@ -66,9 +66,9 @@ const Header = () => {
                                 </div>
                                 Sylvanas
                                 {!isOpenUser ?(
-                                    <i class="bi bi-caret-down-fill"></i>
+                                    <i className="bi bi-caret-down-fill"></i>
                                 ) :(
-                                    <i class="bi bi-caret-up-fill"></i>
+                                    <i className="bi bi-caret-up-fill"></i>
                                 )}
                                 {isOpenUser &&(
                                     <div className='bg-blue-950 absolute top-14 left-0 flex flex-col items-start rounded-lg p-2 w-full shadow-black'>
@@ -86,10 +86,10 @@ const Header = () => {
                                             </div>
                                         </div>
                                         <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-blue-950'>
-                                            <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-nut-fill mx-1"></i >Config. cuenta</a>
+                                            <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i className="bi bi-nut-fill mx-1"></i >Config. cuenta</a>
                                         </div>
                                         <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-red-600 '>
-                                            <Link to={'/login'} className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i class="bi bi-door-open text-xl"></i> Cerrar Sesiòn</Link>
+                                            <Link to={'/login'} className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i className="bi bi-door-open text-xl"></i> Cerrar Sesiòn</Link>
                                         </div>
                                     </div>
                                 )}
