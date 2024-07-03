@@ -29,10 +29,10 @@ const useSesionForm = ({
                   >
                     Fecha :
                   </label>
-                  <div class="flex w-100 h-100">
-                    <span class="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+                  <div className="flex w-100 h-100">
+                    <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
                       <svg
-                        class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                        className="w-4 h-4 text-gray-500 dark:text-gray-400"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -48,7 +48,7 @@ const useSesionForm = ({
                       name="fecha_Sesion"
                       value={formData.fecha}
                       onChange={handleChange}
-                      class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     />
                   </div>
                   {errors.fecha_Sesion && (
@@ -64,9 +64,9 @@ const useSesionForm = ({
                   >
                     Nombre:
                   </label>
-                  <div class="flex w-100 h-100">
-                    <span class="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
-                      <i class="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
+                  <div className="flex w-100 h-100">
+                    <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+                      <i className="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
                     </span>
                     <input
                       type="text"
@@ -92,9 +92,9 @@ const useSesionForm = ({
                   >
                     Enlace:
                   </label>
-                  <div class="flex w-100 h-100">
-                    <span class="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
-                      <i class="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
+                  <div className="flex w-100 h-100">
+                    <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+                      <i className="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
                     </span>
                     <input
                       type="text"
@@ -118,16 +118,16 @@ const useSesionForm = ({
                   >
                     Componente:
                   </label>
-                  <div class="flex w-100 h-100">
-                    <span class="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
-                      <i class="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
+                  <div className="flex w-100 h-100">
+                    <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+                      <i className="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
                     </span>
                     <select
                       type="text"
                       id="componente"
                       name="componente"
                       onChange={handleChange}
-                      class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                       placeholder="Componente"
                       defaultValue="Ingles"
                     >
@@ -153,16 +153,16 @@ const useSesionForm = ({
                   >
                     Estado sesion:
                   </label>
-                  <div class="flex w-100 h-100">
-                    <span class="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
-                      <i class="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
+                  <div className="flex w-100 h-100">
+                    <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+                      <i className="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
                     </span>
                     <select
                       type="text"
                       id="estado_sesion"
                       name="estado_sesion"
                       onChange={handleChange}
-                      class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                       defaultValue="activo"
                    >
                       <option value="proximamente">Proximamente</option>
@@ -186,16 +186,16 @@ const useSesionForm = ({
                   >
                     Bootcamp:
                   </label>
-                  <div class="flex w-100 h-100">
-                    <span class="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
-                      <i class="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
+                  <div className="flex w-100 h-100">
+                    <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+                      <i className="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
                     </span>
                     <select
                       type="text"
                       id="bootcamp"
                       name="bootcamp"
                       onChange={handleChange}
-                      class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                       placeholder="Bootcamp"
                       defaultValue="ADAvanzado"
                     >

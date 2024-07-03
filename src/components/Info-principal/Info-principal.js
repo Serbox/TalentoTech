@@ -158,7 +158,7 @@ const Info = () => {
                                     <p className='font-semibold text-base'>
                                         Link Ingreso
                                     </p>
-                                    <i class="bi bi-chevron-right px-3 text-base"></i>
+                                    <i className="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
                                 <img src={ImgBootcamps} alt="imagen Market" className='absolute bottom-0 right-4'/>
                             </a>
@@ -173,7 +173,7 @@ const Info = () => {
                                     <p className='font-semibold text-base'>
                                         Link Ingreso
                                     </p>
-                                    <i class="bi bi-chevron-right px-3 text-base"></i>
+                                    <i className="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
                                 <img src={ImgPQR} alt="imagen Market" className='absolute bottom-0 right-4'/>
                             </a>
@@ -188,7 +188,7 @@ const Info = () => {
                                     <p className='font-semibold text-base'>
                                         Link Ingreso
                                     </p>
-                                    <i class="bi bi-chevron-right px-3 text-base"></i>
+                                    <i className="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
                                 <img src={ImgHackatones} alt="imagen Market" className='absolute bottom-0 right-4 '/>
                             </a>
@@ -203,7 +203,7 @@ const Info = () => {
                                     <p className='font-semibold text-base'>
                                         Link Ingreso
                                     </p>
-                                    <i class="bi bi-chevron-right px-3 text-base"></i>
+                                    <i className="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
                                 <img src={ImgJobConnection} alt="imagen Market" className='absolute bottom-0 right-4'/>
                             </a>
@@ -218,7 +218,7 @@ const Info = () => {
                                     <p className='font-semibold text-base'>
                                         Link Ingreso
                                     </p>
-                                    <i class="bi bi-chevron-right px-3 text-base"></i>
+                                    <i className="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
                                 <img src={ImgMarketPlace} alt="imagen Market" className='absolute bottom-0 right-4'/>
                             </a>

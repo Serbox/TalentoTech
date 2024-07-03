@@ -36,7 +36,7 @@ function Login() {
                             Email
                         </From.Label>
                         <InputGroup hasValidation className='w-75 '>
-                            <InputGroup.Text id="basic-addon1"><i class="bi bi-person-circle" style={{fontSize:"2rem", color:"gray"}}></i></InputGroup.Text>
+                            <InputGroup.Text id="basic-addon1"><i className="bi bi-person-circle" style={{fontSize:"2rem", color:"gray"}}></i></InputGroup.Text>
                             <From.Control type='email' className='font rounded-end p-2 px-3 border-info' placeholder={'Email'}/>
                             <From.Control.Feedback type='invalid'>
                                 Ingrese un correo valido
@@ -48,7 +48,7 @@ function Login() {
                             Password
                         </From.Label>
                         <InputGroup hasValidation className='w-75 '>
-                            <InputGroup.Text id="basic-addon1"><i class="bi bi-lock-fill" style={{fontSize:"2rem", color:"gray"}}></i></InputGroup.Text>
+                            <InputGroup.Text id="basic-addon1"><i className="bi bi-lock-fill" style={{fontSize:"2rem", color:"gray"}}></i></InputGroup.Text>
                             <From.Control type='password' className='font rounded-end p-2 px-3 border-info w-75 ' placeholder='Password'/>
                             <From.Control.Feedback type='invalid'>
                                 Ingrese una contraseña valida

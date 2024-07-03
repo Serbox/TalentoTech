@@ -60,10 +60,10 @@ const UserNotas = ({
               >
                 Correo:
               </label>
-              <div class="flex w-100 h-100">
-                <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+              <div className="flex w-100 h-100">
+                <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
                   <svg
-                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    className="w-4 h-4 text-gray-500 dark:text-gray-400"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -79,7 +79,7 @@ const UserNotas = ({
                   name="correo"
                   value={formData.correo}
                   onChange={handleChange}
-                  class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                   placeholder="name@gmail.com"
                 />
               </div>
@@ -162,10 +162,10 @@ const UserNotas = ({
                 >
                   Fecha de nacimiento:
                 </label>
-                <div class="flex w-100 h-100">
-                  <span class="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+                <div className="flex w-100 h-100">
+                  <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
                     <svg
-                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      className="w-4 h-4 text-gray-500 dark:text-gray-400"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -180,7 +180,7 @@ const UserNotas = ({
                     name="fecha_nacimiento"
                     value={formData.fecha_nacimiento}
                     onChange={handleChange}
-                    class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     placeholder="Select date"
                   />
                 </div>
@@ -198,16 +198,16 @@ const UserNotas = ({
                 >
                   Bootcamp:
                 </label>
-                <div class="flex w-100 h-100">
-                  <span class="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
-                    <i class="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
+                <div className="flex w-100 h-100">
+                  <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+                    <i className="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
                   </span>
                   <select
                     type="text"
                     id="bootcamp"
                     name="bootcamp"
                     onChange={handleChange}
-                    class="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     placeholder="Bootcamp"
                   >
                     <option value="BlcBasico" selected>
