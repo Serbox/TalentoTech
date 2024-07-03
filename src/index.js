@@ -5,12 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Bd from './components/BD/bd.jsx';
-import {
-  AsistenciaPage,
-  UsersPage,
-  CalificacionPage
-
-} from './pages';
+import AsistenciaPage from './pages/AsistenciaPage/AsistenciaPage.jsx';
+import UsersPage from './pages/Userpage/UsersPage.jsx';
+import CalificacionPage from './pages/CalificacionPage/CalificacionPage.jsx';  
 
 import Login from './components/Login/Login';
 
