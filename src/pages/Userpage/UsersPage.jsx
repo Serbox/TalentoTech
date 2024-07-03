@@ -13,6 +13,7 @@ import Admin from "../../IMG/Admin.svg";
 import AddUsuario from "../../IMG/AddUsuario.svg";
 import Modal from '../../components/forms/formModal.jsx';
 import RegisterUser from '../../components/forms/ManageUsers/RegisterUser.jsx';
+import ImgTables from '../../IMG/Tables.svg'
 import { useState } from "react";
 
 const Menu = [{
@@ -161,7 +162,10 @@ const UsersPage = () => {
                 </a>
               </li>
           </ul>
-          <div className="flex flex-row grid-rows-1 w-100 bg-blue-950 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-sky-950">
+          <div className="relative flex flex-row grid-rows-1 w-100 bg-blue-950 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-sky-950">
+            <div className="absolute bottom-6 left-4">
+              <img src={ImgTables} alt=".." />
+            </div>
             <div className="flex flex-col  gap-2">
               {Menu.map(item => (<button onClick={()=> handleClick(item.id)} key={item.id} type="button" className={`btn bg-blue-200 hover:bg-blue-300 text-white font-bold py-2 px-4 border-b-4 border-blue-400 hover:border-blue-500 rounded ${checkActive(item.id, "bg-blue-400 border-b-4 border-blue-600 text-orange-100")}`}>{item.titleTab}</button>))}
             </div>

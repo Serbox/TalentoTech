@@ -168,7 +168,7 @@ const Info = () => {
                                 <h1 className='font-semibold'>
                                     Pqr
                                 </h1>
-                                <p className='font-semibold'>Editar pqrs</p>
+                                <p className='font-semibold'>Editar sesiones</p>
                                 <div className='flex flex-row pt-5'>
                                     <p className='font-semibold text-base'>
                                         Link Ingreso
@@ -181,9 +181,9 @@ const Info = () => {
                         <li className='flex flex-row justify-betwee'>
                             <a href='#' className='block w-96 h-52 p-6 bg-purple-500 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-purple-700 hover:bg-purple-600'>
                                 <h1 className='font-semibold'>
-                                    Hackathons
+                                    Actividades
                                 </h1>
-                                <p className='font-semibold'>Editar hackatones</p>
+                                <p className='font-semibold'>Editar Actividad</p>
                                 <div className='flex flex-row pt-5'>
                                     <p className='font-semibold text-base'>
                                         Link Ingreso
