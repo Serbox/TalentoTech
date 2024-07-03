@@ -12,13 +12,13 @@ const RegisterUser = ({titleData}) => {
     telefono: "",
     password: "",
     confirmPassword: "",
-    rol: "",
   });
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validate();
+
     if (Object.keys(validationErrors).length > 0) {
       // Convertir los errores en una lista HTML
       const errorsHtml = Object.values(validationErrors).map(error => `<li>${error}</li>`).join('');
@@ -30,7 +30,12 @@ const RegisterUser = ({titleData}) => {
       });
     } else {
       // Aquí puedes manejar el submit del formulario
-      console.log("Formulario enviado", formData);
+      Swal.fire({
+        icon: 'success',
+        title: 'Usuario creado',
+        showConfirmButton: false,
+        timer: 1500
+      });
       setErrors({});
     }
   };
@@ -50,9 +55,10 @@ const RegisterUser = ({titleData}) => {
 
     if (!formData.cedula) {
       newErrors.cedula = "La cédula es obligatoria.";
-    }else if(NaN(formData.cedula)) {
+    }else if(isNaN(formData.cedula)) {
       newErrors.cedula = "La cédula debe ser un número.";
     }
+
     if (!formData.nombre) {
       newErrors.nombre = "El nombre es obligatorio.";
     }
@@ -67,7 +73,7 @@ const RegisterUser = ({titleData}) => {
     if (!formData.correo) {
       newErrors.correo = "El correo es obligatorio.";
     }else if (!/^[a-z0-9._%+-]+@[a-z0-9*-]+\.[a-z]+$/.test(formData.correo)) {
-      errors.correo = "Correo no es válido";
+      newErrors.correo = "Correo no es válido";
     }
 
     if (!formData.telefono) {
@@ -82,29 +88,18 @@ const RegisterUser = ({titleData}) => {
       newErrors.confirmPassword = "Las contraseñas no coinciden.";
     }
 
-    // if (!formData.rol) {
-    //   newErrors.rol = "El rol es obligatorio.";
-    // }
+ 
 
     return newErrors;
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const validationErrors = validate();
-  //   if (Object.keys(validationErrors).length > 0) {
-  //     setErrors(validationErrors);
-  //   } else {
-  //     // Aquí puedes manejar el submit del formulario
-  //     console.log("Formulario enviado", formData);
-  //     setErrors({});
-  //   }
-  // };
+
 
   const handleCancel = () => {
     // Aquí puedes manejar la acción de cancelar
     console.log("Formulario cancelado");
     // Podrías limpiar el formulario si lo deseas
+
     setFormData({
       cedula: "",
       nombre: "",
@@ -114,7 +109,6 @@ const RegisterUser = ({titleData}) => {
       telefono: "",
       password: "",
       confirmPassword: "",
-      rol: "",
     });
   };
 
