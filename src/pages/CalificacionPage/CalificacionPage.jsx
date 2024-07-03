@@ -6,14 +6,69 @@ import Actividades from "../../IMG/NumActividades.svg";
 import EstAsistencia from "../../IMG/EstAsistencia.svg";
 import DocAsistencia from "../../IMG/DocAsistencia.svg";
 import EntActividades from "../../IMG/ActividadesEnt.svg";
-import Profesor from "../../IMG/Profesor.svg";
-import Estudiante from "../../IMG/Estudiantes.svg";
-import Admin from "../../IMG/Admin.svg";
+import Actividad from "../../IMG/Actividades_Actividades.svg";
+import Actividad_Calificada from "../../IMG/Actividades_calificadas.svg";
+import Actividad_sin_calificar from "../../IMG/Actividades_Sin-Calificar.svg";
+import TableUsers from "../../components/tables/tableUsers/TableUsers.jsx";
+import TableNotas from "../../components/tables/tablaNotas/TableNotas.jsx";
+import RegisterUser from '../../components/forms/ManageUsers/RegisterUser.jsx';
+import Modal from '../../components/forms/formModal.jsx';
+import AddActividad from "../../IMG/AddActividad.svg";
+import TablaActividades from "../../IMG/Table_Actividades.svg";
+
+const Menu = [{
+    id: 1,
+    title: "Actividades Desarrollo Web",
+    Form: <RegisterUser titleData={"Crear Estudiante"}/>,
+    Table: <TableUsers/>
+  },{
+    id: 2,
+    title: "Actividades Block Chain",
+    Form: <RegisterUser titleData={"Crear Administrador"}/>,
+    Table: <TableUsers/>
+  },{
+    id: 3,
+    title: "Actividades Inteligencia Artificial",
+    Form: <RegisterUser titleData={"Crear Maestro"}/>,
+    Table: <TableUsers/>
+  },{
+    id: 4,
+    title: "Actividades Analisis de datos",
+    Form: <RegisterUser titleData={"Crear Maestro"}/>,
+    Table: <TableUsers/>
+  }]
 
 
 
 const CalificacionPage = () => {
-    let [isOpenBootcamp, setisOpenBootcamp] = useState(false)
+    const [activeindex , setActiveIndex ] = useState(1);
+    const handleClick = (index) => setActiveIndex(index);
+    const checkActive = (index,className) => activeindex === index ? className : "";
+
+    function changeFunction (){
+        var selectBox = document.getElementById('Bootcamps_actividad');
+        var selectValue = selectBox.options[selectBox.selectedIndex].value;
+        switch (selectValue){
+            case "DW":
+                handleClick(1);
+                checkActive(1, "bg-blue-400 border-b-4 border-blue-600 text-orange-100");
+                break;
+            case "BC":
+                handleClick(2);
+                checkActive(2, "bg-blue-400 border-b-4 border-blue-600 text-orange-100");
+                break;
+            case "IA":
+                handleClick(3);
+                checkActive(3, "bg-blue-400 border-b-4 border-blue-600 text-orange-100");
+                break;
+            case "AD":
+                handleClick(4);
+                checkActive(4, "bg-blue-400 border-b-4 border-blue-600 text-orange-100");
+                break;
+
+        }
+    }
+
     return (
         <div className="container-users">
             <Header/>
@@ -96,45 +151,20 @@ const CalificacionPage = () => {
                             </li>
                             <li className='w-full h-full'>
                                 <p className='font-bold text-blue-900 text-xl'>Bootcamp:</p>
-                                <div className=" relative flex flex-col items-center font-semibold md:my-0 bg-blue-900  border-b-4  border-sky-950 p-2 rounded-xl shadow z-20">
-                                    <a href='#' onClick={() => setisOpenBootcamp((prev) => !prev)} className='flex justify-between font-semibold text-white text-lg decoration-transparent p-0 gap-2 items-start px-3 hover:text-lg hover:font-semibold tracking-wider'>
-                                        Desarrollo Web
-                                        {!isOpenBootcamp ?(
-                                            <i className="bi bi-caret-down-fill"></i>
-                                        ) :(
-                                            <i className="bi bi-caret-up-fill"></i>
-                                        )}
-                                        {isOpenBootcamp &&(
-                                            <div className='bg-white absolute top-12 left-0 flex flex-col items-start rounded-lg p-2 w-full shadow-black border-2 border-blue-900'>
-                                                <div className='flex flex-row w-full h-full items-center bg-slate-50 hover:bg-slate-200 rounded-lg p-1'>
-                                                    <div className='flex flex-col px-2 w-full '>
-                                                            <h4 className='text-gray-700 text-xl font-bold p-0 m-0 text-center'>Sylvanas</h4>
-                                                            <h4 className='text-gray-700 text-xl font-bold p-0 m-0 text-center'>Hayase</h4>
-                                                        <div className='text-base text-center text-sky-700 font-bold'>
-                                                            Sylvanas@
-                                                        </div>
-
-                                                    </div>
-                                                    <div className='bg-gray-300 rounded-full p-0 mx-2 border-2 border-gray-400 shadow'>
-                                                        <h5 className='p-2 text-center font-medium'>SM</h5>
-                                                    </div>
-                                                </div>
-                                                <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-blue-950'>
-                                                    <a href='/' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i className="bi bi-nut-fill mx-1"></i >Config. cuenta</a>
-                                                </div>
-                                                <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-red-600 '>
-                                                    <a to={'/login'} className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i className="bi bi-door-open text-xl"></i> Cerrar Sesiòn</a>
-                                                </div>
-                                            </div>
-                                        )}
-                                    </a>
-                                </div>
+                                <select id='Bootcamps' className=" text-white relative flex flex-col items-center font-semibold md:my-0 bg-blue-900  border-b-4  border-blue-950 p-2 rounded-xl shadow z-2 outline-none">
+                                    <option selected value="US" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Desarrollo Web</option>
+                                    <option value="CA" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Block Chain</option>
+                                    <option value="FR" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Artificial Inteligence</option>
+                                    <option value="DE" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Analisis de datos</option>
+                                </select>
                             </li>
                             <li>
                                 <p className='font-bold text-blue-900 text-xl'>Nivel:</p>
-                            </li>
-                            <li>
-
+                                <select id='Nivel' className=" text-white relative flex flex-col items-center font-semibold md:my-0 bg-blue-900  border-b-4  border-blue-950 p-2 rounded-xl shadow z-2 outline-none">
+                                    <option selected value="CA" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Basico</option>
+                                    <option value="FR" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Intermedio</option>
+                                    <option value="DE" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Experto</option>
+                                </select>
                             </li>
                         </ul>    
 
@@ -143,7 +173,7 @@ const CalificacionPage = () => {
                         <a href="/users" className="p-0 block w-[100%] h-100 bg-white rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-slate-400 hover:bg-slate-400 border-2 border-gray-300 ">
                         <div className="h-full w-full flex flex-column justify-center">
                             <div className="w-100 flex flex-row justify-center">
-                                <img src={Profesor} alt="..." className="w-[60%]" />        
+                                <img src={Actividad} alt="..." className="w-[70%]" />        
                             </div>
                             <div className="w-full h-full bg-blue-100 rounded-b-xl p-2">
                                 <p className="text-center font-bold text-3xl text-gray-400 mb-0">20</p>
@@ -156,12 +186,12 @@ const CalificacionPage = () => {
                         <a href="/users" className="p-0 block w-[100%] h-100 bg-white rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-slate-400 hover:bg-slate-400 border-2 border-gray-300 ">
                         <div className="h-full w-full flex flex-column justify-center">
                             <div className="w-100 flex flex-row justify-center">
-                                <img src={Admin} alt="..." className="w-[60%]" />
+                                <img src={Actividad_Calificada} alt="..." className="w-[70%]" />
                             </div>        
                             <div className="w-100 h-100 bg-blue-100 rounded-b-xl p-2">
                                 <p className="text-center font-bold text-3xl text-gray-400 mb-0">100</p>
                                 <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Actividades</h4>
-                                <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Calificadas</h4>
+                                <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">calificadas</h4>
                             </div>         
                         </div>
                         </a>
@@ -170,17 +200,54 @@ const CalificacionPage = () => {
                         <a href="/users" className="p-0 block w-[100%] h-100 bg-white rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-slate-400 hover:bg-slate-400 border-2 border-gray-300 ">
                         <div className="h-full w-full flex flex-column justify-center">
                             <div className="w-100 flex flex-row justify-center">
-                            <img src={Estudiante} alt="..." className="w-[60%]" />  
+                            <img src={Actividad_sin_calificar} alt="..." className="w-[70%]" />  
                             </div>      
                             <div className="w-100 h-100 bg-blue-100 rounded-b-xl p-2">
                                 <p className="text-center font-bold text-3xl text-gray-400 mb-0">100</p>
                                 <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">Actividades</h4>
-                                <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">No Calificadas</h4>
+                                <h4 className="text-center font-bold text-2xl text-gray-600 m-0 p-0">sin calificadas</h4>
                             </div>         
                         </div>
                         </a>
                     </li>
                 </ul>
+                <div className="relative flex flex-row grid-rows-1 w-100 bg-blue-950 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-sky-950">
+                    <div className="absolute bottom-6 left-10">
+                    <img src={TablaActividades} alt=".." />
+                    </div>
+                    <div className="flex flex-col w-100 h-100 pr-5">
+                        <p className='font-bold text-white text-xl text-center'>Bootcamp:</p>
+                        <select id='Bootcamps_actividad' onChange={changeFunction} className=" w-100 h-100 bg-blue-200 hover:bg-blue-300 text-white font-bold py-2 px-4 border-b-4 border-blue-400 hover:border-blue-500  rounded outline-none">
+                            <option selected value="DW"className={`bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold`}>Desarrollo Web</option>
+                            <option value="BC" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Block Chain</option>
+                            <option value="IA" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Inteligencia Artificial</option>
+                            <option value="AD" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Analisis de datos</option>
+                        </select>
+                    </div>
+                    <div className="relative w-75 h-100 bg-blue-200 rounded-xl p-2 border-b-8 border-x-2 border-blue-400">
+                    {Menu.map(item =>(<div key={item.id} className={`panel ${checkActive(item.id,"active")}`}>
+                        <h1 className="text-gray-600 font-bold text-2xl text-center p-3">{item.title}</h1>
+                        <select id='Bootcamps_level' className="flex flex-row absolute top-4 left-5 font-bold text-white gap-1 rounded-2xl p-2 justify-center align-middle outline-none" style={{background:"#9BD0D9"}}>
+                            <option selected value="DW"className={`bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold`}>Principiante</option>
+                            <option value="BC" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Intermedio</option>
+                            <option value="IA" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Experto</option>
+                        </select>
+                        <Modal Form={item.Form} ButonTitle={"Agregar Actividad"} img={AddActividad} btnClass={'flex flex-row absolute top-4 right-2 font-bold text-white gap-1 rounded-2xl pt-1 justify-center align-middle'} style={{background:"#9BD0D9"}}/>
+                        <div className="h-100 w-100 bg-white rounded-xl">
+                        {item.Table}
+                        </div>
+                    </div>))}
+                    </div>
+                </div>
+                <div className="flex flex-row grid-rows-1 w-100 bg-blue-300 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-blue-400">
+                    <div className="relative w-100 h-100 bg-blue-900 rounded-xl p-2 border-b-8 border-x-2 border-blue-950">
+                        <h1 className="text-white font-bold text-2xl text-center p-3">Notas Estudiantes</h1>
+                        <Modal Form= {<RegisterUser titleData={"Crear Maestro"}/>} btnClass={'hidden'} style={{background:"#9BD0D9"}}/>
+                        <div className="h-100 w-100 bg-white rounded-xl">
+                        <TableNotas/>
+                        </div>
+                    </div>
+                </div>
             </Container>
 
             
