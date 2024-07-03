@@ -168,7 +168,7 @@ const Info = () => {
                                 <h1 className='font-semibold'>
                                     Pqr
                                 </h1>
-                                <p className='font-semibold'>Editar sesiones</p>
+                                <p className='font-semibold'>Editar pqr</p>
                                 <div className='flex flex-row pt-5'>
                                     <p className='font-semibold text-base'>
                                         Link Ingreso
@@ -179,7 +179,7 @@ const Info = () => {
                             </a>
                         </li>
                         <li className='flex flex-row justify-betwee'>
-                            <a href='#' className='block w-96 h-52 p-6 bg-purple-500 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-purple-700 hover:bg-purple-600'>
+                            <Link to={"/calificacion"} className='block w-96 h-52 p-6 bg-purple-500 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-purple-700 hover:bg-purple-600'>
                                 <h1 className='font-semibold'>
                                     Actividades
                                 </h1>
@@ -191,14 +191,14 @@ const Info = () => {
                                     <i className="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
                                 <img src={ImgHackatones} alt="imagen Market" className='absolute bottom-0 right-4 '/>
-                            </a>
+                            </Link>
                         </li>
                         <li className='flex flex-row justify-between'>
-                        <a href='#' className='block w-96 h-52 p-6  bg-red-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-red-600 hover:bg-red-500'>
+                        <Link to={"/asistencia"} className='block w-96 h-52 p-6  bg-red-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-red-600 hover:bg-red-500'>
                                 <h1 className='font-semibold'> 
-                                    Job connections
+                                    Sesiones
                                 </h1>
-                                <p className='font-semibold'>Editar job connections</p>
+                                <p className='font-semibold'>Editar sesiones</p>
                                 <div className='flex flex-row pt-5'>
                                     <p className='font-semibold text-base'>
                                         Link Ingreso
@@ -206,7 +206,7 @@ const Info = () => {
                                     <i className="bi bi-chevron-right px-3 text-base"></i>
                                 </div>
                                 <img src={ImgJobConnection} alt="imagen Market" className='absolute bottom-0 right-4'/>
-                            </a>
+                            </Link>
                         </li>
                         <li className='flex flex-row justify-between'>
                             <a href='#' className='relatove w-96 h-52 p-6  bg-lime-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-lime-600 hover:bg-lime-500'>

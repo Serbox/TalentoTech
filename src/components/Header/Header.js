@@ -30,7 +30,7 @@ const Header = () => {
                     <li className='font-semibold my-6 md:my-0 md:ml-8'>
                         <a href='/' className='block font-semibold text-white text-lg decoration-transparent p-0 hover:text-xl hover:font-bold'><i className="bi bi-house-fill px-2"> </i>Inicio</a>
                     </li>
-                    <li className='relative flex flex-col font-semibold my-6 md:my-0 md:ml-8 hover:bg-blue-950 p-2 rounded-xl hover:shadow'>
+                    <li className='relative flex flex-col font-semibold my-6 md:my-0 md:ml-8 hover:border-b-4 hover:border-x-2 hover:border-t-2 hover:border-blue-950 p-2 rounded-xl hover:shadow-md hover:shadow-blue-950'>
                         <a href='#' onClick={() => setisOpenOptions((prev) => !prev)} className='w-full flex justify-between font-semibold text-white text-lg decoration-transparent p-0 gap-2 items-center px-3 hover:text-lg hover:font-bold tracking-wider'>
                             Opciones
                             {!isOpenOptions ?(
@@ -39,7 +39,7 @@ const Header = () => {
                                 <i className="bi bi-ui-checks-grid px-2 "></i>
                             )}
                             {isOpenOptions && (
-                                <div className='bg-blue-950 absolute top-14 left-0 flex flex-col items-start rounded-lg p-2 w-full shadow-black'>
+                                <div className='bg-white absolute top-12 left-0 flex flex-col items-start rounded-lg p-1 w-full shadow-md shadow-blue-950 border-2 border-blue-950'>
                                     <div className='bg-slate-50 w-full rounded-sm text-center mt-1 hover:bg-blue-950'>
                                         <a href='/users' className='text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold  '><i className="bi bi-people-fill px-1"></i>Usuario</a>
                                     </div>
@@ -59,7 +59,7 @@ const Header = () => {
                     <li className='font-semibold my-6 md:my-0 md:ml-8'>
                         <a href='/' className='block font-semibold text-white text-lg decoration-transparent p-0 hover:text-xl hover:font-bold'><i className="bi bi-question-circle-fill px-2"> </i>Ayuda</a>
                     </li>
-                    <li className=" relative flex flex-col items-center font-semibold my-7 md:my-0 md:ml-8 bg-blue-950  border-b-4  border-sky-950 p-2 rounded-xl shadow">
+                    <li className=" relative flex flex-col items-center font-semibold my-7 md:my-0 md:ml-8 bg-blue-900  border-b-4 border-x-2 border-t-2  border-blue-950 p-2 rounded-xl shadow">
                             <a href='#' onClick={() => setisOpenUser((prev) => !prev)} className='w-full flex justify-between font-semibold text-white text-lg decoration-transparent p-0 gap-2 items-center px-3 hover:text-lg hover:font-semibold tracking-wider'>
                                 <div className='rounded-full bg-gray-400 p-1 text-sm hover:text-sm hover:font-bold'>
                                     SM
@@ -71,7 +71,7 @@ const Header = () => {
                                     <i className="bi bi-caret-up-fill"></i>
                                 )}
                                 {isOpenUser &&(
-                                    <div className='bg-blue-950 absolute top-14 left-0 flex flex-col items-start rounded-lg p-2 w-full shadow-black'>
+                                    <div className='bg-white absolute top-12 left-0 flex flex-col items-start rounded-lg p-1 w-full shadow-md shadow-blue-950 border-2 border-blue-950'>
                                         <div className='flex flex-row w-full h-full items-center bg-slate-50 hover:bg-slate-200 rounded-lg p-1'>
                                             <div className='flex flex-col px-2 w-full '>
                                                     <h4 className='text-gray-700 text-xl font-bold p-0 m-0 text-center'>Sylvanas</h4>

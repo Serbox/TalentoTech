@@ -3,10 +3,6 @@ import "../../App.css";
 import TableUsers from "../../components/tables/tableUsers/TableUsers.jsx";
 import TableNotas from "../../components/tables/tablaNotas/TableNotas.jsx";
 import Container from "react-bootstrap/Container";
-import Actividades from "../../IMG/NumActividades.svg";
-import EstAsistencia from "../../IMG/EstAsistencia.svg";
-import DocAsistencia from "../../IMG/DocAsistencia.svg";
-import EntActividades from "../../IMG/ActividadesEnt.svg";
 import Profesor from "../../IMG/Profesor.svg";
 import Estudiante from "../../IMG/Estudiantes.svg";
 import Admin from "../../IMG/Admin.svg";
@@ -58,7 +54,6 @@ const UsersPage = () => {
             <li className="flex flex-row justify-center">
               <a href="/users" className="block w-64 h-40 p-3 bg-red-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-red-600 hover:bg-red-500">
                 <div className="flex flex-row justify-center align-middle ">
-                    <img src={Actividades} alt="..." className="w-100 h-100" />                 
                     <div className="flex flex-col">
                     <h4 className="text-center font-bold text-xl">Numero de actividades</h4>
                     <p className="text-center font-bold text-2xl">999</p>
@@ -74,7 +69,6 @@ const UsersPage = () => {
             <li className="flex flex-row justify-center">
               <a href="/users" className="block w-64 h-40 p-3 bg-blue-400 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-blue-600 hover:bg-blue-500">
                 <div className="flex flex-row justify-center align-middle ">
-                    <img src={EstAsistencia} alt="..." className="w-[80%]" />                 
                     <div className="flex flex-col">
                     <h4 className="text-center font-bold text-xl">Asistencia estudiantes</h4>
                     <p className="text-center font-bold text-2xl">233/242</p>
@@ -89,7 +83,6 @@ const UsersPage = () => {
             <li className="flex flex-row justify-center">
               <a href="/users" className="block w-64 h-40 p-3 bg-purple-500 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-purple-700 hover:bg-purple-600">
                 <div className="flex flex-row justify-center align-middle ">
-                    <img src={DocAsistencia} alt="..." className="w-100" />                 
                     <div className="flex flex-col">
                     <h4 className="text-center font-bold text-xl">Asistencia docentes</h4>
                     <p className="text-center font-bold text-2xl">242/242</p>
@@ -104,7 +97,6 @@ const UsersPage = () => {
             <li className="flex flex-row justify-center">
               <a href="/users" className="block w-64 h-40 p-3 bg-yellow-300 rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-yellow-500 hover:bg-yellow-400 ">
                 <div className="flex flex-row justify-center align-middle pb-1">
-                    <img src={EntActividades} alt="..." className="w-[60%]" />                 
                     <div className="flex flex-col">
                     <h4 className="text-center font-bold text-xl">Entrega de Actividades</h4>
                     <p className="text-center font-bold text-2xl">25/50</p>
@@ -121,7 +113,7 @@ const UsersPage = () => {
           <ul className="grid grid-cols-3 grid-rows-1 bg-blue-300 w-full mt-6 rounded-xl p-6 border-b-8 border-x-2 border-blue-400">
               <li className="flex flex-row justify-between w-100 h-100">
                 <a href="/users" className="p-0 block w-[100%] h-100 bg-white rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-slate-400 hover:bg-slate-400 border-2 border-gray-300 ">
-                  <div className="flex flex-column justify-center">
+                  <div className="h-full w-full flex flex-column justify-center">
                       <div className="w-100 flex flex-row justify-center">
                         <img src={Profesor} alt="..." className="w-[60%]" />        
                       </div>
@@ -135,7 +127,7 @@ const UsersPage = () => {
               </li>
               <li className="flex flex-row justify-between w-100 h-100">
                 <a href="/users" className="p-0 block w-[100%] h-100 bg-white rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-slate-400 hover:bg-slate-400 border-2 border-gray-300 ">
-                  <div className="flex flex-column justify-center">
+                  <div className="h-full w-full flex flex-column justify-center">
                       <div className="w-100 flex flex-row justify-center">
                         <img src={Admin} alt="..." className="w-[60%]" />
                       </div>        
@@ -149,7 +141,7 @@ const UsersPage = () => {
               </li>
               <li className="flex flex-row justify-between w-100 h-100">
                 <a href="/users" className="p-0 block w-[100%] h-100 bg-white rounded-xl hover:rounded-xl text-sm hover:text-sm shadow-xl hover:shadow-slate-400 hover:bg-slate-400 border-2 border-gray-300 ">
-                  <div className="flex flex-column justify-center">
+                  <div className="h-full w-full flex flex-column justify-center">
                     <div className="w-100 flex flex-row justify-center">
                       <img src={Estudiante} alt="..." className="w-[60%]" />  
                     </div>      
