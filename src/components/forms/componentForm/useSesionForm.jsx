@@ -135,7 +135,7 @@ const useSesionForm = ({
                         Ingles tecnico
                       </option>
                       <option value="Tecnico">Formación técnica</option>
-                      <option value="Porwer">Desarrollo de power skills</option>
+                      <option value="Power">Desarrollo de power skills</option>
                       <option value="Proyectos">Gestion de proyectos</option>
                     </select>
                   </div>
@@ -248,7 +248,41 @@ const useSesionForm = ({
                     <p className="text-red-500 text-sm">{errors.bootcamp}</p>
                   )}
                 </div>
+                
               </div>
+
+              <div className="row m-0 d-flex flex-row justify-content-between py-2">
+  <div className="col d-flex flex-col justify-content-center p-0">
+    <label
+      htmlFor="horario"
+      className="block text-base font-medium text-gray-400"
+    >
+      Horario de la sesión:
+    </label>
+    <div className="flex w-100 h-100">
+      <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
+        <i className="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
+      </span>
+      <select
+        id="horario"
+        name="horario"
+        value={formData.horario}
+        onChange={handleChange}
+        className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      >
+        <option value="">Seleccionar horario</option>
+        <option value="6 am a 8 am">6 am a 8 am</option>
+        <option value="6 pm a 8 pm">6 pm a 8 pm</option>
+        <option value="7 am a 10 am">7 am a 10 am</option>
+        <option value="10 am a 12 am">10 am a 12 am</option>
+      </select>
+    </div>
+    {errors.horario && (
+      <p className="text-red-500 text-sm">{errors.horario}</p>
+    )}
+  </div>
+</div>
+
               <div className="flex flex-row justify-start pt-4 px-2">
                 <button
                   type="submit"
@@ -273,6 +307,9 @@ useSesionForm.propTypes = {
     enlace: PropTypes.string,
     bootcamp: PropTypes.string,
     componente: PropTypes.string,
+    estado_sesion: PropTypes.string,
+    horario: PropTypes.string,  
+
   }).isRequired,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,

@@ -3,18 +3,28 @@ import UserForm from "../componentForm/useSesionForm";
 import Swal from "sweetalert2";
 
 const CrearSesion = () => {
+  // Estado para almacenar los datos del formulario
   const [formData, setFormData] = useState({
     nombre: "",
-    fecha: "",
+    fecha_Sesion: "",
     descripcion: "",
     enlace: "",
+    componente: "",
+    estado_sesion: "activo",
+    bootcamp: "",
+    horario: "", 
   });
 
+  // Estado para almacenar las sesiones creadas
+  const [sessions, setSessions] = useState([]);
+
+  // Maneja el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Valida los datos del formulario
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
-      // Convertir los errores en una lista HTML
+      // Si hay errores, muestra un mensaje de error
       const errorsHtml = Object.values(validationErrors)
         .map((error) => `<li>${error}</li>`)
         .join("");
@@ -25,72 +35,93 @@ const CrearSesion = () => {
         confirmButtonText: "Aceptar",
       });
     } else {
-      // Aquí puedes manejar el submit del formulario
-      console.log("Formulario enviado", formData);
+
+      setSessions([...sessions, formData]);
       Swal.fire({
         icon: 'success',
-        title: 'Sesion creada',
+        title: 'Sesión creada',
         showConfirmButton: false,
         timer: 1500
+      });
+     // Resetea el formulario
+      setFormData({
+        nombre: "",
+        fecha_Sesion: "",
+        descripcion: "",
+        enlace: "",
+        componente: "",
+        estado_sesion: "activo",
+        bootcamp: "",
+        horario: "", 
       });
       setErrors({});
     }
   };
 
+  // Estado para almacenar los errores de validación
   const [errors, setErrors] = useState({});
-  
+
+  // Maneja los cambios en los campos del formulario
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  // Valida los datos del formulario
   const validate = () => {
     const newErrors = {};
 
     if (!formData.fecha_Sesion) {
-      newErrors.fecha_Sesion = "La fecha de la sesion es obligatoria.";
+      newErrors.fecha_Sesion = "La fecha de la sesión es obligatoria.";
     } else {
-      // Obtener la fecha actual y establecer la hora a 0
       const today = new Date();
       today.setHours(0, 0, 0, 0);
-
-      // Convertir la fecha ingresada a objeto Date
       const inputDate = new Date(formData.fecha_Sesion);
-
-      // Comparar la fecha ingresada con la fecha actual
       if (inputDate < today) {
-        newErrors.fecha_Sesion =
-          "La fecha no puede ser anterior a la fecha actual.";
+        newErrors.fecha_Sesion = "La fecha no puede ser anterior a la fecha actual.";
       }
     }
-    
+
     if (!formData.nombre) {
       newErrors.nombre = "El nombre es obligatorio.";
     }
 
     if (!formData.enlace) {
-      newErrors.enlace = "El enlace de la sesion es obligatoria.";
+      newErrors.enlace = "El enlace de la sesión es obligatorio.";
     }
+
+    if (!formData.horario) {
+      newErrors.horario = "El horario de la sesión es obligatorio.";
+    }
+
     return newErrors;
   };
 
+  // Resetea el formulario
   const handleCancel = () => {
-    // Aquí puedes manejar la acción de cancelar
-    console.log("Formulario cancelado");
-    // Podrías limpiar el formulario si lo deseas
     setFormData({
       nombre: "",
-      fecha: "",
+      fecha_Sesion: "",
       descripcion: "",
       enlace: "",
+      componente: "",
+      estado_sesion: "activo",
+      bootcamp: "",
+      horario: "", 
     });
   };
 
-  return <UserForm formData={formData}
-  handleChange={handleChange}
-  handleSubmit={handleSubmit}
-  handleCancel={handleCancel} titleData="Crear Sesion" btnTitle="Registrar" errors={errors} />;
+  return  <UserForm
+        formData={formData}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        handleCancel={handleCancel}
+        titleData="Crear Sesión"
+        btnTitle="Registrar"
+        errors={errors}
+      />
 
 };
 
 export default CrearSesion;
+

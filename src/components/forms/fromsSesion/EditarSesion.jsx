@@ -10,6 +10,7 @@ const EditarSesion = () => {
     enlace: "",
     estado: "",
     bootcamp: "",
+    horario: "", // Añadir campo horario
   });
 
   const handleSubmit = (e) => {
@@ -31,7 +32,7 @@ const EditarSesion = () => {
       console.log("Formulario enviado", formData);
       Swal.fire({
         icon: "success",
-        title: "Sesion editada",
+        title: "Sesión editada",
         showConfirmButton: false,
         timer: 1500,
       });
@@ -49,11 +50,8 @@ const EditarSesion = () => {
   const validate = () => {
     const newErrors = {};
 
-    // if (!formData.fecha_Sesion) {
-    //   newErrors.fecha_Sesion = "La fecha de la sesion es obligatoria.";
-    // }
     if (!formData.fecha_Sesion) {
-      newErrors.fecha_Sesion = "La fecha de la sesion es obligatoria.";
+      newErrors.fecha_Sesion = "La fecha de la sesión es obligatoria.";
     } else {
       // Obtener la fecha actual y establecer la hora a 0
       const today = new Date();
@@ -74,7 +72,11 @@ const EditarSesion = () => {
     }
 
     if (!formData.enlace) {
-      newErrors.enlace = "El enlace de la sesion es obligatoria.";
+      newErrors.enlace = "El enlace de la sesión es obligatorio.";
+    }
+
+    if (!formData.horario) {
+      newErrors.horario = "El horario de la sesión es obligatorio.";
     }
 
     return newErrors;
@@ -86,9 +88,12 @@ const EditarSesion = () => {
     // Podrías limpiar el formulario si lo deseas
     setFormData({
       nombre: "",
-      fecha: "",
-      descripcion: "",
+      fecha_Sesion: "",
+      componente: "",
       enlace: "",
+      estado: "",
+      bootcamp: "",
+      horario: "", // Resetear el campo horario
     });
   };
 
@@ -98,7 +103,7 @@ const EditarSesion = () => {
       handleChange={handleChange}
       handleSubmit={handleSubmit}
       handleCancel={handleCancel}
-      titleData="Editar Sesion"
+      titleData="Editar Sesión"
       btnTitle="Editar"
       errors={errors}
     />

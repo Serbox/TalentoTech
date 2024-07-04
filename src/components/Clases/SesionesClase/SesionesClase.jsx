@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const SesionesClase = ({ title, fecha, finalizado, horario, asistencia, descripcion }) => {
+const SesionesClase = ({ title, fecha, estadoSesion, horario, asistencia, descripcion, enlace }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -13,10 +13,12 @@ const SesionesClase = ({ title, fecha, finalizado, horario, asistencia, descripc
           <span className="block">{title}</span>
           <span className="block text-sm">{fecha}</span>
         </div>
-        {finalizado ? (
+        {estadoSesion === 'finalizado' ? (
           <span className="bg-red-500 text-white px-2 py-1 rounded-md mt-3 mx-2">Finalizado</span>
+        ) : estadoSesion === 'proximamente' ? (
+          <span className="bg-yellow-500 text-white px-2 py-1 rounded-md mt-3 mx-2">Próximamente</span>
         ) : (
-          <span className="bg-yellow-500 text-white px-2 py-1 rounded-md mt-3 mx-2">Proximamente</span>
+          <span className="bg-green-500 text-white px-2 py-1 rounded-md mt-3 mx-2">Activo</span>
         )}
       </div>
       {isOpen && (
@@ -30,9 +32,20 @@ const SesionesClase = ({ title, fecha, finalizado, horario, asistencia, descripc
           <p>
             <strong>Descripción:</strong> {descripcion}
           </p>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-3">
-            {finalizado ? 'Ingresar a la grabación' : 'Ingresar a la clase'}
-          </button>
+          {estadoSesion === 'activo' && (
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-3">
+              <a href={enlace} target="_blank" rel="noopener noreferrer">
+                Ingresar a la clase
+              </a>
+            </button>
+          )}
+          {estadoSesion === 'finalizado' && (
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-3">
+              <a href={enlace} target="_blank" rel="noopener noreferrer">
+                Ingresar a la grabación
+              </a>
+            </button>
+          )}
         </div>
       )}
     </div>

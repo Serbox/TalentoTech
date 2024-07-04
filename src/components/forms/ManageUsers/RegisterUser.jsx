@@ -96,9 +96,7 @@ const RegisterUser = ({titleData}) => {
 
 
   const handleCancel = () => {
-    // Aquí puedes manejar la acción de cancelar
-    console.log("Formulario cancelado");
-    // Podrías limpiar el formulario si lo deseas
+ 
 
     setFormData({
       cedula: "",
