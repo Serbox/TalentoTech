@@ -8,8 +8,7 @@ import Bd from './components/BD/bd.jsx';
 import AsistenciaPage from './pages/AsistenciaPage/AsistenciaPage.jsx';
 import UsersPage from './pages/Userpage/UsersPage.jsx';
 import CalificacionPage from './pages/CalificacionPage/CalificacionPage.jsx';  
-
-import Login from './components/Login/Login';
+import Login from './pages/Login/Login.jsx';
 
 const router = createBrowserRouter([
 

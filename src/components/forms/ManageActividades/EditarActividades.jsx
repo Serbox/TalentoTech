@@ -70,7 +70,7 @@ const EditarUser = () => {
   return <UserCalificaciones formData={formData}
   handleChange={handleChange}
   handleSubmit={handleSubmit}
-  handleCancel={handleCancel} titleData="Editar Usuario" btnTitle="Editar Usuario" errors={errors} />;
+  handleCancel={handleCancel} titleData="Editar Actividad" btnTitle="Editar" errors={errors} />;
 };
 
 
