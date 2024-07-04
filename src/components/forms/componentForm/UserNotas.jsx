@@ -52,13 +52,12 @@ const UserNotas = ({
                 <p className="text-red-500 text-sm">{errors.nombre}</p>
               )}
             </div>
-            {/*Correo*/}
+            {/*Nota 1*/}
             <div className="col d-flex flex-column justify-content-center gap-1 pb-2">
               <label
-                htmlFor="correo"
                 className="block text-base font-medium text-gray-400"
               >
-                Correo:
+                Semana 1:
               </label>
               <div className="flex w-100 h-100">
                 <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
@@ -74,24 +73,24 @@ const UserNotas = ({
                   </svg>
                 </span>
                 <input
-                  type="text"
-                  id="correo"
-                  name="correo"
-                  value={formData.correo}
+                  type="number"
+                  id="Semana1"
+                  name="Semana1"
+                  value={formData.semana1}
                   onChange={handleChange}
                   className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="name@gmail.com"
+                  placeholder="0.0"
+                  required
                 />
               </div>
             </div>
             <div className="row m-0 d-flex flex-row justify-content-between pb-2">
-              {/* Cedula */}
+              {/* Nota 2 */}
               <div className="col d-flex flex-col justify-content-center p-0">
                 <label
-                  htmlFor="cedula"
                   className="block text-base font-medium text-gray-400"
                 >
-                  Cedula :
+                  Smana 2:
                 </label>
                 <div className="flex w-100 h-100">
                   <span className="inline-flex items-center w-24 text-base text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
@@ -104,25 +103,25 @@ const UserNotas = ({
                   </span>
                   <input
                     type="number"
-                    id="cedula"
-                    name="cedula"
-                    value={formData.cedula}
+                    id="semana2"
+                    name="semana2"
+                    value={formData.semana2}
                     onChange={handleChange}
                     className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                    placeholder="1014229886"
+                    placeholder="0.0"
+                    required
                   />
                 </div>
-                {errors.cedula && (
-                  <p className="text-red-500 text-sm">{errors.cedula}</p>
+                {errors.semana2 && (
+                  <p className="text-red-500 text-sm">{errors.semana2}</p>
                 )}
               </div>
-              {/*Telefono*/}
+              {/*Nota 3*/}
               <div className="col d-flex flex-column justify-content-center p-0 ps-2">
                 <label
-                  htmlFor="telefono"
                   className="block text-base font-medium text-gray-400"
                 >
-                  Teléfono:
+                  Semana 3:
                 </label>
                 <div className="flex w-100 h-100">
                   <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
@@ -138,29 +137,29 @@ const UserNotas = ({
                   </span>
                   <input
                     type="number"
-                    id="telefono"
-                    name="telefono"
-                    value={formData.telefono}
+                    id="semana3"
+                    name="semana3"
+                    value={formData.semana3}
                     onChange={handleChange}
                     className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    placeholder="123-456-7890"
+                    placeholder="0.0"
+                    required
                   />
                 </div>
-                {errors.telefono && (
-                  <p className="text-red-500 text-sm">{errors.telefono}</p>
+                {errors.semana3 && (
+                  <p className="text-red-500 text-sm">{errors.semana3}</p>
                 )}
               </div>
             </div>
 
             <div className="row m-0 d-flex flex-row justify-content-between py-2">
-              {/*Fecha de nacimiento*/}
+              {/*Nota 4*/}
               <div className="col d-flex flex-col justify-content-center p-0">
                 <label
-                  htmlFor="fecha_nacimiento"
                   className="block text-base font-medium text-gray-400"
                 >
-                  Fecha de nacimiento:
+                  Semana 4:
                 </label>
                 <div className="flex w-100 h-100">
                   <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
@@ -175,116 +174,42 @@ const UserNotas = ({
                     </svg>
                   </span>
                   <input
-                    type="date"
-                    id="fecha_nacimiento"
-                    name="fecha_nacimiento"
-                    value={formData.fecha_nacimiento}
+                    type="number"
+                    id="semana4"
+                    name="semana4"
+                    value={formData.seman4}
                     onChange={handleChange}
                     className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                    placeholder="Select date"
+                    placeholder="0.0"
+                    required
                   />
                 </div>
-                {errors.fecha_nacimiento && (
+                {errors.semana4 && (
                   <p className="text-red-500 text-sm">
-                    {errors.fecha_nacimiento}
+                    {errors.semana4}
                   </p>
                 )}
               </div>
-              {/*Bootcamp*/}
+              {/*Nota 5*/}
               <div className="col d-flex flex-column justify-content-center p-0 ps-2">
                 <label
-                  htmlFor="bootcamp"
                   className="block text-base font-medium text-gray-400"
                 >
-                  Bootcamp:
-                </label>
-                <div className="flex w-100 h-100">
-                  <span className="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md">
-                    <i className="bi bi-code-square text-xl text-center mb-2.5 w-4 h-4 text-gray-500 dark:text-gray-400"></i>
-                  </span>
-                  <select
-                    type="text"
-                    id="bootcamp"
-                    name="bootcamp"
-                    onChange={handleChange}
-                    className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                    placeholder="Bootcamp"
-                  >
-                    <option value="BlcBasico" selected>
-                      Blockchain basico
-                    </option>
-                    <option value="BlcIntermedio" selected>
-                      Blockchain intermedio
-                    </option>
-                    <option value="BlcAvanzado" selected>
-                      Blockchain avanzado
-                    </option>
-                    <option value="DWEFBasico" selected>
-                      Desarrollo web Full Stack basico
-                    </option>
-                    <option value="DWEFIntermedio" selected>
-                      Desarrollo web Full Stack intermedio
-                    </option>
-                    <option value="DWEFAvanzado" selected>
-                    Desarrollo web Full Stack avanzado
-                    </option>
-                    <option value="ADBasico">Analisis de datos basico</option>
-                    <option value="ADIntermedio">Analisis de datos intermedio</option>
-                    <option value="ADAvanzado">Analisis de datos avanzado</option>
-                    <option value="IABasico">Inteligencia Artificial basico</option>
-                    <option value="IAIntermedio">Inteligencia Artificial intermedio</option>
-                    <option value="IAAvanzado">Inteligencia Artificial avanzado</option>
-                    <option value="NubeBasico">Arquitectura en la Nube basico</option>
-                    <option value="NubeIntermedio">Arquitectura en la Nube intermedio</option>
-                    <option value="NubeAvanzado">Arquitectura en la Nube avanzado</option>
-                  </select>
-                </div>
-                {errors.bootcamp && (
-                  <p className="text-red-500 text-sm">{errors.bootcamp}</p>
-                )}
-              </div>
-            </div>
-
-            <div className="row m-0 d-flex flex-row justify-content-between py-2">
-              <div className="col d-flex flex-col justify-content-center p-0">
-                <label
-                  htmlFor="password"
-                  className="block text-base font-medium text-gray-400"
-                >
-                  Contraseña:
+                  Semana 5:
                 </label>
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  value={formData.password}
+                  type="number"
+                  id="semana5"
+                  name="semana5"
+                  value={formData.semana5}
                   onChange={handleChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="•••••••••"
+                  placeholder="0.0"
+                  required
                 />
-                {errors.password && (
-                  <p className="text-red-500 text-sm">{errors.password}</p>
-                )}
-              </div>
-              <div className="col d-flex flex-column justify-content-center p-0 ps-2">
-                <label
-                  htmlFor="confirmPassword"
-                  className="block text-base font-medium text-gray-400"
-                >
-                  Confirmar contraseña:
-                </label>
-                <input
-                  type="password"
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="•••••••••"
-                />
-                {errors.confirmPassword && (
+                {errors.seman5 && (
                   <p className="text-red-500 text-sm">
-                    {errors.confirmPassword}
+                    {errors.semana5}
                   </p>
                 )}
               </div>
@@ -307,16 +232,11 @@ const UserNotas = ({
 
 UserNotas.propTypes = {
   formData: PropTypes.shape({
-    cedula: PropTypes.string,
-    nombre: PropTypes.string,
-    ciudad: PropTypes.string,
-    fecha_nacimiento: PropTypes.string,
-    correo: PropTypes.string,
-    telefono: PropTypes.string,
-    password: PropTypes.string,
-    confirmPassword: PropTypes.string,
-    bootcamp: PropTypes.string,
-    // rol: PropTypes.string,
+    semana1: PropTypes.number,
+    semana2: PropTypes.number,
+    semana3: PropTypes.number,
+    semana4: PropTypes.number,
+    semana5: PropTypes.number,
   }).isRequired,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,

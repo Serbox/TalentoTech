@@ -9,33 +9,33 @@ import EntActividades from "../../IMG/ActividadesEnt.svg";
 import Actividad from "../../IMG/Actividades_Actividades.svg";
 import Actividad_Calificada from "../../IMG/Actividades_calificadas.svg";
 import Actividad_sin_calificar from "../../IMG/Actividades_Sin-Calificar.svg";
-import TableUsers from "../../components/tables/tableUsers/TableUsers.jsx";
+import TableActividades from "../../components/tables/TablaActividades/TablaActividades.jsx";
 import TableNotas from "../../components/tables/tablaNotas/TableNotas.jsx";
 import RegisterUser from '../../components/forms/ManageUsers/RegisterUser.jsx';
 import Modal from '../../components/forms/formModal.jsx';
 import AddActividad from "../../IMG/AddActividad.svg";
-import TablaActividades from "../../IMG/Table_Actividades.svg";
+import IMGTablaActividades from "../../IMG/Table_Actividades.svg";
 
 const Menu = [{
     id: 1,
     title: "Actividades Desarrollo Web",
     Form: <RegisterUser titleData={"Crear Estudiante"}/>,
-    Table: <TableUsers/>
+    Table: <TableActividades/>
   },{
     id: 2,
     title: "Actividades Block Chain",
     Form: <RegisterUser titleData={"Crear Administrador"}/>,
-    Table: <TableUsers/>
+    Table: <TableActividades/>
   },{
     id: 3,
-    title: "Actividades Inteligencia Artificial",
+    title: "Actividades IA",
     Form: <RegisterUser titleData={"Crear Maestro"}/>,
-    Table: <TableUsers/>
+    Table: <TableActividades/>
   },{
     id: 4,
     title: "Actividades Analisis de datos",
     Form: <RegisterUser titleData={"Crear Maestro"}/>,
-    Table: <TableUsers/>
+    Table: <TableActividades/>
   }]
 
 
@@ -48,7 +48,7 @@ const CalificacionPage = () => {
     function changeFunction (){
         var selectBox = document.getElementById('Bootcamps_actividad');
         var selectValue = selectBox.options[selectBox.selectedIndex].value;
-        switch (selectValue){
+        switch(selectValue){
             case "DW":
                 handleClick(1);
                 checkActive(1, "bg-blue-400 border-b-4 border-blue-600 text-orange-100");
@@ -65,6 +65,8 @@ const CalificacionPage = () => {
                 handleClick(4);
                 checkActive(4, "bg-blue-400 border-b-4 border-blue-600 text-orange-100");
                 break;
+            default:
+                console.log('Opcion Errada');
 
         }
     }
@@ -147,10 +149,10 @@ const CalificacionPage = () => {
                     <li className="flex flex-col justify-between">
                         <ul className='flex flex-col'>
                             <li>
-                                <h1 className=" font-bold text-white">Actividades</h1>
+                                <h1 className=" font-bold text-white text-3xl p-0">Actividades</h1>
                             </li>
                             <li className='w-full h-full'>
-                                <p className='font-bold text-blue-900 text-xl'>Bootcamp:</p>
+                                <p className='font-bold text-blue-950 text-2xl'>Bootcamp:</p>
                                 <select id='Bootcamps' className=" text-white relative flex flex-col items-center font-semibold md:my-0 bg-blue-900  border-b-4  border-blue-950 p-2 rounded-xl shadow z-2 outline-none">
                                     <option selected value="US" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Desarrollo Web</option>
                                     <option value="CA" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Block Chain</option>
@@ -159,7 +161,7 @@ const CalificacionPage = () => {
                                 </select>
                             </li>
                             <li>
-                                <p className='font-bold text-blue-900 text-xl'>Nivel:</p>
+                                <p className='font-bold text-blue-950 text-2xl'>Nivel:</p>
                                 <select id='Nivel' className=" text-white relative flex flex-col items-center font-semibold md:my-0 bg-blue-900  border-b-4  border-blue-950 p-2 rounded-xl shadow z-2 outline-none">
                                     <option selected value="CA" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Basico</option>
                                     <option value="FR" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Intermedio</option>
@@ -213,7 +215,7 @@ const CalificacionPage = () => {
                 </ul>
                 <div className="relative flex flex-row grid-rows-1 w-100 bg-blue-950 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-sky-950">
                     <div className="absolute bottom-6 left-10">
-                    <img src={TablaActividades} alt=".." />
+                    <img src={IMGTablaActividades} alt=".." />
                     </div>
                     <div className="flex flex-col w-100 h-100 pr-5">
                         <p className='font-bold text-white text-xl text-center'>Bootcamp:</p>
@@ -232,7 +234,7 @@ const CalificacionPage = () => {
                             <option value="BC" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Intermedio</option>
                             <option value="IA" className='bg-white hover:bg-blue-300 text-gray-700 text-base font-bold w-100 hover:text-white hover:text-bases hover:font-bold'>Experto</option>
                         </select>
-                        <Modal Form={item.Form} ButonTitle={"Agregar Actividad"} img={AddActividad} btnClass={'flex flex-row absolute top-4 right-2 font-bold text-white gap-1 rounded-2xl pt-1 justify-center align-middle'} style={{background:"#9BD0D9"}}/>
+                        <Modal Form={item.Form} ButonTitle={"Agregar Actividad"} img={AddActividad} btnClass={'flex flex-row absolute top-5 right-1 font-bold text-white gap-1 rounded-2xl pt-1 justify-center align-middle'} style={{background:"#9BD0D9"}}/>
                         <div className="h-100 w-100 bg-white rounded-xl">
                         {item.Table}
                         </div>

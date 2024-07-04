@@ -46,6 +46,7 @@ const UserForm = ({
                   onChange={handleChange}
                   className="rounded-none rounded-e-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  "
                   placeholder="elonmusk"
+                  required
                 />
               </div>
               {errors.nombre && (
@@ -81,6 +82,7 @@ const UserForm = ({
                   onChange={handleChange}
                   className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                   placeholder="name@gmail.com"
+                  required
                 />
               </div>
             </div>
@@ -111,6 +113,7 @@ const UserForm = ({
                     onChange={handleChange}
                     className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     placeholder="1014229886"
+                    required
                   />
                 </div>
                 {errors.cedula && (
@@ -146,6 +149,7 @@ const UserForm = ({
                     className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     placeholder="123-456-7890"
+                    required
                   />
                 </div>
                 {errors.telefono && (
@@ -183,6 +187,7 @@ const UserForm = ({
                     onChange={handleChange}
                     className="bg-gray-50 border border-blue-400 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     placeholder="Select date"
+                    required
                   />
                 </div>
                 {errors.fecha_nacimiento && (
@@ -279,6 +284,7 @@ const UserForm = ({
                   onChange={handleChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                   placeholder="•••••••••"
+                  required
                 />
                 {errors.password && (
                   <p className="text-red-500 text-sm">{errors.password}</p>
@@ -299,6 +305,7 @@ const UserForm = ({
                   onChange={handleChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                   placeholder="•••••••••"
+                  required
                 />
                 {errors.confirmPassword && (
                   <p className="text-red-500 text-sm">
