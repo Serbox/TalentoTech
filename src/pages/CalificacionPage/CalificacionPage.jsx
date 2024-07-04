@@ -12,6 +12,7 @@ import Actividad_sin_calificar from "../../IMG/Actividades_Sin-Calificar.svg";
 import TableActividades from "../../components/tables/TablaActividades/TablaActividades.jsx";
 import TableNotas from "../../components/tables/tablaNotas/TableNotas.jsx";
 import RegisterUser from '../../components/forms/ManageUsers/RegisterUser.jsx';
+import EditarNotas from '../../components/forms/ManageNotas/EditarNotas.jsx'
 import Modal from '../../components/forms/formModal.jsx';
 import AddActividad from "../../IMG/AddActividad.svg";
 import IMGTablaActividades from "../../IMG/Table_Actividades.svg";
@@ -19,22 +20,22 @@ import IMGTablaActividades from "../../IMG/Table_Actividades.svg";
 const Menu = [{
     id: 1,
     title: "Actividades Desarrollo Web",
-    Form: <RegisterUser titleData={"Crear Estudiante"}/>,
+    Form: <EditarNotas titleData={"Crear Estudiante"}/>,
     Table: <TableActividades/>
   },{
     id: 2,
     title: "Actividades Block Chain",
-    Form: <RegisterUser titleData={"Crear Administrador"}/>,
+    Form: <EditarNotas titleData={"Crear Administrador"}/>,
     Table: <TableActividades/>
   },{
     id: 3,
     title: "Actividades IA",
-    Form: <RegisterUser titleData={"Crear Maestro"}/>,
+    Form: <EditarNotas titleData={"Crear Maestro"}/>,
     Table: <TableActividades/>
   },{
     id: 4,
     title: "Actividades Analisis de datos",
-    Form: <RegisterUser titleData={"Crear Maestro"}/>,
+    Form: <EditarNotas titleData={"Crear Maestro"}/>,
     Table: <TableActividades/>
   }]
 
@@ -244,7 +245,7 @@ const CalificacionPage = () => {
                 <div className="flex flex-row grid-rows-1 w-100 bg-blue-300 mt-3 rounded-xl p-6 border-b-8 border-x-2 border-blue-400">
                     <div className="relative w-100 h-100 bg-blue-900 rounded-xl p-2 border-b-8 border-x-2 border-blue-950">
                         <h1 className="text-white font-bold text-2xl text-center p-3">Notas Estudiantes</h1>
-                        <Modal Form= {<RegisterUser titleData={"Crear Maestro"}/>} btnClass={'hidden'} style={{background:"#9BD0D9"}}/>
+                        <Modal Form= {<EditarNotas titleData={"Crear Notas"}/>} btnClass={'hidden'} style={{background:"#9BD0D9"}}/>
                         <div className="h-100 w-100 bg-white rounded-xl">
                         <TableNotas/>
                         </div>
