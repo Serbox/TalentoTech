@@ -15,6 +15,7 @@ const users = [
     enlace: "meet/xyz",
     componente: "Ingles",
     estado: "Activa",
+    horario: "8 a 12",
     bootcamp: "Desarrollo web full stack basico",
   },
   {
@@ -23,6 +24,7 @@ const users = [
     enlace: "meet/abc",
     componente: "Tecnico",
     estado: "proximamente",
+    horario: "8 a 12",
     bootcamp: "Desarrollo web full stack intermedio",
   },
   {
@@ -31,6 +33,7 @@ const users = [
     enlace: "meet/def",
     componente: "Tecnico",
     estado: "Activa",
+    horario: "8 a 12",
     bootcamp: "Desarrollo web full stack avanzado",
   },
   {
@@ -39,6 +42,7 @@ const users = [
     enlace: "",
     componente: "Power skills",
     estado: "finalizada",
+    horario: "8 a 12",
     bootcamp: "Analisis de datos",
   },
   {
@@ -47,6 +51,7 @@ const users = [
     enlace: "meet/xyz",
     componente: "Ingles",
     estado: "Proximamente",
+    horario: "8 a 12",
     bootcamp: "Inteligencia artificial basico",
   },
   {
@@ -55,6 +60,7 @@ const users = [
     enlace: "meet/abc",
     componente: "Tecnico",
     estado: "Activa",
+    horario: "8 a 12",
     bootcamp: "Inteligencia artificial intermedio",
   },
 
@@ -63,9 +69,10 @@ const users = [
 const columns = [
   { name: "Fecha", selector: (row) => row.fecha, sortable: true },
   { name: "Nombre", selector: (row) => row.name, sortable: true },
-  { name: "Enlace", selector: (row) => row.enlace, sortable: true },
-  { name: "Estado", selector: (row) => row.estado, sortable: true },
   { name: "Bootcamp", selector: (row) => row.bootcamp, sortable: true },
+  { name: "Enlace", selector: (row) => row.enlace, sortable: true },
+  { name: "Horario", selector: (row) => row.horario, sortable: true },
+  { name: "Estado", selector: (row) => row.estado, sortable: true },
   {
     name: "Acciones",
     cell: (row) => (
