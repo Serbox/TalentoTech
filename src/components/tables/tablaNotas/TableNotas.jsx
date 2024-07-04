@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DataTable from 'react-data-table-component';
 import './TableNotas.css';
 import Modal from '../../forms/formModal.jsx';
-import EditarUser from '../../forms/ManageUsers/EditarUser.jsx';
+import EditarNotas from '../../forms/ManageNotas/EditarNotas.jsx';
 import Swal from "sweetalert2";
 
 
@@ -36,7 +36,7 @@ const columns = [
     name: 'Acciones',    
     cell: row => (
       <>
-        <Modal Form={<EditarUser/>} ButonTitle={'📝'} btnClass={'btn btn-transparent'}/>
+        <Modal Form={<EditarNotas/>} ButonTitle={'📝'} btnClass={'btn btn-transparent'}/>
         <button onClick={() => {
           Swal.fire({
             title: '¿Estás seguro de eliminar estas notas?',

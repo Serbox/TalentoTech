@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import UserNotas from "../componentForm/UserNotas";
+import UserNotas from "../componentForm/UserNotas.jsx";
 import Swal from "sweetalert2";
 
 const EditarNotas = () => {
