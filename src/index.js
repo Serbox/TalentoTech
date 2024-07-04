@@ -10,21 +10,6 @@ import UsersPage from './pages/Userpage/UsersPage.jsx';
 import CalificacionPage from './pages/CalificacionPage/CalificacionPage.jsx';  
 import Login from './pages/Login/Login.jsx';
 
-import {
-  AsistenciaPage,
-  Bootcamp,
-  Hackathon,
-  JobConnection,
-  Marketplace,
-  PQR,
-  Usuario,
-  UsersPage,
-  News
-} from './pages';
-
-import Login from './components/Login/Login';
-
-
 const router = createBrowserRouter([
 
   {
@@ -49,10 +34,6 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />
-  },
-  {
-    path: '/news',
-    element: <News />
   },
 
 
