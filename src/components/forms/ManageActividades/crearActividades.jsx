@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import UserCalificacion from "../componentForm/UserCalificaciones";
+import UserCalificaciones from "../componentForm/UserCalificaciones";
 import Swal from "sweetalert2";
 
 const CrearSesion = () => {
@@ -42,22 +42,29 @@ const CrearSesion = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  
+  const validate = () => {
+    const newErrors = {};
+    
+    if (!formData.nombreActividad) {
+      newErrors.nombreActividad = "El nombre es obligatorio.";
+    }
+    return newErrors;
+  };
 
   const handleCancel = () => {
     // Aquí puedes manejar la acción de cancelar
     console.log("Formulario cancelado");
     // Podrías limpiar el formulario si lo deseas
     setFormData({
-    nombreActividad: "",
-    descripcion: "",
+      nombreActividad: "",
+      descripcion: "",
     });
   };
 
-  return <UserCalificacion formData={formData}
+  return <UserCalificaciones formData={formData}
   handleChange={handleChange}
   handleSubmit={handleSubmit}
-  handleCancel={handleCancel} titleData="Crear Actividad" btnTitle="Crear" errors={errors} />;
+  handleCancel={handleCancel} titleData="Crear Actividad" btnTitle="Registrar" errors={errors} />;
 
 };
 

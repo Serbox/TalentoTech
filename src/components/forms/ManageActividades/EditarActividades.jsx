@@ -6,8 +6,8 @@ const EditarUser = () => {
     const [errors, setErrors] = useState({});
 
     const [formData, setFormData] = useState({
-    descripcion: "",
     nombreActividad: "",
+    descripcion: "",
  
   });
 
@@ -27,7 +27,7 @@ const EditarUser = () => {
       // Aquí puedes manejar el submit del formulario
       Swal.fire({
         icon: 'success',
-        title: 'Actividad editada',
+        title: 'Usuario editado',
         showConfirmButton: false,
         timer: 1500
       });
@@ -42,6 +42,17 @@ const EditarUser = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const validate = () => {
+    const newErrors = {};
+
+
+    if (!formData.nombre) {
+      newErrors.nombre = "El nombre es obligatorio.";
+    }
+
+
+    return newErrors;
+  };
 
 
   const handleCancel = () => {
@@ -49,8 +60,9 @@ const EditarUser = () => {
     console.log("Formulario cancelado");
     // Podrías limpiar el formulario si lo deseas
     setFormData({
-    descripcion: "",
-    nombreActividad: "",
+      nombreActividad: "",
+      descripcion: "",
+
    
     });
   };
@@ -58,7 +70,7 @@ const EditarUser = () => {
   return <UserCalificaciones formData={formData}
   handleChange={handleChange}
   handleSubmit={handleSubmit}
-  handleCancel={handleCancel} titleData="Editar Actividad" btnTitle="Editar" errors={errors} />;
+  handleCancel={handleCancel} titleData="Editar Usuario" btnTitle="Editar Usuario" errors={errors} />;
 };
 
 
