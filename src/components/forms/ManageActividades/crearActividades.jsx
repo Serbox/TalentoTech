@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-import UserNotas from "../componentForm/UserNotas.jsx";
+import UserCalificacion from "../componentForm/UserCalificaciones";
 import Swal from "sweetalert2";
 
-const EditarNotas = () => {
+const CrearSesion = () => {
   const [formData, setFormData] = useState({
-    nombre: "",
-    semana1: "",
-    semana2: "",
-    semana3: "",
-    semana4: "",
-    semana5: "",
+    nombreActividad: "",
+    descripcion: "",
   });
 
   const handleSubmit = (e) => {
@@ -30,62 +26,39 @@ const EditarNotas = () => {
       // Aquí puedes manejar el submit del formulario
       console.log("Formulario enviado", formData);
       Swal.fire({
-        icon: "success",
-        title: "Calificaciones editada",
+        icon: 'success',
+        title: 'Sesion creada',
         showConfirmButton: false,
-        timer: 1500,
+        timer: 1500
       });
       setErrors({});
     }
   };
 
   const [errors, setErrors] = useState({});
-
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const validate = () => {
-    const newErrors = {};
-
-    // if (!formData.fecha_Sesion) {
-    //   newErrors.fecha_Sesion = "La fecha de la sesion es obligatoria.";
-    // }
-
-
-    if (!formData.nombre) {
-      newErrors.nombre = "El nombre es obligatorio.";
-    }
-
-    return newErrors;
-  };
+  
 
   const handleCancel = () => {
     // Aquí puedes manejar la acción de cancelar
     console.log("Formulario cancelado");
     // Podrías limpiar el formulario si lo deseas
     setFormData({
-      nombre: "",
-      semana1: "",
-      semana2: "",
-      semana3: "",
-      semana4: "",
-      semana5: "",
+    nombreActividad: "",
+    descripcion: "",
     });
   };
 
-  return (
-    <UserNotas
-      formData={formData}
-      handleChange={handleChange}
-      handleSubmit={handleSubmit}
-      handleCancel={handleCancel}
-      titleData="Editar Notas"
-      btnTitle="Editar"
-      errors={errors}
-    />
-  );
+  return <UserCalificacion formData={formData}
+  handleChange={handleChange}
+  handleSubmit={handleSubmit}
+  handleCancel={handleCancel} titleData="Crear Actividad" btnTitle="Crear" errors={errors} />;
+
 };
 
-export default EditarNotas;
+export default CrearSesion;
