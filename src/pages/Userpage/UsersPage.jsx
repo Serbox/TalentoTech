@@ -17,21 +17,21 @@ const Menu = [{
   title: "Administrar estudiantes",
   titleButton: "Agregar estudiante",
   Form: <RegisterUser titleData={"Crear Estudiante"}/>,
-  Table: <TableUsers/>
+  Table: <TableUsers className="w-100 h-100"/>
 },{
   id: 2,
   titleTab: "Administrador",
   title: "Administrar administradores",
   titleButton: "Agregar administrador",
   Form: <RegisterUser titleData={"Crear Administrador"}/>,
-  Table: <TableUsers/>
+  Table: <TableUsers className="w-100 h-100"/>
 },{
   id: 3,
   titleTab: "Maestro",
   title: "Administrar Maestros",
   titleButton: "Agregar Maestro",
   Form: <RegisterUser titleData={"Crear Maestro"}/>,
-  Table: <TableUsers/>
+  Table: <TableUsers className="w-100 h-100"/>
 }]
 
 const UsersPage = () => {

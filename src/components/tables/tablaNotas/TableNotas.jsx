@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import './TableNotas.css';
 import Modal from '../../forms/formModal.jsx';
 import EditarNotas from '../../forms/ManageNotas/EditarNotas.jsx';
 import Swal from "sweetalert2";
+import {getNota} from "../../../services/APIservices.js"
 
 
 
@@ -25,12 +26,12 @@ const columns = [
       </>
     ),
   },
-  { name: 'Nombre', selector: row => row.name, sortable: true },
-  { name: 'Semana 1', selector: row => row.semana1, sortable: true },
-  { name: 'Semana 2', selector: row => row.semana2, sortable: true },
-  { name: 'Semana 3', selector: row => row.semana3, sortable: true },
-  { name: 'Semana 4', selector: row => row.semana4, sortable: true },
-  { name: 'Semana 5', selector: row => row.semana5, sortable: true },
+  { name: 'Nombre', selector: row => row.nombre, sortable: true },
+  { name: 'Semana 1', selector: row => row.nota1, sortable: true },
+  { name: 'Semana 2', selector: row => row.nota2, sortable: true },
+  { name: 'Semana 3', selector: row => row.nota3, sortable: true },
+  { name: 'Semana 4', selector: row => row.nota4, sortable: true },
+  { name: 'Semana 5', selector: row => row.nota5, sortable: true },
   { name: 'Promedio', selector: row => row.promedio, sortable: true },
   {
     name: 'Acciones',    
@@ -56,10 +57,20 @@ const columns = [
 ];
 
 const TableAsis = () => {
+  const [notas, setNotas] = useState([])
+      useEffect(() => {
+          getNota()
+          .then(res => {
+            // Transform the data into an array of key-value pairs
+            //*const transformedData = transformData(res); // Transform the data
+            setNotas(res); // Flatten the transformed data
+          })
+          .catch(err => console.log(err));
+      }, []);
   return (
     <DataTable
       columns={columns}
-      data={users}
+      data={notas}
       pagination
     />
   );

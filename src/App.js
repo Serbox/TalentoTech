@@ -4,18 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import Info from './components/Info-principal/Info-principal';
 import Board from './components/board/board';
-import { getFunction } from './services/APIservices';
 import SlideBar from './components/SlideBar/SlideBar';
 import Class from './components/Class/Class';
-import SesionDataTable from './components/DataTable/DataTable';
 import Tools from './components/Tools/Tools';
 
 function App() {
-  function btnGetFunctionClick() {
-    getFunction()
-      .then(data => console.log(data))
-      .catch(err => console.error(err));
-  }
+
 
   return (
     <>
@@ -50,13 +44,6 @@ function App() {
         <div className='tools'>
           <Tools/>
         </div> */}
-
-        <div>
-          <button onClick={btnGetFunctionClick}>GET Function</button>
-        </div>
-
-
-        
 
     </>
   );
