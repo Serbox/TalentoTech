@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UserForm from "../componentForm/UserForm";
 import Swal from "sweetalert2";
+import { postUsuario } from "../../../services/APIservices";
 
 const EditarUser = () => {
     const [errors, setErrors] = useState({});
@@ -8,7 +9,6 @@ const EditarUser = () => {
     const [formData, setFormData] = useState({
     cedula: "",
     nombre: "",
-    ciudad: "",
     fecha_nacimiento: "",
     correo: "",
     telefono: "",
@@ -16,6 +16,7 @@ const EditarUser = () => {
     confirmPassword: "",
  
   });
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,6 +40,8 @@ const EditarUser = () => {
       });
       console.log("Formulario enviado", formData);
       setErrors({});
+
+      postUsuario({id_usuario:formData.cedula,nombre:formData.nombre,correo:formData.correo,fecha_nacimiento:formData.fecha_nacimiento,telefono:formData.telefono,password:formData.password});
     }
   };
 

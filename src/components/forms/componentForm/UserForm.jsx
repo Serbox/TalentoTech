@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 const UserForm = ({
@@ -9,6 +9,9 @@ const UserForm = ({
   titleData,
   btnTitle,
 }) => {
+ 
+
+
   return (
     <form onSubmit={handleSubmit} className="w-100 h-100">
       <div className="container text-left p-0 w-100 h-100">

@@ -1,77 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
 import DataTable from "react-data-table-component";
 import "./TableAsis.css";
-import CrearSesion from "../../forms/fromsSesion/CrearSesion";
 import Modal from "../../forms/formModal.jsx";
 
 import EditarSesion from "../../forms/fromsSesion/EditarSesion";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { getSesion } from '../../../services/APIservices.js';
 
-const users = [
-  {
-    fecha: "10/06/2024",
-    name: "Sesion de ingles",
-    enlace: "meet/xyz",
-    componente: "Ingles",
-    estado: "Activa",
-    horario: "8 a 12",
-    bootcamp: "Desarrollo web full stack basico",
-  },
-  {
-    fecha: "10/06/2024",
-    name: "Sesion de bootstrap",
-    enlace: "meet/abc",
-    componente: "Tecnico",
-    estado: "proximamente",
-    horario: "8 a 12",
-    bootcamp: "Desarrollo web full stack intermedio",
-  },
-  {
-    fecha: "3/07/2024",
-    name: "Sesion de react side server",
-    enlace: "meet/def",
-    componente: "Tecnico",
-    estado: "Activa",
-    horario: "8 a 12",
-    bootcamp: "Desarrollo web full stack avanzado",
-  },
-  {
-    fecha: "2/07/2024",
-    name: "Sesion de Power skills",
-    enlace: "",
-    componente: "Power skills",
-    estado: "finalizada",
-    horario: "8 a 12",
-    bootcamp: "Analisis de datos",
-  },
-  {
-    fecha: "20/10/2024",
-    name: "Sesion de ingles",
-    enlace: "meet/xyz",
-    componente: "Ingles",
-    estado: "Proximamente",
-    horario: "8 a 12",
-    bootcamp: "Inteligencia artificial basico",
-  },
-  {
-    fecha: "30/07/2024",
-    name: "Sesion de estadistica",
-    enlace: "meet/abc",
-    componente: "Tecnico",
-    estado: "Activa",
-    horario: "8 a 12",
-    bootcamp: "Inteligencia artificial intermedio",
-  },
-
-];
 
 const columns = [
-  { name: "Fecha", selector: (row) => row.fecha, sortable: true },
-  { name: "Nombre", selector: (row) => row.name, sortable: true },
-  { name: "Bootcamp", selector: (row) => row.bootcamp, sortable: true },
+  { name: "Nombre", selector: (row) => row.nombre, sortable: true },
+  { name: "Asignatura", selector: (row) => row.asignatura, sortable: true },
+  { name: "Componente", selector: (row) => row.componente, sortable: true },
   { name: "Enlace", selector: (row) => row.enlace, sortable: true },
-  { name: "Horario", selector: (row) => row.horario, sortable: true },
   { name: "Estado", selector: (row) => row.estado, sortable: true },
   {
     name: "Acciones",
@@ -104,11 +45,21 @@ const columns = [
 ];
 
 const TableAsis = () => {
+  const [asistencia, setAsistencia] = useState([])
+      useEffect(() => {
+          getSesion()
+          .then(res => {
+            // Transform the data into an array of key-value pairs
+            //*const transformedData = transformData(res); // Transform the data
+            setAsistencia(res); // Flatten the transformed data
+          })
+          .catch(err => console.log(err));
+      }, []);
   return (
     <DataTable
       title="Sesiones bootcamp"
       columns={columns}
-      data={users}
+      data={asistencia}
       pagination
     />
   );

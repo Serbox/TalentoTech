@@ -7,6 +7,11 @@ export async function getFunction(){
     return response.data;
 }
 
+export async function postUsuario(value){
+    const response = await axios.get(`${API_URL}/save`,value);
+    console.log(response.data);
+}
+
 export async function getNota(){
     const response = await axios.get(`${API_URL}/calificaciones`);
     return response.data;
@@ -14,5 +19,10 @@ export async function getNota(){
 
 export async function getActividad(){
     const response = await axios.get(`${API_URL}/Actividades`);
+    return response.data;
+}
+
+export async function getSesion(){
+    const response = await axios.get(`${API_URL}/sesion`);
     return response.data;
 }
