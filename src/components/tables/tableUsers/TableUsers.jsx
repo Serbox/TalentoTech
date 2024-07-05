@@ -6,6 +6,7 @@ import Modal from '../../forms/formModal.jsx';
 import EditarUser from '../../forms/ManageUsers/EditarUser.jsx';
 import Swal from "sweetalert2";
 import { getFunction } from '../../../services/APIservices.js';
+import Deleteform from '../../forms/componentForm/deleteform.jsx';
 
 
 const columns = [
@@ -19,19 +20,7 @@ const columns = [
     cell: row => (
       <>
         <Modal Form={<EditarUser/>} ButonTitle={'📝'} btnClass={'btn btn-transparent'}/>
-        <button onClick={() => {
-          Swal.fire({
-            title: '¿Estás seguro de eliminar esta sesión?',
-            showDenyButton: true,
-            confirmButtonText: `Eliminar`,
-            denyButtonText: `Cancelar`,
-          }).then((result) => {
-            if (result.isConfirmed) {
-              Swal.fire('Usuario eliminado', '', 'success')
-            } 
-          })
-        
-        }}>🗑️</button>
+        <Modal Form={<Deleteform/>} ButonTitle={'🗑️'} btnClass={'btn btn-transparent'}></Modal>
       </>
     ),
   },
@@ -47,7 +36,8 @@ const TableUsers = () => {
             setUsuario(res); // Flatten the transformed data
           })
           .catch(err => console.log(err));
-      }, []);
+      }, [usuario]);
+
   return (      
 
       <DataTable

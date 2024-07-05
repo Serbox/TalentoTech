@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UserForm from "../componentForm/UserForm";
 import Swal from 'sweetalert2';
+import { postUsuario } from "../../../services/APIservices";
 
 const RegisterUser = ({titleData}) => {
   const [formData, setFormData] = useState({
@@ -29,6 +30,15 @@ const RegisterUser = ({titleData}) => {
         confirmButtonText: 'Aceptar'
       });
     } else {
+      const body = {
+        id_usuario: formData.cedula,
+        nombre: formData.nombre,
+        correo: formData.correo,
+        fecha_nacimiento: formData.fecha_nacimiento,
+        telefono: formData.telefono,
+        password: formData.password,
+      };
+      const e = postUsuario(body);
       // Aquí puedes manejar el submit del formulario
       Swal.fire({
         icon: 'success',
