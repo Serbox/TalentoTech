@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import UserForm from "../componentForm/UserForm";
 import Swal from "sweetalert2";
 import { postUsuario } from "../../../services/APIservices";
+import axios from "axios";
 
 const EditarUser = () => {
     const [errors, setErrors] = useState({});
@@ -31,6 +32,8 @@ const EditarUser = () => {
         confirmButtonText: 'Aceptar'
       });
     } else {
+      const e = postUsuario(formData.cedula,formData.nombre,formData.correo,formData.fecha_nacimiento,formData.telefono,formData.password);
+      console.log (e)
       // Aquí puedes manejar el submit del formulario
       Swal.fire({
         icon: 'success',
@@ -41,7 +44,6 @@ const EditarUser = () => {
       console.log("Formulario enviado", formData);
       setErrors({});
 
-      postUsuario({id_usuario:formData.cedula,nombre:formData.nombre,correo:formData.correo,fecha_nacimiento:formData.fecha_nacimiento,telefono:formData.telefono,password:formData.password});
     }
   };
 

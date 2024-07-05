@@ -8,7 +8,7 @@ export async function getFunction(){
 }
 
 export async function postUsuario(value){
-    const response = await axios.get(`${API_URL}/save`,value);
+    const response = await axios.post(`${API_URL}/save`,value);
     console.log(response.data);
 }
 
